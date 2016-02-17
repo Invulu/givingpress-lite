@@ -1,13 +1,13 @@
 /*******************************************************************************************************************
 
 	Theme Name: GivingPress Lite
-	Theme URI: http://organicthemes.com/theme/non-profit-theme/
-	Description: A theme for nonprofit organizations and conscious businiess owners.
-	Author: Organic Themes
-	Author URI: http://organicthemes.com
+	Theme URI: https://givingpress.com/
+	Description: The lite version of the GivingPress theme created for nonprofit organizations and conscious businiess owners. GivingPress provides website solutions for organizations. The theme is for charities, churches, scholarships, scientific reasearch and humanitarian sites.
+	Author: GivingPress
+	Author URI: https://givingpress.com/
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.1
+	Version: 1.1.1
 	Text Domain: givingpress-lite
 	Tags: light, gray, white, green, one-column, two-columns, three-columns, right-sidebar, fluid-layout, custom-background, custom-header, custom-menu, featured-images, featured-image-header, flexible-header, full-width-template, theme-options, translation-ready, sticky-post, featured-images
 
@@ -81,9 +81,9 @@ hr {
 	border: 0;
 	width: 100%;
 	height: 1px;
-	color: #DDDDDD;
-	background-color: #DDDDDD;
-	margin: 6px 0px 8px 0px;
+	color: #dddddd;
+	background-color: #dddddd;
+	margin: 6px 0px;
 	padding: 0px;
 	}
 ol, ul {
@@ -134,13 +134,13 @@ q:before, q:after {
 	}
 code, pre {
 	color: #666666;
-	background: #F9F9F9;
+	background: #f9f9f9;
 	font-family: Courier, Verdana, Tahoma, Verdana;
 	font-size: 13px;
 	line-height: 1.4;
 	margin: 12px 0px;
 	padding: 6px 8px;
-	border: 1px solid #DDDDDD;
+	border: 1px solid #dddddd;
 	border-radius: 3px;
 	}
 code {

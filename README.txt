@@ -1,4 +1,4 @@
-Giving Theme v1.1
+Giving Theme v1.1.1
 http://www.givingpress.com
  
 INSTALL: 
@@ -11,3 +11,7 @@ CHANGELOG v1.0:
 
 CHANGELOG v1.1:
 - Several fixes and updates
+
+CHANGELOG v1.1.1:
+- Description and URL updates
+- Added admin notice

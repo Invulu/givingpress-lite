@@ -76,6 +76,17 @@ function givingpress_lite_setup() {
 endif; // givingpress_lite_setup
 add_action( 'after_setup_theme', 'givingpress_lite_setup' );
 
+/*-----------------------------------------------------------------------------------------------------//	
+	Admin Notice		       	     	 
+-------------------------------------------------------------------------------------------------------*/
+
+function givingpress_lite_admin_notice(){
+    echo '<div class="updated"><p>'; 
+    printf( __('Enjoying the theme? <a href="%1$s" target="_blank">Sign Up</a> to start your <a href="%2$s" target="_blank">GivingPress Pro</a> site with a ton of added features and services!', 'givingpress-lite'), 'https://givingpress.com', 'http://preview.givingpress.com');
+    echo "</p></div>";
+}
+add_action('admin_notices', 'givingpress_lite_admin_notice');
+
 /*-----------------------------------------------------------------------------------------------------//
 	Category ID to Name
 -------------------------------------------------------------------------------------------------------*/
