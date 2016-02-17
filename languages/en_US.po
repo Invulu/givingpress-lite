@@ -1,0 +1,548 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: GivingPress Lite\n"
+"POT-Creation-Date: 2016-02-17 15:28-0500\n"
+"PO-Revision-Date: 2016-02-17 15:29-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:23 404.php:45
+msgid "Not Found, Error 404"
+msgstr ""
+
+#: 404.php:24 404.php:46
+msgid ""
+"The page you are looking for no longer exists. Perhaps searching can help."
+msgstr ""
+
+#: comments.php:17
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr ""
+
+#: comments.php:33
+#, php-format
+msgid "One Comment on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s Comments on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:40 comments.php:60
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:41 comments.php:61
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:42 comments.php:62
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:72
+msgid "Comments are closed."
+msgstr ""
+
+#: content/content-author.php:22
+msgid "Website:"
+msgstr ""
+
+#: content/content-author.php:23
+msgid "Link to author page"
+msgstr ""
+
+#: content/content-author.php:28
+msgid "Profile:"
+msgstr ""
+
+#: content/content-author.php:34
+#, php-format
+msgid "Posts by %1$s:"
+msgstr ""
+
+#: content/content-author.php:43 loop-archive.php:54 loop-blog.php:62
+#: loop-category.php:61
+msgid "&laquo;"
+msgstr ""
+
+#: content/content-author.php:44 loop-archive.php:55 loop-blog.php:63
+#: loop-category.php:62
+msgid "&raquo;"
+msgstr ""
+
+#: content/content-author.php:48
+msgid "No posts by this author."
+msgstr ""
+
+#: content/content-none.php:16
+msgid "No Options Saved"
+msgstr ""
+
+#: content/content-none.php:17
+#, php-format
+msgid ""
+"Please set and save the theme options for the Home Page template within the "
+"<a href=\"%1$s\">Customizer</a>."
+msgstr ""
+
+#: content/content-none.php:21
+msgid "No Results Found"
+msgstr ""
+
+#: content/content-none.php:22
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: content/home-page-small.php:30
+msgid "Learn More"
+msgstr ""
+
+#: content/home-page-wide.php:25 functions.php:253 loop-blog.php:43
+#: loop-page.php:16
+msgid "Read More"
+msgstr ""
+
+#: footer.php:47
+msgid "Copyright"
+msgstr ""
+
+#: footer.php:47
+msgid "Y"
+msgstr ""
+
+#: footer.php:47
+msgid "All Rights Reserved"
+msgstr ""
+
+#: footer.php:49
+msgid "GivingPress Lite"
+msgstr ""
+
+#: footer.php:49 loop-archive.php:25
+msgid "by"
+msgstr ""
+
+#: footer.php:49
+msgid "Giving Press"
+msgstr ""
+
+#: footer.php:49
+msgid "RSS Feed"
+msgstr ""
+
+#: functions.php:37
+msgid "Main Menu"
+msgstr ""
+
+#: functions.php:38
+msgid "Social Menu"
+msgstr ""
+
+#: functions.php:46
+msgid "Default Custom Header"
+msgstr ""
+
+#: functions.php:130
+msgid "Default Sidebar"
+msgstr ""
+
+#: functions.php:138
+msgid "Left Sidebar"
+msgstr ""
+
+#: functions.php:146
+msgid "Footer Widgets"
+msgstr ""
+
+#: functions.php:192
+msgid "Pingback:"
+msgstr ""
+
+#: functions.php:192 functions.php:232
+msgid "Edit"
+msgstr ""
+
+#: functions.php:210
+#, php-format
+msgid "%1$s <br/> %2$s <br/>"
+msgstr ""
+
+#: functions.php:216
+#, php-format
+msgid "%1$s"
+msgstr ""
+
+#: functions.php:225
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions.php:230
+msgid "Reply"
+msgstr ""
+
+#: functions.php:263
+#, php-format
+msgid ""
+"<span class=\"%1$s\">Last Updated:</span> %2$s <span class=\"meta-sep\">by</"
+"span> %3$s"
+msgstr ""
+
+#: functions.php:272 functions.php:286
+#, php-format
+msgid "View all posts by %s"
+msgstr ""
+
+#: functions.php:277
+#, php-format
+msgid ""
+"<span class=\"%1$s\">Posted:</span> %2$s <span class=\"meta-sep\">by</span> "
+"%3$s"
+msgstr ""
+
+#: functions.php:439
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#: functions.php:443
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#: header.php:128
+#, php-format
+msgid "Create a Custom Navigation Menu <a href=\"%1$s\">here</a>."
+msgstr ""
+
+#: includes/customizer.php:21
+msgid "&mdash; Select &mdash;"
+msgstr ""
+
+#: includes/customizer.php:77
+msgid "2 Seconds"
+msgstr ""
+
+#: includes/customizer.php:78
+msgid "4 Seconds"
+msgstr ""
+
+#: includes/customizer.php:79
+msgid "6 Seconds"
+msgstr ""
+
+#: includes/customizer.php:80
+msgid "8 Seconds"
+msgstr ""
+
+#: includes/customizer.php:81
+msgid "10 Seconds"
+msgstr ""
+
+#: includes/customizer.php:82
+msgid "12 Seconds"
+msgstr ""
+
+#: includes/customizer.php:83
+msgid "20 Seconds"
+msgstr ""
+
+#: includes/customizer.php:84
+msgid "30 Seconds"
+msgstr ""
+
+#: includes/customizer.php:85
+msgid "1 Minute"
+msgstr ""
+
+#: includes/customizer.php:86
+msgid "Hold Frame"
+msgstr ""
+
+#: includes/customizer.php:98
+msgid "Fade"
+msgstr ""
+
+#: includes/customizer.php:99
+msgid "Slide"
+msgstr ""
+
+#: includes/customizer.php:111
+msgid "One Column"
+msgstr ""
+
+#: includes/customizer.php:112
+msgid "Two Columns"
+msgstr ""
+
+#: includes/customizer.php:113
+msgid "Three Columns"
+msgstr ""
+
+#: includes/customizer.php:114
+msgid "Four Columns"
+msgstr ""
+
+#: includes/customizer.php:126
+msgid "Right"
+msgstr ""
+
+#: includes/customizer.php:127
+msgid "Bottom"
+msgstr ""
+
+#: includes/customizer.php:139 includes/customizer.php:223
+#: includes/customizer.php:240
+msgid "Left Align"
+msgstr ""
+
+#: includes/customizer.php:140 includes/customizer.php:224
+#: includes/customizer.php:241
+msgid "Center Align"
+msgstr ""
+
+#: includes/customizer.php:141 includes/customizer.php:225
+#: includes/customizer.php:242
+msgid "Right Align"
+msgstr ""
+
+#: includes/customizer.php:153
+msgid "Black"
+msgstr ""
+
+#: includes/customizer.php:154
+msgid "White"
+msgstr ""
+
+#: includes/customizer.php:197
+msgid "Site Title, Tagline & Logo"
+msgstr ""
+
+#: includes/customizer.php:207
+msgid "Logo"
+msgstr ""
+
+#: includes/customizer.php:220
+msgid "Logo Alignment"
+msgstr ""
+
+#: includes/customizer.php:237
+msgid "Site Description Alignment"
+msgstr ""
+
+#: includes/customizer.php:255
+msgid "Theme Options"
+msgstr ""
+
+#: includes/customizer.php:256
+msgid ""
+"This panel allows you to customize specific areas of the GivingPress Lite "
+"Theme."
+msgstr ""
+
+#: includes/customizer.php:264
+msgid "Contact Info Bar"
+msgstr ""
+
+#: includes/customizer.php:275
+msgid "Company Address"
+msgstr ""
+
+#: includes/customizer.php:288
+msgid "Company Email Address"
+msgstr ""
+
+#: includes/customizer.php:301
+msgid "Company Phone Number"
+msgstr ""
+
+#: includes/customizer.php:314
+msgid "Display Search Field?"
+msgstr ""
+
+#: includes/customizer.php:326
+msgid "Home Page Template"
+msgstr ""
+
+#: includes/customizer.php:337
+msgid "Donation Tagline"
+msgstr ""
+
+#: includes/customizer.php:350
+msgid "Donation Description"
+msgstr ""
+
+#: includes/customizer.php:363
+msgid "Donation Link"
+msgstr ""
+
+#: includes/customizer.php:376
+msgid "Donation Link Text"
+msgstr ""
+
+#: includes/customizer.php:389
+msgid "Featured Page Left"
+msgstr ""
+
+#: includes/customizer.php:402
+msgid "Featured Page Middle"
+msgstr ""
+
+#: includes/customizer.php:415
+msgid "Featured Page Right"
+msgstr ""
+
+#: includes/customizer.php:428
+msgid "Featured Page Bottom"
+msgstr ""
+
+#: includes/customizer.php:440
+msgid "Blog Template"
+msgstr ""
+
+#: includes/customizer.php:452
+msgid "Blog Template Category"
+msgstr ""
+
+#: includes/customizer.php:464
+msgid "Blog Posts to Display"
+msgstr ""
+
+#: includes/typefaces.php:17
+msgctxt "Oswald font: on or off"
+msgid "on"
+msgstr ""
+
+#: includes/typefaces.php:18
+msgctxt "Open Sans font: on or off"
+msgid "on"
+msgstr ""
+
+#: includes/typefaces.php:19
+msgctxt "Merriweather font: on or off"
+msgid "on"
+msgstr ""
+
+#: includes/typefaces.php:20
+msgctxt "Playfair font: on or off"
+msgid "on"
+msgstr ""
+
+#: includes/typefaces.php:21
+msgctxt "Montserrat font: on or off"
+msgid "on"
+msgstr ""
+
+#: includes/typefaces.php:22
+msgctxt "Raleway font: on or off"
+msgid "on"
+msgstr ""
+
+#: loop-archive.php:21
+msgid "Updated on"
+msgstr ""
+
+#: loop-archive.php:21 loop-archive.php:23
+msgid "F j, Y"
+msgstr ""
+
+#: loop-archive.php:23
+msgid "Posted on"
+msgstr ""
+
+#: loop-archive.php:27 loop-blog.php:33 loop-category.php:31 loop-post.php:14
+msgid "Leave a Comment"
+msgstr ""
+
+#: loop-archive.php:27 loop-blog.php:33 loop-category.php:31 loop-post.php:14
+msgid "1 Comment"
+msgstr ""
+
+#: loop-archive.php:31
+#, php-format
+msgid "Permalink to %s"
+msgstr ""
+
+#: loop-archive.php:36
+msgid ","
+msgstr ""
+
+#: loop-archive.php:41 loop-post.php:49
+msgid "Category:"
+msgstr ""
+
+#: loop-archive.php:41 loop-post.php:49
+msgid "Tags:"
+msgstr ""
+
+#: loop-blog.php:33 loop-category.php:31 loop-post.php:14
+msgid "% Comments"
+msgstr ""
+
+#: loop-page.php:19 loop-post.php:31
+msgid "Pages:"
+msgstr ""
+
+#: loop-page.php:24 loop-post.php:36
+msgid "Next"
+msgstr ""
+
+#: loop-page.php:25 loop-post.php:37
+msgid "Previous"
+msgstr ""
+
+#: loop-page.php:30 loop-post.php:42
+msgid "(Edit)"
+msgstr ""
+
+#: loop-post.php:44 loop-post.php:49
+msgid ", "
+msgstr ""
+
+#: search.php:39 search.php:77 search.php:97 search.php:127
+#, php-format
+msgid "Search: %s"
+msgstr ""
+
+#: searchform.php:12
+msgid "Search"
+msgstr ""
+
+#: searchform.php:13
+msgid "Search Here &hellip;"
+msgstr ""
+
+#: searchform.php:14
+msgid "Go"
+msgstr ""
+
+#: template-archive.php:40
+msgid "By Page:"
+msgstr ""
+
+#: template-archive.php:45
+msgid "By Post:"
+msgstr ""
+
+#: template-archive.php:50
+msgid "By Month:"
+msgstr ""
+
+#: template-archive.php:53
+msgid "By Category:"
+msgstr ""
