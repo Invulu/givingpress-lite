@@ -1,7 +1,7 @@
 /*******************************************************************************************************************
 
 	Theme Name: GivingPress Lite
-	Theme URI: https://givingpress.com/
+	Theme URI: https://preview.givingpress.com/
 	Description: The lite version of the GivingPress theme created for nonprofit organizations and conscious businiess owners. GivingPress provides website solutions for organizations. The theme is for charities, churches, scholarships, scientific reasearch and humanitarian sites.
 	Author: GivingPress
 	Author URI: https://givingpress.com/
@@ -510,7 +510,7 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 	background-size: cover;
 	box-shadow: inset 0px 0px 6px rgba(0, 0, 0, .24);
 	}
-	
+
 /* Conditionals */
 
 .givingpress-lite-header-active #site-info {
@@ -596,7 +596,7 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 	font-weight: 500;
 	text-transform: none;
 	}
-	
+
 /* Conditionals */
 .givingpress-lite-logo-left #navigation {
 	right: 0;
@@ -648,13 +648,13 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 .menu ul {
 	margin: 0px;
 	padding: 0px;
-	} 
+	}
 ul.menu ul,
 div.menu ul ul {
 	position: absolute;
 	top: -9999px;
 	width: 220px; /* left offset of submenus need to match (see below) */
-	} 
+	}
 ul.menu ul li,
 div.menu ul ul li {
 	width: 100%;
@@ -837,7 +837,7 @@ div.menu ul li li li:hover ul {
 .sf-arrows a.sf-with-ul {
 	padding-right: 6px;
 	}
-	
+
 /* Down-Facing Arrows */
 .sf-arrows .sf-with-ul:after {
 	content: '';
@@ -1042,7 +1042,7 @@ html[xmlns] .slides {
 .page-template-template-home .content.not-set {
 	margin-bottom: 24px;
 	}
-	
+
 /* Donation Section */
 .featured-donation {
 	background: #ffffff;
@@ -1475,8 +1475,8 @@ img.aligncenter {
 	text-align: center;
 	padding: 0px;
 	}
-img.alignnone, 
-img.alignright, 
+img.alignnone,
+img.alignright,
 img.alignleft {
 	display: inline;
 	padding: 0px;
@@ -1613,7 +1613,7 @@ img.alignleft {
 	background: none;
 	padding: 24px 0px 0px 36px;
 	}
-	
+
 /* Conditionals */
 
 .givingpress-lite-header-active.blog .sidebar,
@@ -2059,9 +2059,9 @@ p.logged-in-as {
 *	22.	Buttons  								*
 ************************************************/
 
-button, .button, a.button, a:link.button, a:visited.button, 
-a.more-link, a:link.more-link, a:visited.more-link, 
-.container .reply a, #searchsubmit, #prevLink a, #nextLink a, 
+button, .button, a.button, a:link.button, a:visited.button,
+a.more-link, a:link.more-link, a:visited.more-link,
+.container .reply a, #searchsubmit, #prevLink a, #nextLink a,
 input#submit, input[type='submit'] {
 	display: inline-block;
 	background-color: #f9f9f9;
@@ -2084,9 +2084,9 @@ input#submit, input[type='submit'] {
 	-webkit-appearance: none;
 	}
 button:hover, button:focus, button:active, .button:hover,
-a:hover.button, a:focus.button, a:active.button, 
-a:hover.more-link, a:focus.more-link, a:active.more-link, 
-.container .reply a:hover, #searchsubmit:hover, #prevLink a:hover, #nextLink a:hover, 
+a:hover.button, a:focus.button, a:active.button,
+a:hover.more-link, a:focus.more-link, a:active.more-link,
+.container .reply a:hover, #searchsubmit:hover, #prevLink a:hover, #nextLink a:hover,
 input#submit:hover, input[type='submit']:hover {
 	background-color: #99cc00;
 	color: #ffffff;
@@ -2256,7 +2256,7 @@ a, a:link, button, #submit, #searchsubmit {
 	-khtml-border-radius: 50%;
 	-webkit-border-radius: 50%;
 	}
-	
+
 /* CSS Animations */
 @keyframes "spin" {
 	 from {
@@ -2316,7 +2316,7 @@ a, a:link, button, #submit, #searchsubmit {
 	}
 
 /************************************************
-*	26.	Jetpack	 					     	    * 
+*	26.	Jetpack	 					     	    *
 ************************************************/
 
 .jetpack-video-wrapper {
@@ -2326,7 +2326,7 @@ a, a:link, button, #submit, #searchsubmit {
 	margin: 24px auto 24px;
 	overflow: hidden;
 	}
-#wrapper .grofile-thumbnail, 
+#wrapper .grofile-thumbnail,
 #wrapper .widgets-grid-layout {
 	float: left;
 	width: 28%;
