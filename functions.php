@@ -20,7 +20,7 @@ function givingpress_lite_setup() {
 
 	// Add default posts and comments RSS feed links to head
 	add_theme_support( 'automatic-feed-links' );
-	
+
 	// Enable support for site title tag
 	add_theme_support( 'title-tag' );
 
@@ -40,16 +40,16 @@ function givingpress_lite_setup() {
 
 	// Custom Header
 	register_default_headers( array(
-	    'forest' => array(
-		    'url'   => get_template_directory_uri() . '/images/header.jpg',
-		    'thumbnail_url' => get_template_directory_uri() . '/images/header-thumb.jpg',
-		    'description'   => esc_html__( 'Default Custom Header', 'givingpress-lite' )
+		'forest' => array(
+			'url'   => get_template_directory_uri() . '/images/header.jpg',
+			'thumbnail_url' => get_template_directory_uri() . '/images/header-thumb.jpg',
+			'description'   => esc_html__( 'Default Custom Header', 'givingpress-lite' )
 		)
 	));
 	$defaults = array(
 		'width'                 => 1800,
 		'height'                => 640,
-		'default-image' 		=> get_template_directory_uri() . '/images/header.jpg',
+		'default-image'					=> get_template_directory_uri() . '/images/header.jpg',
 		'flex-height'           => true,
 		'flex-width'            => true,
 		'default-text-color'    => 'ffffff',
@@ -76,14 +76,14 @@ function givingpress_lite_setup() {
 endif; // givingpress_lite_setup
 add_action( 'after_setup_theme', 'givingpress_lite_setup' );
 
-/*-----------------------------------------------------------------------------------------------------//	
-	Admin Notice		       	     	 
+/*-----------------------------------------------------------------------------------------------------//
+	Admin Notice
 -------------------------------------------------------------------------------------------------------*/
 
 function givingpress_lite_admin_notice(){
-    echo '<div class="updated"><p>'; 
-    printf( __('Enjoying the theme? <a href="%1$s" target="_blank">Sign Up</a> to start your <a href="%2$s" target="_blank">GivingPress Pro</a> site with a ton of added features and services!', 'givingpress-lite'), 'https://givingpress.com', 'http://preview.givingpress.com');
-    echo "</p></div>";
+	echo '<div class="updated"><p>';
+	printf( __('Enjoying the theme? <a href="%1$s" target="_blank">Sign Up</a> to start your <a href="%2$s" target="_blank">GivingPress Pro</a> site with a ton of added features and services!', 'givingpress-lite'), 'https://givingpress.com', 'http://preview.givingpress.com');
+	echo "</p></div>";
 }
 add_action('admin_notices', 'givingpress_lite_admin_notice');
 
@@ -125,9 +125,9 @@ if( !function_exists('givingpress_lite_enqueue_scripts') ) {
 		}
 
 		// Load single scripts only on single pages
-	    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-	    	wp_enqueue_script( 'comment-reply' );
-	    }
+		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+			wp_enqueue_script( 'comment-reply' );
+		}
 	}
 }
 add_action('wp_enqueue_scripts', 'givingpress_lite_enqueue_scripts');
@@ -306,27 +306,26 @@ function givingpress_lite_posted_on() {
 /*-----------------------------------------------------------------------------------------------------*/
 
 function givingpress_lite_wp_link_pages_args_prevnext_add($args) {
-    global $page, $numpages, $more, $pagenow;
+	global $page, $numpages, $more, $pagenow;
 
-    if (!$args['next_or_number'] == 'next_and_number')
-        return $args;
+	if (!$args['next_or_number'] == 'next_and_number')
+	return $args;
 
-    $args['next_or_number'] = 'number'; // Keep numbering for the main part
-    if (!$more)
-        return $args;
+	$args['next_or_number'] = 'number'; // Keep numbering for the main part
+	if (!$more)
+	return $args;
 
-    if($page-1) // There is a previous page
-        $args['before'] .= _wp_link_page($page-1)
-            . $args['link_before']. $args['previouspagelink'] . $args['link_after'] . '</a>';
+	if($page-1) // There is a previous page
+	$args['before'] .= _wp_link_page($page-1)
+	. $args['link_before']. $args['previouspagelink'] . $args['link_after'] . '</a>';
 
-    if ($page<$numpages) // There is a next page
-        $args['after'] = _wp_link_page($page+1)
-            . $args['link_before'] . $args['nextpagelink'] . $args['link_after'] . '</a>'
-            . $args['after'];
+	if ($page<$numpages) // There is a next page
+	$args['after'] = _wp_link_page($page+1)
+	. $args['link_before'] . $args['nextpagelink'] . $args['link_after'] . '</a>'
+	. $args['after'];
 
-    return $args;
+	return $args;
 }
-
 add_filter('wp_link_pages_args', 'givingpress_lite_wp_link_pages_args_prevnext_add');
 
 /*-----------------------------------------------------------------------------------------------------//
@@ -336,58 +335,58 @@ add_filter('wp_link_pages_args', 'givingpress_lite_wp_link_pages_args_prevnext_a
 function givingpress_lite_body_class( $classes ) {
 
 	$header_image = get_header_image();
-	
+
 	if ( is_singular() )
 		$classes[] = 'givingpress-lite-singular';
-		
+
 	if ( has_post_thumbnail() )
 		$classes[] = 'has-featured-img';
 
 	if ( is_active_sidebar( 'sidebar-1' ) )
 		$classes[] = 'givingpress-lite-right-sidebar';
-		
+
 	if ( is_active_sidebar( 'sidebar-left' ) )
 		$classes[] = 'givingpress-lite-left-sidebar';
-		
+
 	if ( is_page_template('template-home.php') && class_exists( 'Jetpack' ) && givingpress_lite_has_featured_posts( 1 ) )
 		$classes[] = 'givingpress-lite-slider-active';
-		
+
 	if ( ! empty( $header_image ) )
 		$classes[] = 'givingpress-lite-header-active';
-		
+
 	if ( empty( $header_image ) )
 		$classes[] = 'givingpress-lite-header-inactive';
-		
+
 	if ( 'blank' != get_theme_mod( 'header_textcolor' ) )
 		$classes[] = 'givingpress-lite-title-active';
-		
+
 	if ( 'blank' == get_theme_mod( 'header_textcolor' ) )
 		$classes[] = 'givingpress-lite-title-inactive';
-		
+
 	if ( get_theme_mod( 'givingpress_lite_logo', get_template_directory_uri() . '/images/logo.png' ) )
 		$classes[] = 'givingpress-lite-logo-active';
-		
+
 	if ( get_theme_mod( 'givingpress_lite_description_align', 'left' ) == 'left' )
 		$classes[] = 'givingpress-lite-description-left';
-		
+
 	if ( get_theme_mod( 'givingpress_lite_description_align' ) == 'center' )
 		$classes[] = 'givingpress-lite-description-center';
-		
+
 	if ( get_theme_mod( 'givingpress_lite_description_align' ) == 'right' )
 		$classes[] = 'givingpress-lite-description-right';
-		
+
 	if ( get_theme_mod( 'givingpress_lite_logo_align', 'left' ) == 'left' )
 		$classes[] = 'givingpress-lite-logo-left';
-		
+
 	if ( get_theme_mod( 'givingpress_lite_logo_align' ) == 'center' )
 		$classes[] = 'givingpress-lite-logo-center';
-		
+
 	if ( get_theme_mod( 'givingpress_lite_logo_align' ) == 'right' )
 		$classes[] = 'givingpress-lite-logo-right';
-		
+
 	if ( get_theme_mod( 'givingpress_lite_contact_email', 'info@givingpress.com' ) || get_theme_mod( 'givingpress_lite_contact_phone', '808.123.4567' ) || get_theme_mod( 'givingpress_lite_contact_address', '231 Front Street, Lahaina, HI 96761' ) )
 		$classes[] = 'givingpress-lite-info-active';
-	
+
 	if ( get_theme_mod( 'background_image' ) ) {
 		// This class will render when a background image is set
 		// regardless of whether the user has set a color as well.
@@ -408,12 +407,10 @@ add_action( 'body_class', 'givingpress_lite_body_class' );
 -------------------------------------------------------------------------------------------------------*/
 
 function givingpress_lite_post_classes( $classes, $class, $post_id ) {
-    
-    if ( 0 == get_comments_number( $post_id ) ) {
-        $classes[] = 'no-comments';
-    }
- 
-    return $classes;
+	if ( 0 == get_comments_number( $post_id ) ) {
+		$classes[] = 'no-comments';
+	}
+	return $classes;
 }
 add_filter( 'post_class', 'givingpress_lite_post_classes', 10, 3 );
 
@@ -458,26 +455,25 @@ if ( ! function_exists( 'givingpress_lite_posted_on' ) ) {
 	}
 }
 
-/*-----------------------------------------------------------------------------------------------------//	
-	First Featured Video		       	     	 
+/*-----------------------------------------------------------------------------------------------------//
+	First Featured Video
 -------------------------------------------------------------------------------------------------------*/
 
 function givingpress_lite_first_embed_media() {
-    global $post, $posts;
-    $first_vid = '';
-    $content = do_shortcode( apply_filters( 'the_content', $post->post_content ) );
-    $embeds = get_media_embedded_in_content( $content );
+	global $post, $posts;
+	$first_vid = '';
+	$content = do_shortcode( apply_filters( 'the_content', $post->post_content ) );
+	$embeds = get_media_embedded_in_content( $content );
 
-    if ( ! empty($embeds) ) {
-        foreach( $embeds as $embed ) {
-            if ( strpos( $embed, 'video' ) || strpos( $embed, 'youtube' ) || strpos( $embed, 'vimeo' ) ) {
-                return $embed;
-            }
-        }
-
-    } else {
-        return false;
-    }
+	if ( ! empty($embeds) ) {
+		foreach( $embeds as $embed ) {
+			if ( strpos( $embed, 'video' ) || strpos( $embed, 'youtube' ) || strpos( $embed, 'vimeo' ) ) {
+				return $embed;
+			}
+		}
+	} else {
+		return false;
+	}
 }
 
 /*-----------------------------------------------------------------------------------------------------//
@@ -485,13 +481,12 @@ function givingpress_lite_first_embed_media() {
 -------------------------------------------------------------------------------------------------------*/
 
 function givingpress_lite_remove_gallery($content) {
-
-    if ( is_page_template('template-slideshow.php') ) {
-        $content = preg_replace('/\[gallery(.*?)ids=[^\]]+\]/', '', $content, 1);
-        }
-    return $content;
+	if ( is_page_template('template-slideshow.php') ) {
+		$content = preg_replace('/\[gallery(.*?)ids=[^\]]+\]/', '', $content, 1);
+	}
+	return $content;
 }
-add_filter( 'the_content', 'givingpress_lite_remove_gallery'); 
+add_filter( 'the_content', 'givingpress_lite_remove_gallery');
 
 /*-----------------------------------------------------------------------------------------------------//
 	Includes
