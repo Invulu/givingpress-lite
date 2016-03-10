@@ -33,3 +33,8 @@ CHANGELOG v1.1:
 CHANGELOG v1.1.1:
 - Description and URL updates
 - Added admin notice
+
+CHANGELOG v1.2:
+- WP.org updates
+- Fixed PHP errors in functions file
+- Added new base classes
