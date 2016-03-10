@@ -2,12 +2,12 @@
 
 	Theme Name: GivingPress Lite
 	Theme URI: https://preview.givingpress.com/
-	Description: The lite version of the GivingPress theme created for nonprofit organizations and conscious businiess owners. GivingPress provides website solutions for organizations. The theme is for charities, churches, scholarships, scientific reasearch and humanitarian sites.
+	Description: The lite version of the GivingPress theme created for nonprofit organizations and conscious business owners. GivingPress provides website solutions for organizations. The theme is for charities, churches, scholarships, scientific reasearch and humanitarian sites.
 	Author: GivingPress
 	Author URI: https://givingpress.com/
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.1.1
+	Version: 1.2
 	Text Domain: givingpress-lite
 	Tags: light, gray, white, green, one-column, two-columns, three-columns, right-sidebar, fluid-layout, custom-background, custom-header, custom-menu, featured-images, featured-image-header, flexible-header, full-width-template, theme-options, translation-ready, sticky-post, featured-images
 
@@ -31,7 +31,7 @@
 	10. Pagination
 	11.	Images
 	12. Page Templates
-	13.	Wordpress Gallery
+	13.	WordPress Gallery
 	14.	Sidebar
 	15.	Widgets
 	16.	RSS Widget
@@ -71,11 +71,42 @@ p {
 p:empty {
 	display: none;
 	}
-em {
+dfn, cite, em, i {
 	font-style: italic;
 	}
-strong {
+strong, b {
 	font-weight: bold;
+	}
+big {
+	font-size: 120%;
+	}
+small {
+	font-size: 80%;
+	}
+s {
+	text-decoration: line-through;
+	}
+mark {
+	background: #ff0;
+	color: #000;
+	}
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+	}
+sup {
+	top: -0.5em;
+	}
+sub {
+	bottom: -0.25em;
+	}
+textarea {
+	overflow: auto;
+	}
+address {
+	margin: 12px 0px;
 	}
 hr {
 	border: 0;
@@ -1549,43 +1580,80 @@ img.alignleft {
 *	13.	WordPress Gallery					    *
 ************************************************/
 
-.gallery-caption {
-	font-size: 0.8em;
-	padding: 0px 10px;
-	}
 .gallery {
-	margin: 0px auto 0px;
-	padding: 0px;
+	display: block;
+	text-align: center;
+	clear: both;
 	overflow: hidden;
+	margin: 12px auto 12px;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
 	}
-.gallery-item {
-	margin: 0px
+.gallery .gallery-row {
+	display:block;
+	clear: both;
+	overflow: hidden;
+	margin: 0;
 	}
-.gallery-icon {
-	line-height: 0;
-	margin: 6px;
+.gallery .gallery-item {
+	overflow: hidden;
+	float: left;
+	margin: 0;
+	text-align: center;
+	list-style: none;
+	padding: 0;
+	position: absolute
+	bottom: 0
 	}
-.gallery-icon img {
+.gallery .gallery-item a {
 	display: block;
 	background: #F4F4F4;
+	margin: 4px;
 	padding: 6px;
-	border: 1px solid #DDDDDD;
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, .08);
+	border: none;
+	border-radius: 3px;
 	transition: background .25s;
 	-moz-transition: background .25s;
 	-webkit-transition: background .25s;
 	-o-transition: background .25s;
-	border-radius: 3px;
-	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
 	}
-.gallery a:hover {
-	background: #99cc00;
-	}
-.gallery img {
-	border: none;
+.gallery .gallery-item img,
+.gallery .gallery-item img.thumbnail {
+	display: block;
+	height: auto;
+	margin: 0 auto;
 	}
 .gallery-caption {
-	font-size: .9em;
-	padding: 0px 10px;
+	margin-left: 0;
+	}
+.gallery-columns-1 .gallery-item:nth-child(1n+1) {
+	clear: both;
+	}
+.gallery-columns-2 .gallery-item:nth-child(2n+1) {
+	clear: both;
+	}
+.gallery-columns-3 .gallery-item:nth-child(3n+1) {
+	clear: both;
+	}
+.gallery-columns-4 .gallery-item:nth-child(4n+1) {
+	clear: both;
+	}
+.gallery-columns-5 .gallery-item:nth-child(5n+1) {
+	clear: both;
+	}
+.gallery-columns-6 .gallery-item:nth-child(6n+1) {
+	clear: both;
+	}
+.gallery-columns-7 .gallery-item:nth-child(7n+1) {
+	clear: both;
+	}
+.gallery-columns-8 .gallery-item:nth-child(8n+1) {
+	clear: both;
+	}
+.gallery-columns-9 .gallery-item:nth-child(9n+1) {
+	clear: both;
 	}
 
 /************************************************
@@ -1636,23 +1704,27 @@ img.alignleft {
 	}
 .widget-title {
 	font-family: 'Raleway';
-	font-size: 1em;
+	font-size: 0.9em;
 	font-weight: 700;
-	letter-spacing: 0.4px;
+	letter-spacing: 1px;
 	text-transform: uppercase;
 	margin-top: 0px;
 	padding-top: 0px;
 	border-bottom: none;
 	}
-.widget ul, .widget li {
+.widget ul,
+.widget ol,
+.widget li {
 	list-style-type: none;
 	margin: 0px;
 	padding: 0px;
 	}
 .widget li {
 	display: block;
-	margin: 2px 0px;
-	padding: 2px 0px;
+	background: rgba(0, 0, 0, .04);
+	margin: 6px 0px;
+	padding: 6px 12px;
+	border-radius: 3px;
 	}
 .widget li li {
 	padding-left: 12px;
@@ -1662,6 +1734,7 @@ img.alignleft {
 	border-bottom: none;
 	}
 .widget li a {
+	font-size: 0.9em;
 	margin: 0px;
 	padding: 0px;
 	}
