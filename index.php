@@ -1,13 +1,13 @@
 <?php
 /**
-* The index template for our theme.
-*
-* This template is used to display posts. The content is displayed in post formats.
-*
-* @package GivingPress Lite
-* @since GivingPress Lite 1.0
-*
-*/
+ * The index template for our theme.
+ *
+ * This template is used to display posts. The content is displayed in post formats.
+ *
+ * @package GivingPress Lite
+ * @since GivingPress Lite 1.0
+ */
+
 get_header(); ?>
 
 <!-- BEGIN .post class -->
@@ -32,7 +32,7 @@ get_header(); ?>
 				<!-- BEGIN .five columns -->
 				<div class="five columns">
 
-					<?php get_sidebar('blog'); ?>
+					<?php get_sidebar( 'blog' ); ?>
 
 				<!-- END .five columns -->
 				</div>

@@ -1,20 +1,27 @@
 <?php
 /**
-* Theme customizer with real-time update
-*
-* Very helpful: http://ottopress.com/2012/theme-customizer-part-deux-getting-rid-of-options-pages/
-*
-* @package GivingPress Lite
-* @since GivingPress Lite 1.0
-*/
+ * Theme customizer with real-time update
+ *
+ * Very helpful: http://ottopress.com/2012/theme-customizer-part-deux-getting-rid-of-options-pages/
+ *
+ * @package GivingPress Lite
+ * @since GivingPress Lite 1.0
+ */
+
+/**
+ * Begin the customizer functions.
+ *
+ * @param array $wp_customize Returns classes and sanitized inputs.
+ */
 function givingpress_lite_theme_customizer( $wp_customize ) {
 
-	// Category Dropdown Control
+	// Category Dropdown Control.
 	class GivingPress_Lite_Category_Dropdown_Control extends WP_Customize_Control {
-	public $type = 'dropdown-categories';
 
-	public function render_content() {
-		$dropdown = wp_dropdown_categories(
+		public $type = 'dropdown-categories';
+
+		public function render_content() {
+			$dropdown = wp_dropdown_categories(
 				array(
 					'name'              => '_customize-dropdown-categories-' . $this->id,
 					'echo'              => 0,
@@ -34,7 +41,7 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 		}
 	}
 
-	// Numerical Control
+	// Numerical Control.
 	class GivingPress_Lite_Customizer_Number_Control extends WP_Customize_Control {
 
 		public $type = 'number';
@@ -47,31 +54,47 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 			</label>
 			<?php
 		}
-
 	}
-	
-	// Sanitize Categories
+
+	/**
+	 * Sanitize Categories.
+	 *
+	 * @param array $input Sanitizes user input.
+	 * @return array
+	 */
 	function givingpress_lite_sanitize_categories( $input ) {
-		
-		$categories = get_terms( 'category', array('fields' => 'ids', 'get' => 'all') );
-			
-		if ( in_array( $input, $categories ) ) {
+
+		$categories = get_terms( 'category', array( 'fields' => 'ids', 'get' => 'all' ) );
+
+		if ( in_array( $input, $categories, true ) ) {
 		    return $input;
 		} else {
 			return '';
 		}
 	}
 
+	/**
+	 * Sanitize Pages.
+	 *
+	 * @param array $input Sanitizes user input.
+	 * @return array
+	 */
 	function givingpress_lite_sanitize_pages( $input ) {
 		$pages = get_all_page_ids();
 
-	    if ( in_array( $input, $pages ) ) {
+	    if ( in_array( $input, $pages, true ) ) {
 	        return $input;
 	    } else {
 	    	return '';
 	    }
 	}
 
+	/**
+	 * Sanitize Slideshow Transition Interval.
+	 *
+	 * @param array $input Sanitizes user input.
+	 * @return array
+	 */
 	function givingpress_lite_sanitize_transition_interval( $input ) {
 	    $valid = array(
 	        '2000' 		=> esc_html__( '2 Seconds', 'givingpress-lite' ),
@@ -92,13 +115,19 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 	        return '';
 	    }
 	}
-	
+
+	/**
+	 * Sanitize Slideshow Transition Style.
+	 *
+	 * @param array $input Sanitizes user input.
+	 * @return array
+	 */
 	function givingpress_lite_sanitize_transition_style( $input ) {
 	    $valid = array(
 	        'fade' 		=> esc_html__( 'Fade', 'givingpress-lite' ),
 	        'slide' 	=> esc_html__( 'Slide', 'givingpress-lite' ),
 	    );
-	 
+
 	    if ( array_key_exists( $input, $valid ) ) {
 	        return $input;
 	    } else {
@@ -106,6 +135,12 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 	    }
 	}
 
+	/**
+	 * Sanitize Columns.
+	 *
+	 * @param array $input Sanitizes user input.
+	 * @return array
+	 */
 	function givingpress_lite_sanitize_columns( $input ) {
 	    $valid = array(
 	        'one' 		=> esc_html__( 'One Column', 'givingpress-lite' ),
@@ -120,7 +155,13 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 	        return '';
 	    }
 	}
-	
+
+	/**
+	 * Sanitize Slide Info Alignment.
+	 *
+	 * @param array $input Sanitizes user input.
+	 * @return array
+	 */
 	function givingpress_lite_sanitize_slide_info( $input ) {
 	    $valid = array(
 	        'right' 		=> esc_html__( 'Right', 'givingpress-lite' ),
@@ -134,6 +175,12 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 	    }
 	}
 
+	/**
+	 * Sanitize Alignment.
+	 *
+	 * @param array $input Sanitizes user input.
+	 * @return array
+	 */
 	function givingpress_lite_sanitize_align( $input ) {
 	    $valid = array(
 	        'left' 		=> esc_html__( 'Left Align', 'givingpress-lite' ),
@@ -148,57 +195,60 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 	    }
 	}
 
-	function givingpress_lite_sanitize_title_color( $input ) {
-	    $valid = array(
-	        'black' 	=> esc_html__( 'Black', 'givingpress-lite' ),
-	        'white' 	=> esc_html__( 'White', 'givingpress-lite' ),
-	    );
-
-	    if ( array_key_exists( $input, $valid ) ) {
-	        return $input;
-	    } else {
-	        return '';
-	    }
-	}
-
+	/**
+	 * Sanitize Checkboxes.
+	 *
+	 * @param array $input Sanitizes user input.
+	 * @return array
+	 */
 	function givingpress_lite_sanitize_checkbox( $input ) {
-		if ( $input == 1 ) {
+		if ( 1 === $input ) {
 			return 1;
 		} else {
 			return '';
 		}
 	}
 
+	/**
+	 * Sanitize Text Input.
+	 *
+	 * @param array $input Sanitizes user input.
+	 * @return array
+	 */
 	function givingpress_lite_sanitize_text( $input ) {
 	    return wp_kses_post( force_balance_tags( $input ) );
 	}
-	
-	function givingpress_lite_sanitize_color( $input ){
+
+	/**
+	 * Sanitize Colors.
+	 *
+	 * @param array $input Sanitizes user input.
+	 * @return array
+	 */
+	function givingpress_lite_sanitize_color( $input ) {
 		if ( preg_match( '/^#[a-f0-9]{6}$/i', $input ) ) {
 			return $input;
-		}
-		else {
+		} else {
 			return '';
 		}
 	}
 
-	// Set site name and description text to be previewed in real-time
-	$wp_customize->get_setting('blogname')->transport='postMessage';
-	$wp_customize->get_setting('blogdescription')->transport='postMessage';
+	// Set site name and description text to be previewed in real-time.
+	$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
+	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 
-	// Set site title color to be previewed in real-time
+	// Set site title color to be previewed in real-time.
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-	
-	//-------------------------------------------------------------------------------------------------------------------//
+
+	// -------------------------------------------------------------------------------------------------------------------//
 	// Site Title Section
-	//-------------------------------------------------------------------------------------------------------------------//	
-		
+	// -------------------------------------------------------------------------------------------------------------------//
 	$wp_customize->add_section( 'title_tagline' , array(
 		'title'       => esc_html__( 'Site Title, Tagline & Logo', 'givingpress-lite' ),
 		'priority'    => 1,
 	) );
-	
-		// Logo uploader
+
+		// Logo Uploader.
 		$wp_customize->add_setting( 'givingpress_lite_logo', array(
 			'default' 			=> get_template_directory_uri() . '/images/logo.png',
 			'sanitize_callback' => 'esc_url_raw',
@@ -209,8 +259,8 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 			'settings'	=> 'givingpress_lite_logo',
 			'priority'	=> 40,
 		) ) );
-		
-		// Logo Align
+
+		// Logo Align.
 		$wp_customize->add_setting( 'givingpress_lite_logo_align', array(
 		    'default' 			=> 'left',
 		    'sanitize_callback' => 'givingpress_lite_sanitize_align',
@@ -226,8 +276,8 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 		    ),
 		    'priority' => 45,
 		) ) );
-		
-		// Site Title Align
+
+		// Site Title Align.
 		$wp_customize->add_setting( 'givingpress_lite_description_align', array(
 		    'default' 			=> 'left',
 		    'sanitize_callback' => 'givingpress_lite_sanitize_align',
@@ -244,29 +294,33 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 		    'priority' => 50,
 		) ) );
 
-	//-------------------------------------------------------------------------------------------------------------------//
-	// Theme Options Panel
-	//-------------------------------------------------------------------------------------------------------------------//
+		/*
+		-------------------------------------------------------------------------------------------------------
+			Theme Options Panel
+		-------------------------------------------------------------------------------------------------------
+		*/
 
-	$wp_customize->add_panel( 'givingpress_lite_theme_options', array(
-	    'priority' 			=> 1,
-	    'capability' 		=> 'edit_theme_options',
-	    'theme_supports'	=> '',
-	    'title' 			=> esc_html__( 'Theme Options', 'givingpress-lite' ),
-	    'description' 		=> esc_html__( 'This panel allows you to customize specific areas of the GivingPress Lite Theme.', 'givingpress-lite' ),
-	) );
+		$wp_customize->add_panel( 'givingpress_lite_theme_options', array(
+			'priority' 			=> 1,
+			'capability' 		=> 'edit_theme_options',
+			'theme_supports'	=> '',
+			'title' 			=> esc_html__( 'Theme Options', 'givingpress-lite' ),
+			'description' 		=> esc_html__( 'This panel allows you to customize specific areas of the GivingPress Lite Theme.', 'givingpress-lite' ),
+		) );
 
-	//-------------------------------------------------------------------------------------------------------------------//
-	// Contact Section
-	//-------------------------------------------------------------------------------------------------------------------//
+		/*
+		-------------------------------------------------------------------------------------------------------
+			Contact Section
+		-------------------------------------------------------------------------------------------------------
+		*/
 
-	$wp_customize->add_section( 'givingpress_lite_contact_section' , array(
-		'title'     => esc_html__( 'Contact Info Bar', 'givingpress-lite' ),
-		'priority'  => 100,
-		'panel' 	=> 'givingpress_lite_theme_options',
-	) );
+		$wp_customize->add_section( 'givingpress_lite_contact_section' , array(
+			'title'     => esc_html__( 'Contact Info Bar', 'givingpress-lite' ),
+			'priority'  => 100,
+			'panel' 	=> 'givingpress_lite_theme_options',
+		) );
 
-		// Contact Address
+		// Contact Address.
 		$wp_customize->add_setting( 'givingpress_lite_contact_address', array(
 			'default' => '231 Front Street, Lahaina, HI 96761',
 			'sanitize_callback' => 'givingpress_lite_sanitize_text',
@@ -279,7 +333,7 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 			'priority' 	=> 20,
 		) ) );
 
-		// Contact Email
+		// Contact Email.
 		$wp_customize->add_setting( 'givingpress_lite_contact_email', array(
 			'default' => 'info@givingpress.com',
 			'sanitize_callback' => 'sanitize_email',
@@ -292,7 +346,7 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 			'priority' 	=> 40,
 		) ) );
 
-		// Contact Phone
+		// Contact Phone.
 		$wp_customize->add_setting( 'givingpress_lite_contact_phone', array(
 			'default' => '808.123.4567',
 			'sanitize_callback' => 'givingpress_lite_sanitize_text',
@@ -304,8 +358,8 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 			'type'		=> 'text',
 			'priority' 	=> 60,
 		) ) );
-		
-		// Header Search Field
+
+		// Header Search Field.
 		$wp_customize->add_setting( 'givingpress_lite_display_header_search', array(
 			'default' => 1,
 			'sanitize_callback' => 'givingpress_lite_sanitize_checkbox',
@@ -318,17 +372,19 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 			'priority' => 80,
 		) ) );
 
-	//-------------------------------------------------------------------------------------------------------------------//
-	// Home Page Section
-	//-------------------------------------------------------------------------------------------------------------------//
+		/*
+		-------------------------------------------------------------------------------------------------------
+			Home Page Section
+		-------------------------------------------------------------------------------------------------------
+		*/
 
-	$wp_customize->add_section( 'givingpress_lite_home_section' , array(
-		'title'       => esc_html__( 'Home Page Template', 'givingpress-lite' ),
-		'priority'    => 102,
-		'panel' => 'givingpress_lite_theme_options',
-	) );
-	
-		// Donation Tagline
+		$wp_customize->add_section( 'givingpress_lite_home_section' , array(
+			'title'       => esc_html__( 'Home Page Template', 'givingpress-lite' ),
+			'priority'    => 102,
+			'panel' => 'givingpress_lite_theme_options',
+		) );
+
+		// Donation Tagline.
 		$wp_customize->add_setting( 'givingpress_lite_donation_tagline', array(
 			'default' => 'Donations Are Welcome',
 			'sanitize_callback' => 'givingpress_lite_sanitize_text',
@@ -341,7 +397,7 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 			'priority' => 10,
 		) ) );
 
-		// Donation Description
+		// Donation Description.
 		$wp_customize->add_setting( 'givingpress_lite_donation_description', array(
 			'default' => 'Enter a brief message about accepting donations for your cause. Edit the content in this section within the WordPress Customizer.',
 			'sanitize_callback' => 'givingpress_lite_sanitize_text',
@@ -354,7 +410,7 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 			'priority' => 20,
 		) ) );
 
-		// Featured Link
+		// Featured Link.
 		$wp_customize->add_setting( 'givingpress_lite_donation_link', array(
 			'default' => '#',
 			'sanitize_callback' => 'givingpress_lite_sanitize_text',
@@ -367,7 +423,7 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 			'priority' => 30,
 		) ) );
 
-		// Featured Link Text
+		// Featured Link Text.
 		$wp_customize->add_setting( 'givingpress_lite_donation_link_text', array(
 			'default' => 'Donate',
 			'sanitize_callback' => 'givingpress_lite_sanitize_text',
@@ -380,7 +436,7 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 			'priority' => 40,
 		) ) );
 
-		// Featured Page Left
+		// Featured Page Left.
 		$wp_customize->add_setting( 'givingpress_lite_page_one', array(
 			'default' => '2',
 			'sanitize_callback' => 'givingpress_lite_sanitize_pages',
@@ -393,7 +449,7 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 			'priority' => 50,
 		) ) );
 
-		// Featured Page Middle
+		// Featured Page Middle.
 		$wp_customize->add_setting( 'givingpress_lite_page_two', array(
 			'default' => '2',
 			'sanitize_callback' => 'givingpress_lite_sanitize_pages',
@@ -406,7 +462,7 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 			'priority' => 60,
 		) ) );
 
-		// Featured Page Right
+		// Featured Page Right.
 		$wp_customize->add_setting( 'givingpress_lite_page_three', array(
 			'default' => '2',
 			'sanitize_callback' => 'givingpress_lite_sanitize_pages',
@@ -419,7 +475,7 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 			'priority' => 80,
 		) ) );
 
-		// Featured Page Bottom
+		// Featured Page Bottom.
 		$wp_customize->add_setting( 'givingpress_lite_page_four', array(
 			'default' => '2',
 			'sanitize_callback' => 'givingpress_lite_sanitize_pages',
@@ -432,17 +488,19 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 			'priority' => 100,
 		) ) );
 
-	//-------------------------------------------------------------------------------------------------------------------//
-	// Page Templates
-	//-------------------------------------------------------------------------------------------------------------------//
+		/*
+		-------------------------------------------------------------------------------------------------------
+			Page Templates
+		-------------------------------------------------------------------------------------------------------
+		*/
 
-	$wp_customize->add_section( 'givingpress_lite_templates_section' , array(
-		'title'       => esc_html__( 'Blog Template', 'givingpress-lite' ),
-		'priority'    => 104,
-		'panel' => 'givingpress_lite_theme_options',
-	) );
-	
-		// Blog Category
+		$wp_customize->add_section( 'givingpress_lite_templates_section' , array(
+			'title'       => esc_html__( 'Blog Template', 'givingpress-lite' ),
+			'priority'    => 104,
+			'panel' => 'givingpress_lite_theme_options',
+		) );
+
+		// Blog Category.
 		$wp_customize->add_setting( 'givingpress_lite_blog_category', array(
 	        'default' => '0',
 	        'sanitize_callback' => 'givingpress_lite_sanitize_categories',
@@ -455,7 +513,7 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 	        'priority' => 10,
 		) ) );
 
-		// Number of Blog Posts to Display
+		// Number of Blog Posts to Display.
 		$wp_customize->add_setting( 'givingpress_lite_blog_posts', array(
 			'default' => '5',
 			'sanitize_callback' => 'givingpress_lite_sanitize_text',
@@ -469,12 +527,12 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 		) ) );
 
 }
-add_action('customize_register', 'givingpress_lite_theme_customizer');
+add_action( 'customize_register', 'givingpress_lite_theme_customizer' );
 
 /**
-* Binds JavaScript handlers to make Customizer preview reload changes
-* asynchronously.
-*/
+ * Binds JavaScript handlers to make Customizer preview reload changes
+ * asynchronously.
+ */
 function givingpress_lite_customize_preview_js() {
 	wp_enqueue_script( 'giving-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ) );
 }

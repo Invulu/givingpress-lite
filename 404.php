@@ -1,11 +1,11 @@
 <?php
 /**
-* This page template is used to display a 404 error message.
-*
-* @package GivingPress Lite
-* @since GivingPress Lite 1.0
-*
-*/
+ * This page template is used to display a 404 error message.
+ *
+ * @package GivingPress Lite
+ * @since GivingPress Lite 1.0
+ */
+
 get_header(); ?>
 
 <!-- BEGIN .row -->
@@ -20,8 +20,8 @@ get_header(); ?>
 			<div class="eleven columns">
 
 			<div class="postarea">
-				<h1 class="headline"><?php esc_html_e("Not Found, Error 404", 'givingpress-lite'); ?></h1>
-				<p><?php esc_html_e("The page you are looking for no longer exists. Perhaps searching can help.", 'givingpress-lite'); ?></p>
+				<h1 class="headline"><?php esc_html_e( 'Not Found, Error 404', 'givingpress-lite' ); ?></h1>
+				<p><?php esc_html_e( 'The page you are looking for no longer exists. Perhaps searching can help.', 'givingpress-lite' ); ?></p>
 				<div class="no-result-search"><?php get_template_part( 'searchform' ); ?></div>
 			</div>
 
@@ -42,8 +42,8 @@ get_header(); ?>
 			<div class="sixteen columns">
 
 			<div class="postarea full">
-				<h1 class="headline"><?php esc_html_e("Not Found, Error 404", 'givingpress-lite'); ?></h1>
-				<p><?php esc_html_e("The page you are looking for no longer exists. Perhaps searching can help.", 'givingpress-lite'); ?></p>
+				<h1 class="headline"><?php esc_html_e( 'Not Found, Error 404', 'givingpress-lite' ); ?></h1>
+				<p><?php esc_html_e( 'The page you are looking for no longer exists. Perhaps searching can help.', 'givingpress-lite' ); ?></p>
 				<div class="no-result-search"><?php get_template_part( 'searchform' ); ?></div>
 			</div>
 

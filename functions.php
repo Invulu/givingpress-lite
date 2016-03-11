@@ -155,8 +155,8 @@ add_action( 'wp_enqueue_scripts', 'givingpress_lite_enqueue_scripts' );
 -------------------------------------------------------------------------------------------------------
 */
 
-/** Function givingpress_widgets_init */
-function givingpress_widgets_init() {
+/** Function givingpress_lite_widgets_init */
+function givingpress_lite_widgets_init() {
 	register_sidebar(array(
 		'name' => esc_html__( 'Default Sidebar', 'givingpress-lite' ),
 		'id' => 'sidebar-1',
@@ -182,7 +182,7 @@ function givingpress_widgets_init() {
 		'after_title' => '</h6>',
 	));
 }
-add_action( 'widgets_init', 'givingpress_widgets_init' );
+add_action( 'widgets_init', 'givingpress_lite_widgets_init' );
 
 /*
 -------------------------------------------------------------------------------------------------------

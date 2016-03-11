@@ -1,11 +1,11 @@
 <?php
 /**
-* This template is used to display category post indexes.
-*
-* @package GivingPress Lite
-* @since GivingPress Lite 1.0
-*
-*/
+ * This template is used to display category post indexes.
+ *
+ * @package GivingPress Lite
+ * @since GivingPress Lite 1.0
+ */
+
 get_header(); ?>
 
 <!-- BEGIN .post class -->
@@ -21,7 +21,7 @@ get_header(); ?>
 
 			<!-- BEGIN .eleven columns -->
 			<div class="eleven columns">
-			
+
 				<?php get_template_part( 'loop', 'category' ); ?>
 
 			<!-- END .eleven columns -->
@@ -30,7 +30,7 @@ get_header(); ?>
 			<!-- BEGIN .five columns -->
 			<div class="five columns">
 
-				<?php get_sidebar('blog'); ?>
+				<?php get_sidebar( 'blog' ); ?>
 
 			<!-- END .five columns -->
 			</div>

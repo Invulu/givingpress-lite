@@ -1,17 +1,17 @@
 <?php
 /**
 Template Name: Slideshow
-*
-* This template is used to display a page with a slideshow.
-*
-* @package GivingPress Lite
-* @since GivingPress Lite 1.0
-*
-*/
+ *
+ * This template is used to display a page with a slideshow.
+ *
+ * @package GivingPress Lite
+ * @since GivingPress Lite 1.0
+ */
+
 get_header(); ?>
 
 <!-- BEGIN .post class -->
-<div <?php post_class('slideshow-page'); ?> id="page-<?php the_ID(); ?>">
+<div <?php post_class( 'slideshow-page' ); ?> id="page-<?php the_ID(); ?>">
 
 	<!-- BEGIN .row -->
 	<div class="row">

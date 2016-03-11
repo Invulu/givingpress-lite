@@ -1,13 +1,13 @@
 <?php
 /**
-* The search template for our theme.
-*
-* This template is used to display search results.
-*
-* @package GivingPress Lite
-* @since GivingPress Lite 1.0
-*
-*/
+ * The search template for our theme.
+ *
+ * This template is used to display search results.
+ *
+ * @package GivingPress Lite
+ * @since GivingPress Lite 1.0
+ */
+
 get_header(); ?>
 
 <!-- BEGIN .post class -->
@@ -24,7 +24,7 @@ get_header(); ?>
 			<!-- BEGIN .three columns -->
 			<div class="three columns">
 
-				<?php get_sidebar('left'); ?>
+				<?php get_sidebar( 'left' ); ?>
 
 			<!-- END .three columns -->
 			</div>
@@ -34,9 +34,9 @@ get_header(); ?>
 
 				<!-- BEGIN .postarea -->
 				<div class="postarea middle clearfix">
-				
+
 					<h2 class="headline archive-headline">
-						<?php printf( __( "Search: %s", 'givingpress-lite' ), get_search_query() ); ?>
+						<?php printf( __( 'Search: %s', 'givingpress-lite' ), get_search_query() ); ?>
 					</h2>
 
 					<?php get_template_part( 'loop', 'archive' ); ?>
@@ -62,7 +62,7 @@ get_header(); ?>
 			<!-- BEGIN .three columns -->
 			<div class="three columns">
 
-				<?php get_sidebar('left'); ?>
+				<?php get_sidebar( 'left' ); ?>
 
 			<!-- END .three columns -->
 			</div>
@@ -72,9 +72,9 @@ get_header(); ?>
 
 				<!-- BEGIN .postarea -->
 				<div class="postarea right clearfix">
-				
+
 					<h2 class="headline archive-headline">
-						<?php printf( __( "Search: %s", 'givingpress-lite' ), get_search_query() ); ?>
+						<?php printf( __( 'Search: %s', 'givingpress-lite' ), get_search_query() ); ?>
 					</h2>
 
 					<?php get_template_part( 'loop', 'archive' ); ?>
@@ -92,9 +92,9 @@ get_header(); ?>
 
 				<!-- BEGIN .postarea -->
 				<div class="postarea clearfix">
-				
+
 					<h2 class="headline archive-headline">
-						<?php printf( __( "Search: %s", 'givingpress-lite' ), get_search_query() ); ?>
+						<?php printf( __( 'Search: %s', 'givingpress-lite' ), get_search_query() ); ?>
 					</h2>
 
 					<?php get_template_part( 'loop', 'archive' ); ?>
@@ -122,9 +122,9 @@ get_header(); ?>
 
 				<!-- BEGIN .postarea full -->
 				<div class="postarea full clearfix">
-				
+
 					<h2 class="headline archive-headline">
-						<?php printf( __( "Search: %s", 'givingpress-lite' ), get_search_query() ); ?>
+						<?php printf( __( 'Search: %s', 'givingpress-lite' ), get_search_query() ); ?>
 					</h2>
 
 					<?php get_template_part( 'loop', 'archive' ); ?>

@@ -1,11 +1,11 @@
 <?php
 /**
-* This template displays single post content.
-*
-* @package GivingPress Lite
-* @since GivingPress Lite 1.0
-*
-*/
+ * This template displays single post content.
+ *
+ * @package GivingPress Lite
+ * @since GivingPress Lite 1.0
+ */
+
 get_header(); ?>
 
 <!-- BEGIN .post class -->
@@ -21,11 +21,11 @@ get_header(); ?>
 
 				<!-- BEGIN .eleven columns -->
 				<div class="eleven columns">
-				
+
 					<?php $thumb = ( get_the_post_thumbnail() ) ? wp_get_attachment_image_src( get_post_thumbnail_id(), 'giving-featured-medium' ) : false; ?>
-					
+
 					<?php if ( has_post_thumbnail() ) { ?>
-						<div class="feature-img post-banner" <?php if ( ! empty( $thumb ) ) { ?> style="background-image: url(<?php echo esc_url($thumb[0]); ?>);" <?php } ?>>
+						<div class="feature-img post-banner" <?php if ( ! empty( $thumb ) ) { ?> style="background-image: url(<?php echo esc_url( $thumb[0] ); ?>);" <?php } ?>>
 							<h1 class="headline img-headline"><?php the_title(); ?></h1>
 							<?php the_post_thumbnail( 'giving-featured-medium' ); ?>
 						</div>
@@ -45,7 +45,7 @@ get_header(); ?>
 				<!-- BEGIN .five columns -->
 				<div class="five columns">
 
-					<?php get_sidebar('post'); ?>
+					<?php get_sidebar( 'post' ); ?>
 
 				<!-- END .five columns -->
 				</div>
@@ -54,11 +54,11 @@ get_header(); ?>
 
 				<!-- BEGIN .sixteen columns -->
 				<div class="sixteen columns">
-					
+
 					<?php $thumb = ( get_the_post_thumbnail() ) ? wp_get_attachment_image_src( get_post_thumbnail_id(), 'giving-featured-medium' ) : false; ?>
 
 					<?php if ( has_post_thumbnail() ) { ?>
-						<div class="feature-img post-banner" <?php if ( ! empty( $thumb ) ) { ?> style="background-image: url(<?php echo esc_url($thumb[0]); ?>);" <?php } ?>>
+						<div class="feature-img post-banner" <?php if ( ! empty( $thumb ) ) { ?> style="background-image: url(<?php echo esc_url( $thumb[0] ); ?>);" <?php } ?>>
 							<h1 class="headline img-headline"><?php the_title(); ?></h1>
 							<?php the_post_thumbnail( 'giving-featured-medium' ); ?>
 						</div>

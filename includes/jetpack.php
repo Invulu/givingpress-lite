@@ -1,15 +1,15 @@
 <?php
 /**
-* Jetpack Compatibility File
-* See: http://jetpack.me/
-*
-* @package GivingPress Lite
-* @since GivingPress Lite 1.0
-*/
+ * Jetpack Compatibility File
+ * See: http://jetpack.me/
+ *
+ * @package GivingPress Lite
+ * @since GivingPress Lite 1.0
+ */
 
 /**
-* Add support for Jetpack's Featured Content
-*/
+ * Add support for Jetpack's Featured Content
+ */
 function givingpress_lite_jetpack_setup() {
 
 	// See: http://jetpack.me/support/featured-content/
@@ -22,27 +22,27 @@ function givingpress_lite_jetpack_setup() {
 add_action( 'after_setup_theme', 'givingpress_lite_jetpack_setup' );
 
 /**
-* Featured Content: get our featured posts
-*/
+ * Featured Content: get our featured posts
+ */
 function givingpress_lite_get_featured_posts() {
 	return apply_filters( 'givingpress_lite_get_featured_posts', array() );
 }
 
 /**
-* Featured Content: check if we have at least one post in our FC tag
-*/
+ * Featured Content: check if we have at least one post in our FC tag
+ */
 function givingpress_lite_has_featured_posts( $minimum = 1 ) {
-	if ( is_paged() )
-		return true;
+	if ( is_paged() ) {
+		return true; }
 
 	$minimum = absint( $minimum );
 	$featured_posts = apply_filters( 'givingpress_lite_get_featured_posts', array() );
 
-	if ( ! is_array( $featured_posts ) )
-		return false;
+	if ( ! is_array( $featured_posts ) ) {
+		return false; }
 
-	if ( $minimum > count( $featured_posts ) )
-		return false;
+	if ( $minimum > count( $featured_posts ) ) {
+		return false; }
 
 	return true;
 }

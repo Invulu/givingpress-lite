@@ -1,11 +1,11 @@
 <?php
 /**
-* This template is used to display author information, when clicking on an authors name.
-*
-* @package GivingPress Lite
-* @since GivingPress Lite 1.0
-*
-*/
+ * This template is used to display author information, when clicking on an authors name.
+ *
+ * @package GivingPress Lite
+ * @since GivingPress Lite 1.0
+ */
+
 get_header(); ?>
 
 <!-- BEGIN .post class -->

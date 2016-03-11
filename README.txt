@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.2
+GivingPress Lite Theme v1.3
 http://www.givingpress.com
 
 Image Credits
@@ -24,6 +24,17 @@ INSTALL:
 2. Activate the theme after uploading.
 3. Configure and save the theme options within Appearance > Customize.
 
+THEME SETUP:
+1. Create a Page, and apply the "Home Page" template.
+2. Create a Page, and apply the "Blog" template.
+3. Navigate to Appearance > Customize to open the WordPress Customizer.
+4. Navigate to "Static Front Page" within the Customizer.
+5. Set the Front Page to the "A static page" option.
+6. Select the Page with the "Home Page" template applied as the Front Page.
+7. Select the Page with the "Blog" template applied as the Posts Page.
+8. Navigate to "Theme Options" within the Customizer.
+9. Go through each section setting up your theme options.
+
 CHANGELOG v1.0:
 - Initial build
 
@@ -38,3 +49,9 @@ CHANGELOG v1.2:
 - WP.org updates
 - Fixed PHP errors in functions file
 - Added new base classes
+
+CHANGELOG v1.3:
+- Fixed more PHP errors throughout theme
+- Added styles for div and span tags
+- Updated function prefix
+- Added theme setup instructions to README.txt

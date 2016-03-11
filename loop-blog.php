@@ -1,23 +1,22 @@
 <?php
 /**
-* This template displays the blog loop.
-*
-* @package GivingPress Lite
-* @since GivingPress Lite 1.0
-*
-*/
+ * This template displays the blog loop.
+ *
+ * @package GivingPress Lite
+ * @since GivingPress Lite 1.0
+ */
+
 ?>
 
-<?php $wp_query = new WP_Query(array('cat'=>get_theme_mod('givingpress_lite_blog_category', '0'), 'posts_per_page'=>get_theme_mod('givingpress_lite_blog_posts', '5'), 'paged'=>$paged, 'suppress_filters'=>0)); ?>
-<?php if ($wp_query->have_posts()) : while($wp_query->have_posts()) : $wp_query->the_post(); ?>
+<?php $wp_query = new WP_Query( array( 'cat' => get_theme_mod( 'givingpress_lite_blog_category', '0' ), 'posts_per_page' => get_theme_mod( 'givingpress_lite_blog_posts', '5' ), 'paged' => $paged, 'suppress_filters' => 0 ) ); ?>
+<?php if ( $wp_query->have_posts() ) : while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
 <?php $thumb = ( get_the_post_thumbnail() ) ? wp_get_attachment_image_src( get_post_thumbnail_id(), 'giving-featured-medium' ) : false; ?>
-<?php global $more; $more = 0; ?>
 
 <!-- BEGIN .blog-holder -->
 <div class="blog-holder shadow radius-full">
 
-	<?php if ( has_post_thumbnail()) { ?>
-		<div class="feature-img post-banner" <?php if ( ! empty( $thumb ) ) { ?> style="background-image: url(<?php echo esc_url($thumb[0]); ?>);" <?php } ?>>
+	<?php if ( has_post_thumbnail() ) { ?>
+		<div class="feature-img post-banner" <?php if ( ! empty( $thumb ) ) { ?> style="background-image: url(<?php echo esc_url( $thumb[0] ); ?>);" <?php } ?>>
 			<h2 class="headline img-headline"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 			<?php the_post_thumbnail( 'giving-featured-medium' ); ?>
 		</div>
@@ -30,7 +29,7 @@
 		<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 			<div class="post-date">
-				<p><i class="fa fa-clock-o"></i> <?php givingpress_lite_posted_on(); ?> <span class="align-right"><i class="fa fa-comment"></i> <a class="scroll" href="<?php the_permalink(); ?>#comments"><?php comments_number( esc_html__('Leave a Comment', 'givingpress-lite'), esc_html__('1 Comment', 'givingpress-lite'), esc_html__('% Comments', 'givingpress-lite') ); ?></a></span></p>
+				<p><i class="fa fa-clock-o"></i> <?php givingpress_lite_posted_on(); ?> <span class="align-right"><i class="fa fa-comment"></i> <a class="scroll" href="<?php the_permalink(); ?>#comments"><?php comments_number( esc_html__( 'Leave a Comment', 'givingpress-lite' ), esc_html__( '1 Comment', 'givingpress-lite' ), esc_html__( '% Comments', 'givingpress-lite' ) ); ?></a></span></p>
 			</div>
 
 			<?php if ( ! has_post_thumbnail() ) { ?>
@@ -40,7 +39,7 @@
 			<!-- BEGIN .article -->
 			<div class="article">
 
-				<?php the_content( esc_attr__("Read More", 'givingpress-lite')); ?>
+				<?php the_content( esc_attr__( 'Read More', 'givingpress-lite' ) ); ?>
 
 			<!-- END .article -->
 			</div>
@@ -56,13 +55,13 @@
 
 <?php endwhile; ?>
 
-	<?php if ($wp_query->max_num_pages > 1) { ?>
-	
+	<?php if ( $wp_query->max_num_pages > 1 ) { ?>
+
 		<?php the_posts_pagination( array(
 		    'prev_text' => esc_attr__( '&laquo;', 'givingpress-lite' ),
 		    'next_text' => esc_attr__( '&raquo;', 'givingpress-lite' ),
 		) ); ?>
-		
+
 	<?php } ?>
 
 <?php else : ?>

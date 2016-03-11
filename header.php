@@ -1,25 +1,25 @@
 <?php
 /**
-* The Header for our theme.
-* Displays all of the <head> section and everything up till <div id="wrap">
-*
-* @package GivingPress Lite
-* @since GivingPress Lite 1.0
-*
-*/
+ * The Header for our theme.
+ * Displays all of the <head> section and everything up till <div id="wrap">
+ *
+ * @package GivingPress Lite
+ * @since GivingPress Lite 1.0
+ */
+
 ?><!DOCTYPE html>
 
 <html class="no-js" <?php language_attributes(); ?>>
 
 <head>
 
-	<meta charset="<?php bloginfo('charset'); ?>">
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
 
 	<!-- Mobile View -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="pingback" href="<?php echo esc_url( bloginfo('pingback_url') ); ?>">
+	<link rel="pingback" href="<?php echo esc_url( bloginfo( 'pingback_url' ) ); ?>">
 
 	<?php wp_head(); ?>
 
@@ -57,7 +57,7 @@
 
 			</div>
 
-			<?php if ( get_theme_mod('givingpress_lite_display_header_search', '1') == '1') { ?>
+			<?php if ( '1' === get_theme_mod( 'givingpress_lite_display_header_search', '1' ) ) { ?>
 
 			<div class="align-right">
 
@@ -113,7 +113,7 @@
 					'depth' 			=> 4,
 					'fallback_cb'     	=> 'wp_page_menu',
 					'container_class' 	=> '',
-					'menu_class'      	=> 'menu'
+					'menu_class'      	=> 'menu',
 					)
 				); ?>
 
@@ -143,7 +143,7 @@
 
 <?php $header_image = get_header_image(); ?>
 
-<?php if ( is_home() || is_page_template('template-home.php') || is_single() || is_404() || is_attachment() || is_archive() || is_search() || is_page() && ! has_post_thumbnail() ) { ?>
+<?php if ( is_home() || is_page_template( 'template-home.php' ) || is_single() || is_404() || is_attachment() || is_archive() || is_search() || is_page() && ! has_post_thumbnail() ) { ?>
 <?php if ( 'blank' != get_theme_mod( 'header_textcolor' ) || ! empty( $header_image ) ) { ?>
 
 <!-- BEGIN #header -->
@@ -182,7 +182,7 @@
 
 			<?php if ( ! empty( $header_image ) ) { ?>
 
-			<img class="hide-img" src="<?php header_image(); ?>" height="<?php echo esc_attr(get_custom_header()->height); ?>" width="<?php echo esc_attr(get_custom_header()->width); ?>" alt="<?php echo esc_attr( get_bloginfo() ); ?>" />
+			<img class="hide-img" src="<?php header_image(); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="<?php echo esc_attr( get_bloginfo() ); ?>" />
 
 			<?php } ?>
 
