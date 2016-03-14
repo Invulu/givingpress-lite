@@ -21,30 +21,30 @@ function givingpress_lite_fonts_url() {
 	$montserrat = _x( 'on', 'Montserrat font: on or off', 'givingpress-lite' );
 	$raleway = _x( 'on', 'Raleway font: on or off', 'givingpress-lite' );
 
-	if ( 'off' !== $oswald || 'off' !== $open_sans || 'off' !== $merriweather || 'off' !== $playfair || 'off' !== $montserrat || 'off' !== $raleway ) {
+	if ( 'off' != $oswald || 'off' != $open_sans || 'off' != $merriweather || 'off' != $playfair || 'off' != $montserrat || 'off' != $raleway ) {
 		$font_families = array();
 
-		if ( 'off' !== $oswald ) {
+		if ( 'off' != $oswald ) {
 			$font_families[] = 'Oswald:400,700,300';
 		}
 
-		if ( 'off' !== $open_sans ) {
+		if ( 'off' != $open_sans ) {
 			$font_families[] = 'Open Sans:400,300,600,700,800,800italic,700italic,600italic,400italic,300italic';
 		}
 
-		if ( 'off' !== $merriweather ) {
+		if ( 'off' != $merriweather ) {
 			$font_families[] = 'Merriweather:400,700,300,900';
 		}
 
-		if ( 'off' !== $playfair ) {
+		if ( 'off' != $playfair ) {
 			$font_families[] = 'Playfair Display:400,400italic,700,700italic,900,900italic';
 		}
 
-		if ( 'off' !== $montserrat ) {
+		if ( 'off' != $montserrat ) {
 			$font_families[] = 'Montserrat:400,700';
 		}
 
-		if ( 'off' !== $raleway ) {
+		if ( 'off' != $raleway ) {
 			$font_families[] = 'Raleway:400,100,200,300,500,600,700,800,900';
 		}
 

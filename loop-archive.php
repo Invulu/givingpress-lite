@@ -17,7 +17,7 @@
 
 	<div class="post-date">
 		<p class="align-left"><i class="fa fa-clock-o"></i>
-			<?php if ( get_the_modified_time() !== get_the_time() ) { ?>
+			<?php if ( get_the_modified_time() != get_the_time() ) { ?>
 				<?php esc_html_e( 'Updated on', 'givingpress-lite' ); ?> <?php the_modified_date( esc_html__( 'F j, Y', 'givingpress-lite' ) ); ?>
 			<?php } else { ?>
 				<?php esc_html_e( 'Posted on', 'givingpress-lite' ); ?> <?php the_time( esc_html__( 'F j, Y', 'givingpress-lite' ) ); ?>

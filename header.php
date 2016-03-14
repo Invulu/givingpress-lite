@@ -57,7 +57,7 @@
 
 			</div>
 
-			<?php if ( '1' === get_theme_mod( 'givingpress_lite_display_header_search', '1' ) ) { ?>
+			<?php if ( '1' == get_theme_mod( 'givingpress_lite_display_header_search', '1' ) ) { ?>
 
 			<div class="align-right">
 

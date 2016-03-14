@@ -10,7 +10,7 @@ Template Name: Home Page
 
 get_header(); ?>
 
-<?php if ( get_theme_mod( 'givingpress_lite_donation_tagline', 'Donations Are Welcome' ) && '' !== get_theme_mod( 'givingpress_lite_donation_tagline', 'Donations Are Welcome' ) ) { ?>
+<?php if ( get_theme_mod( 'givingpress_lite_donation_tagline', 'Donations Are Welcome' ) && '' != get_theme_mod( 'givingpress_lite_donation_tagline', 'Donations Are Welcome' ) ) { ?>
 
 <!-- BEGIN .featured-donation -->
 <section class="featured-donation shadow">
@@ -21,7 +21,7 @@ get_header(); ?>
 		<!-- BEGIN .content -->
 		<div class="content donation">
 
-			<?php if ( get_theme_mod( 'givingpress_lite_donation_link', '#' ) && '' !== get_theme_mod( 'givingpress_lite_donation_link', '#' ) ) { ?>
+			<?php if ( get_theme_mod( 'givingpress_lite_donation_link', '#' ) && '' != get_theme_mod( 'givingpress_lite_donation_link', '#' ) ) { ?>
 
 			<div class="twelve columns">
 				<h2><?php echo get_theme_mod( 'givingpress_lite_donation_tagline', 'Donations Are Welcome' ); ?></h2>
@@ -129,7 +129,7 @@ get_header(); ?>
 
 <?php } ?>
 
-<?php if ( '' === get_theme_mod( 'givingpress_lite_page_one' ) && '' === get_theme_mod( 'givingpress_lite_page_four' ) || '' === get_theme_mod( 'givingpress_lite_page_two' ) && '' === get_theme_mod( 'givingpress_lite_page_four' ) || '' === get_theme_mod( 'givingpress_lite_page_three' ) && '' === get_theme_mod( 'givingpress_lite_page_four' ) ) { ?>
+<?php if ( '' == get_theme_mod( 'givingpress_lite_page_one' ) && '' == get_theme_mod( 'givingpress_lite_page_four' ) || '' == get_theme_mod( 'givingpress_lite_page_two' ) && '' == get_theme_mod( 'givingpress_lite_page_four' ) || '' == get_theme_mod( 'givingpress_lite_page_three' ) && '' == get_theme_mod( 'givingpress_lite_page_four' ) ) { ?>
 
 <!-- BEGIN .set-options -->
 <section class="set-options">

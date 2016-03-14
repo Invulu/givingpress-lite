@@ -202,7 +202,7 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 	 * @return array
 	 */
 	function givingpress_lite_sanitize_checkbox( $input ) {
-		if ( 1 === $input ) {
+		if ( 1 == $input ) {
 			return 1;
 		} else {
 			return '';
@@ -352,10 +352,10 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 			'sanitize_callback' => 'givingpress_lite_sanitize_text',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'givingpress_lite_contact_phone', array(
-			'label'		=> esc_html__( 'Company Phone Number', 'givingpress-lite' ),
-			'section'	=> 'givingpress_lite_contact_section',
+			'label'			=> esc_html__( 'Company Phone Number', 'givingpress-lite' ),
+			'section'		=> 'givingpress_lite_contact_section',
 			'settings'	=> 'givingpress_lite_contact_phone',
-			'type'		=> 'text',
+			'type'			=> 'text',
 			'priority' 	=> 60,
 		) ) );
 
@@ -365,11 +365,11 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 			'sanitize_callback' => 'givingpress_lite_sanitize_checkbox',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'givingpress_lite_display_header_search', array(
-			'label'		=> esc_html__( 'Display Search Field?', 'givingpress-lite' ),
-			'section'	=> 'givingpress_lite_contact_section',
+			'label'			=> esc_html__( 'Display Search Field?', 'givingpress-lite' ),
+			'section'		=> 'givingpress_lite_contact_section',
 			'settings'	=> 'givingpress_lite_display_header_search',
-			'type'		=> 'checkbox',
-			'priority' => 80,
+			'type'			=> 'checkbox',
+			'priority' 	=> 80,
 		) ) );
 
 		/*

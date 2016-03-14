@@ -37,7 +37,7 @@
 	'previouspagelink' => esc_html__( 'Previous', 'givingpress-lite' ),
 	'pagelink' => '%',
 	'echo' => 1,
-	),
+	)
 ); ?>
 
 <?php edit_post_link( esc_html__( '(Edit)', 'givingpress-lite' ), '', '' ); ?>
@@ -61,7 +61,7 @@
 <!-- END .post-navigation -->
 </div>
 
-<?php if ( comments_open() || '0' !== get_comments_number() ) { comments_template(); } ?>
+<?php if ( comments_open() || '0' != get_comments_number() ) { comments_template(); } ?>
 
 <div class="clear"></div>
 

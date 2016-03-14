@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.3
+GivingPress Lite Theme v1.3.1
 http://www.givingpress.com
 
 Image Credits
@@ -55,3 +55,7 @@ CHANGELOG v1.3:
 - Added styles for div and span tags
 - Updated function prefix
 - Added theme setup instructions to README.txt
+
+CHANGELOG v1.3.1:
+- Bug fixes
+- Updated screenshot

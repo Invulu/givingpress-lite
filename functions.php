@@ -247,7 +247,7 @@ if ( ! function_exists( 'givingpress_lite_comment' ) ) :
 				<div class="comment-author vcard">
 					<?php
 						$avatar_size = 72;
-					if ( '0' !== $comment->comment_parent ) {
+					if ( '0' != $comment->comment_parent ) {
 						$avatar_size = 48; }
 
 						echo get_avatar( $comment, $avatar_size );
@@ -266,7 +266,7 @@ if ( ! function_exists( 'givingpress_lite_comment' ) ) :
 				</footer>
 
 				<div class="comment-content">
-					<?php if ( '0' === $comment->comment_approved ) : ?>
+					<?php if ( '0' == $comment->comment_approved ) : ?>
 					<em class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'givingpress-lite' ); ?></em>
 					<br />
 				<?php endif; ?>
@@ -321,7 +321,7 @@ add_filter( 'excerpt_more', 'givingpress_lite_excerpt_more' );
 
 /** Function givingpress_lite_posted_on */
 function givingpress_lite_posted_on() {
-	if ( get_the_modified_time() !== get_the_time() ) {
+	if ( get_the_modified_time() != get_the_time() ) {
 		printf( __( '<span class="%1$s">Last Updated:</span> %2$s <span class="meta-sep">by</span> %3$s', 'givingpress-lite' ),
 			'meta-prep meta-prep-author',
 			sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><span class="entry-date">%3$s</span></a>',
@@ -367,7 +367,7 @@ function givingpress_lite_posted_on() {
 function givingpress_lite_wp_link_pages_args_prevnext_add( $args ) {
 	global $page, $numpages, $more, $pagenow;
 
-	if ( 'next_and_number' === ! $args['next_or_number'] ) {
+	if ( 'next_and_number' == ! $args['next_or_number'] ) {
 		return $args; }
 
 	$args['next_or_number'] = 'number'; // Keep numbering for the main part.
@@ -424,31 +424,31 @@ function givingpress_lite_body_class( $classes ) {
 	if ( empty( $header_image ) ) {
 		$classes[] = 'givingpress-lite-header-inactive'; }
 
-	if ( 'blank' !== get_theme_mod( 'header_textcolor' ) ) {
+	if ( 'blank' != get_theme_mod( 'header_textcolor' ) ) {
 		$classes[] = 'givingpress-lite-title-active'; }
 
-	if ( 'blank' === get_theme_mod( 'header_textcolor' ) ) {
+	if ( 'blank' == get_theme_mod( 'header_textcolor' ) ) {
 		$classes[] = 'givingpress-lite-title-inactive'; }
 
 	if ( get_theme_mod( 'givingpress_lite_logo', get_template_directory_uri() . '/images/logo.png' ) ) {
 		$classes[] = 'givingpress-lite-logo-active'; }
 
-	if ( 'left' === get_theme_mod( 'givingpress_lite_description_align', 'left' ) ) {
+	if ( 'left' == get_theme_mod( 'givingpress_lite_description_align', 'left' ) ) {
 		$classes[] = 'givingpress-lite-description-left'; }
 
-	if ( 'center' === get_theme_mod( 'givingpress_lite_description_align' ) ) {
+	if ( 'center' == get_theme_mod( 'givingpress_lite_description_align' ) ) {
 		$classes[] = 'givingpress-lite-description-center'; }
 
-	if ( 'right' === get_theme_mod( 'givingpress_lite_description_align' ) ) {
+	if ( 'right' == get_theme_mod( 'givingpress_lite_description_align' ) ) {
 		$classes[] = 'givingpress-lite-description-right'; }
 
-	if ( 'left' === get_theme_mod( 'givingpress_lite_logo_align', 'left' ) ) {
+	if ( 'left' == get_theme_mod( 'givingpress_lite_logo_align', 'left' ) ) {
 		$classes[] = 'givingpress-lite-logo-left'; }
 
-	if ( 'center' === get_theme_mod( 'givingpress_lite_logo_align' ) ) {
+	if ( 'center' == get_theme_mod( 'givingpress_lite_logo_align' ) ) {
 		$classes[] = 'givingpress-lite-logo-center'; }
 
-	if ( 'right' === get_theme_mod( 'givingpress_lite_logo_align' ) ) {
+	if ( 'right' == get_theme_mod( 'givingpress_lite_logo_align' ) ) {
 		$classes[] = 'givingpress-lite-logo-right'; }
 
 	if ( get_theme_mod( 'givingpress_lite_contact_email', 'info@givingpress.com' ) || get_theme_mod( 'givingpress_lite_contact_phone', '808.123.4567' ) || get_theme_mod( 'givingpress_lite_contact_address', '231 Front Street, Lahaina, HI 96761' ) ) {
@@ -484,7 +484,7 @@ add_action( 'body_class', 'givingpress_lite_body_class' );
  * @return array
  */
 function givingpress_lite_post_classes( $classes, $class, $post_id ) {
-	if ( 0 === get_comments_number( $post_id ) ) {
+	if ( 0 == get_comments_number( $post_id ) ) {
 		$classes[] = 'no-comments';
 	}
 	return $classes;
@@ -522,7 +522,7 @@ if ( ! function_exists( 'givingpress_lite_posted_on' ) ) {
 	 */
 	function givingpress_lite_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+		if ( get_the_time( 'U' ) != get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
 		}
 		$time_string = sprintf( $time_string,
