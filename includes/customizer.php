@@ -240,9 +240,12 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 	// Set site title color to be previewed in real-time.
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
-	// -------------------------------------------------------------------------------------------------------------------//
-	// Site Title Section
-	// -------------------------------------------------------------------------------------------------------------------//
+	/*
+	-------------------------------------------------------------------------------------------------------
+		Site Title Section
+	-------------------------------------------------------------------------------------------------------
+	*/
+
 	$wp_customize->add_section( 'title_tagline' , array(
 		'title'       => esc_html__( 'Site Title, Tagline & Logo', 'givingpress-lite' ),
 		'priority'    => 1,
@@ -262,19 +265,19 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 
 		// Logo Align.
 		$wp_customize->add_setting( 'givingpress_lite_logo_align', array(
-		    'default' 			=> 'left',
-		    'sanitize_callback' => 'givingpress_lite_sanitize_align',
+			'default' 			=> 'left',
+			'sanitize_callback' => 'givingpress_lite_sanitize_align',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'givingpress_lite_logo_align', array(
-		    'type'		=> 'radio',
-		    'label' 	=> esc_html__( 'Logo Alignment', 'givingpress-lite' ),
-		    'section' 	=> 'title_tagline',
-		    'choices' 	=> array(
-		        'left' 		=> esc_html__( 'Left Align', 'givingpress-lite' ),
-		        'center' 	=> esc_html__( 'Center Align', 'givingpress-lite' ),
-		        'right' 	=> esc_html__( 'Right Align', 'givingpress-lite' ),
-		    ),
-		    'priority' => 45,
+			'type'		=> 'radio',
+			'label' 	=> esc_html__( 'Logo Alignment', 'givingpress-lite' ),
+			'section' 	=> 'title_tagline',
+			'choices' 	=> array(
+				'left' 		=> esc_html__( 'Left Align', 'givingpress-lite' ),
+				'center' 	=> esc_html__( 'Center Align', 'givingpress-lite' ),
+				'right' 	=> esc_html__( 'Right Align', 'givingpress-lite' ),
+			),
+			'priority' => 45,
 		) ) );
 
 		// Site Title Align.

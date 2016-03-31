@@ -209,7 +209,7 @@ function givingpress_lite_add_editor_styles() {
 
 /** Function givingpress_lite_content_width */
 function givingpress_lite_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'givingpress_lite_content_width', 980 );
+	$GLOBALS['content_width'] = apply_filters( 'givingpress_lite_content_width', 1080 );
 }
 add_action( 'after_setup_theme', 'givingpress_lite_content_width', 0 );
 
@@ -235,7 +235,8 @@ if ( ! function_exists( 'givingpress_lite_comment' ) ) :
 			case 'trackback' :
 		?>
 		<li class="post pingback">
-		<p><?php esc_html_e( 'Pingback:', 'givingpress-lite' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( esc_html__( 'Edit', 'givingpress-lite' ), '<span class="edit-link">', '</span>' ); ?></p>
+			<p><?php esc_html_e( 'Pingback:', 'givingpress-lite' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( esc_html__( 'Edit', 'givingpress-lite' ), '<span class="edit-link">', '</span>' ); ?></p>
+		</li>
 	<?php
 		break;
 			default :
@@ -277,7 +278,9 @@ if ( ! function_exists( 'givingpress_lite_comment' ) ) :
 					<?php edit_comment_link( esc_html__( 'Edit', 'givingpress-lite' ), '<span class="edit-link">', '</span>' ); ?>
 				</div>
 
-			</article><!-- #comment-## -->
+			</article><!-- End #comment-# -->
+
+		</li><!-- End #li-comment-# -->
 
 		<?php
 		break;
@@ -490,24 +493,6 @@ function givingpress_lite_post_classes( $classes, $class, $post_id ) {
 	return $classes;
 }
 add_filter( 'post_class', 'givingpress_lite_post_classes', 10, 3 );
-
-/*
------------------------------------------------------------------------------------------------
-	Retrieve email value from Customizer and add mailto protocol
------------------------------------------------------------------------------------------------
-*/
-
-/**
- * Retrieve email value from Customizer.
- */
-function givingpress_lite_get_email_link() {
-	$email = get_theme_mod( 'givingpress_lite_link_email' );
-
-	if ( ! $email ) {
-		return false; }
-
-	return 'mailto:' . sanitize_email( $email );
-}
 
 /*
 -------------------------------------------------------------------------------------------------------
