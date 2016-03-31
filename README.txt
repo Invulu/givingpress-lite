@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.3.1
+GivingPress Lite Theme v1.3.2
 http://www.givingpress.com
 
 Image Credits
@@ -59,3 +59,6 @@ CHANGELOG v1.3:
 CHANGELOG v1.3.1:
 - Bug fixes
 - Updated screenshot
+
+CHANGELOG v1.3.2:
+- Added closing li tags to comments function
