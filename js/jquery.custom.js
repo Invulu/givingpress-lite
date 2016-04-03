@@ -14,8 +14,49 @@
 			autoArrows:  true,
 			dropShadows: false
 		});
+
+		// Fix Superfish menu if off screen.
+		var sfMainWindowWidth = $(window).width();
+
+		$('ul.menu li').mouseover(function() {
+
+			// Checks if second level menu exist.
+			var subMenuExist = $(this).find('.sub-menu').length;
+			if ( subMenuExist > 0 ) {
+				var subMenuWidth = $(this).find('.sub-menu').width();
+				var subMenuOffset = $(this).find('.sub-menu').parent().offset().left;
+
+				// If sub menu is off screen, give new position.
+				if ( (subMenuOffset + subMenuWidth) > sfMainWindowWidth ) {
+					$(this).find('.sub-menu').css({
+						right: 0,
+					});
+					$(this).find('.sub-menu').css({
+						left: 'auto',
+					});
+				}
+			}
+		});
+
+		$('ul.menu li').mouseover(function() {
+
+			// Checks if third level menu exist.
+			var subMenuExist = $(this).find('.sub-menu').length;
+			if ( subMenuExist > 0 ) {
+				var subMenuWidth = $(this).find('.sub-menu').width();
+				var subMenuOffset = $(this).find('.sub-menu').parent().offset().left + subMenuWidth;
+
+				// If sub menu is off screen, give new position.
+				if ( (subMenuOffset + subMenuWidth) > sfMainWindowWidth ) {
+					var newSubMenuPosition = subMenuWidth + 24;
+					$(this).find('.sub-menu .sub-menu').css({
+						left: -newSubMenuPosition,
+					});
+				}
+			}
+		});
 	}
-	
+
 	/* Disable Superfish on mobile ---------------------*/
 	function superfishMobile() {
 		var sf, body;
@@ -63,7 +104,7 @@
 			});
 		}
 	}
-	
+
 	/* Equal Height Columns ---------------------*/
 	function equalHeight() {
 		var currentTallest 	= 0,
@@ -71,12 +112,12 @@
 			rowDivs 		= new Array(),
 			$el,
 			topPosition 	= 0;
-		
+
 		$('.featured-pages .content').each(function() {
 			$el = $(this);
 			$($el).height('auto')
 			topPostion = $el.position().top;
-			
+
 			if (currentRowStart != topPostion) {
 				for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
 					rowDivs[currentDiv].height(currentTallest);
@@ -85,7 +126,7 @@
 				currentRowStart = topPostion;
 				currentTallest = $el.height();
 				rowDivs.push($el);
-			
+
 			} else {
 				rowDivs.push($el);
 				currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
@@ -97,7 +138,7 @@
 	}
 
 	function modifyPosts() {
-	
+
 		/* Fit Vids ---------------------*/
 		$('.feature-vid, .content').fitVids();
 
