@@ -1,13 +1,13 @@
 /*******************************************************************************************************************
 
 	Theme Name: GivingPress Lite
-	Theme URI: https://preview.givingpress.com/
+	Theme URI: http://givingpress.com/free-wordpress-nonprofit-theme-givingpress-lite/
 	Description: The lite version of the GivingPress theme created for nonprofit organizations and conscious business owners. GivingPress provides website solutions for organizations. The theme is for charities, churches, scholarships, scientific reasearch and humanitarian sites.
 	Author: GivingPress
-	Author URI: https://givingpress.com/
+	Author URI: http://givingpress.com/
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.3.3
+	Version: 1.4
 	Text Domain: givingpress-lite
 	Tags: light, gray, white, green, one-column, two-columns, three-columns, right-sidebar, fluid-layout, custom-background, custom-header, custom-menu, featured-images, featured-image-header, flexible-header, full-width-template, theme-options, translation-ready, sticky-post, featured-images
 
@@ -474,9 +474,8 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 	font-size: 1.6em;
 	font-family: 'Raleway', Arial, sans-serif;
 	font-style: normal;
-	font-weight: 700;
-	text-transform: uppercase;
-	letter-spacing: -1px;
+	font-weight: 400;
+	letter-spacing: 0px;
 	line-height: 1.2;
 	margin: 0px;
 	padding: 12px 0px;
@@ -492,24 +491,14 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 #header-content {
 	width: 100%;
 }
-#logo {
-	display: block;
-	line-height: 0;
-	margin: 0px;
-	padding: 0px;
+.custom-logo-link {
+	display: inline-block;
+	max-width: 100%;
 }
-#logo a {
-	display: block;
-	max-width: 320px;
-	padding: 0px;
-}
-#logo img {
-	max-height: 80px;
-}
-#logo .logo-text {
-	float: left;
-	text-align: left;
-	text-indent: -9999px;
+.custom-logo-link img {
+	width: auto;
+	height: auto;
+	max-height: 120px;
 }
 #masthead {
 	display: block;
@@ -556,26 +545,26 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 .givingpress-lite-title-active.givingpress-lite-header-active #masthead .site-description {
 	text-shadow: 0px 0px 4px rgba(0, 0, 0, .24);
 }
-.givingpress-lite-logo-left #logo,
+.givingpress-lite-logo-left .custom-logo-link,
 .givingpress-lite-logo-left .site-title,
 .givingpress-lite-description-left #masthead {
 	float: left;
 	text-align: left;
 }
-.givingpress-lite-logo-right #logo,
+.givingpress-lite-logo-right .custom-logo-link,
 .givingpress-lite-logo-right .site-title,
 .givingpress-lite-description-right #masthead {
 	float: right;
 	text-align: right;
 }
-.givingpress-lite-logo-center #logo,
+.givingpress-lite-logo-center .custom-logo-link,
 .givingpress-lite-logo-center .site-title,
 .givingpress-lite-logo-center #navigation,
 .givingpress-lite-description-center #masthead {
 	text-align: center;
 	width: 100%;
 }
-.givingpress-lite-logo-center #logo a,
+.givingpress-lite-logo-center .custom-logo-link a,
 .givingpress-lite-description-center #masthead .site-description {
 	margin: 0px auto 0px;
 }

@@ -2,22 +2,32 @@ GivingPress Lite Theme v1.3.3
 http://www.givingpress.com
 
 Image Credits
-
 - logo.png: Created by David Morgan, http://dav.idmorgan.com. Licensed under the GPLv2 license.
 - logo.psd: Created by David Morgan, http://dav.idmorgan.com. Licensed under the GPLv2 license.
 - screenshot.png: Created by David Morgan, http://dav.idmorgan.com. Licensed under the GPLv2 license.
-- header.jpg: Downloaded from Unsplash, https://unsplash.com. Licensed under Creative Commons Zero license, https://unsplash.com/license.
-- header-thumb.jpg: Downloaded from Unsplash, https://unsplash.com. Licensed under Creative Commons Zero license, https://unsplash.com/license.
-- default-image.jpg: Downloaded from Unsplash, https://unsplash.com. Licensed under Creative Commons Zero license, https://unsplash.com/license.
+- header.jpg: Downloaded from Unsplash, https://unsplash.com/photos/n9SLYuyyZhQ. Licensed under Creative Commons Zero license, https://unsplash.com/license.
+- header-thumb.jpg: Downloaded from Unsplash, https://unsplash.com/photos/n9SLYuyyZhQ. Licensed under Creative Commons Zero license, https://unsplash.com/license.
+- default-image.jpg: Downloaded from Unsplash, https://unsplash.com/photos/N9yFjkDc0vA. Licensed under Creative Commons Zero license, https://unsplash.com/license.
 
 Font Awesome
-
 - Font License: SIL OFL 1.1 http://scripts.sil.org/OFL
 - Code License: MIT License http://opensource.org/licenses/mit-license.html
 
 Navigation.js
+- Copyright 2014 Organic Themes
+- Licensed under the GPLv2 license, http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
-- Licensed under the GPLv2 license.
+FlexSlider.js
+- Copyright 2012 WooThemes
+- Licensed under the GPLv2 license, http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
+
+FitVids.js
+- Copyright 2013, Chris Coyier and Dave Rupert, http://css-tricks.com, http://daverupert.com
+- Released under the WTFPL license, http://sam.zoy.org/wtfpl/
+
+Superfish.js
+- Copyright (c) 2013 Joel Birch
+- Dual licensed under the MIT and GPL licenses,	http://www.opensource.org/licenses/mit-license.php,	http://www.gnu.org/licenses/gpl.html
 
 INSTALL:
 1. Upload the theme by navigating to Appearance > Themes > Install Themes within the WordPress admin. Select the theme zip file to upload.
@@ -66,3 +76,17 @@ CHANGELOG v1.3.2:
 CHANGELOG v1.3.3:
 - Fixed submenu from going off screen
 - Style tweaks
+
+CHANGELOG v1.4:
+- Final review updates
+- Removed some unnecessary customizer blog options
+- Made admin notice dismissible
+- Added WP custom logo
+- Listed all resources and links in readme.txt
+- Included only one credit link in footer
+- Updated Theme URI in stylesheet
+- Only logged users can view front end notifications
+- Updated escaping and sanitization
+- Removed hoverintent.js file
+- Removed prefixing on some styles and scripts
+- Added missing translations in customizer

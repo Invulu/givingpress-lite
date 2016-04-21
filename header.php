@@ -81,24 +81,7 @@
 		<!-- BEGIN .content -->
 		<div class="content">
 
-		<?php if ( get_theme_mod( 'givingpress_lite_logo', get_template_directory_uri() . '/images/logo.png' ) ) { ?>
-
-			<!-- BEGIN #logo -->
-			<h1 id="logo">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-					<img src="<?php echo esc_url( get_theme_mod( 'givingpress_lite_logo', get_template_directory_uri() . '/images/logo.png' ) ); ?>" alt="" />
-					<h1 class="hide-text"><?php echo wp_kses_post( get_bloginfo( 'name' ) ); ?></h1>
-				</a>
-			<!-- END #logo -->
-			</h1>
-
-		<?php } else { ?>
-
-			<h1 class="site-title">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo wp_kses_post( get_bloginfo( 'name' ) ); ?></a>
-			</h1>
-
-		<?php } ?>
+		<?php givingpress_lite_custom_logo(); ?>
 
 		<?php if ( has_nav_menu( 'main-menu' ) ) { ?>
 
@@ -120,7 +103,7 @@
 			<!-- END #navigation -->
 			</nav>
 
-		<?php } else { ?>
+		<?php } elseif ( current_user_can( 'publish_posts' ) ) { ?>
 
 			<!-- BEGIN #navigation -->
 			<nav id="navigation" class="navigation-main vertical-center" role="navigation">

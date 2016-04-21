@@ -216,7 +216,27 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 	 * @return array
 	 */
 	function givingpress_lite_sanitize_text( $input ) {
-	    return wp_kses_post( force_balance_tags( $input ) );
+		return wp_kses_post( force_balance_tags( $input ) );
+	}
+
+	/**
+	 * Sanitize Integer Input.
+	 *
+	 * @param array $input Sanitizes user input.
+	 * @return array
+	 */
+	function givingpress_lite_sanitize_integer( $input ) {
+		return absint( $input );
+	}
+
+	/**
+	 * Sanitize IURL Input.
+	 *
+	 * @param array $input Sanitizes user input.
+	 * @return array
+	 */
+	function givingpress_lite_sanitize_url( $input ) {
+		return esc_url_raw( $input );
 	}
 
 	/**
@@ -247,21 +267,9 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 	*/
 
 	$wp_customize->add_section( 'title_tagline' , array(
-		'title'       => esc_html__( 'Site Title, Tagline & Logo', 'givingpress-lite' ),
+		'title'       => esc_html__( 'Site Identity', 'givingpress-lite' ),
 		'priority'    => 1,
 	) );
-
-		// Logo Uploader.
-		$wp_customize->add_setting( 'givingpress_lite_logo', array(
-			'default' 			=> get_template_directory_uri() . '/images/logo.png',
-			'sanitize_callback' => 'esc_url_raw',
-		) );
-		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'givingpress_lite_logo', array(
-			'label' 	=> esc_html__( 'Logo', 'givingpress-lite' ),
-			'section' 	=> 'title_tagline',
-			'settings'	=> 'givingpress_lite_logo',
-			'priority'	=> 40,
-		) ) );
 
 		// Logo Align.
 		$wp_customize->add_setting( 'givingpress_lite_logo_align', array(
@@ -402,7 +410,7 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 
 		// Donation Description.
 		$wp_customize->add_setting( 'givingpress_lite_donation_description', array(
-			'default' => 'Enter a brief message about accepting donations for your cause. Edit the content in this section within the WordPress Customizer.',
+			'default' => esc_html__( 'Enter a brief message about accepting donations for your cause. Edit the content in this section within the WordPress Customizer.', 'givingpress-lite' ),
 			'sanitize_callback' => 'givingpress_lite_sanitize_text',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'givingpress_lite_donation_description', array(
@@ -415,8 +423,8 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 
 		// Featured Link.
 		$wp_customize->add_setting( 'givingpress_lite_donation_link', array(
-			'default' => '#',
-			'sanitize_callback' => 'givingpress_lite_sanitize_text',
+			'default' => esc_html__( '#', 'givingpress-lite' ),
+			'sanitize_callback' => 'givingpress_lite_sanitize_url',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'givingpress_lite_donation_link', array(
 			'label'		=> esc_html__( 'Donation Link', 'givingpress-lite' ),
@@ -489,44 +497,6 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 			'settings'	=> 'givingpress_lite_page_four',
 			'type'		=> 'dropdown-pages',
 			'priority' => 100,
-		) ) );
-
-		/*
-		-------------------------------------------------------------------------------------------------------
-			Page Templates
-		-------------------------------------------------------------------------------------------------------
-		*/
-
-		$wp_customize->add_section( 'givingpress_lite_templates_section' , array(
-			'title'       => esc_html__( 'Blog Template', 'givingpress-lite' ),
-			'priority'    => 104,
-			'panel' => 'givingpress_lite_theme_options',
-		) );
-
-		// Blog Category.
-		$wp_customize->add_setting( 'givingpress_lite_blog_category', array(
-	        'default' => '0',
-	        'sanitize_callback' => 'givingpress_lite_sanitize_categories',
-	    ) );
-		$wp_customize->add_control( new GivingPress_Lite_Category_Dropdown_Control( $wp_customize, 'givingpress_lite_blog_category', array(
-	        'type'	=> 'dropdown-categories',
-	        'label' => esc_html__( 'Blog Template Category', 'givingpress-lite' ),
-	        'section' => 'givingpress_lite_templates_section',
-	        'settings'	=> 'givingpress_lite_blog_category',
-	        'priority' => 10,
-		) ) );
-
-		// Number of Blog Posts to Display.
-		$wp_customize->add_setting( 'givingpress_lite_blog_posts', array(
-			'default' => '5',
-			'sanitize_callback' => 'givingpress_lite_sanitize_text',
-		) );
-		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'givingpress_lite_blog_posts', array(
-			'label'		=> esc_html__( 'Blog Posts to Display', 'givingpress-lite' ),
-			'section'	=> 'givingpress_lite_templates_section',
-			'settings'	=> 'givingpress_lite_blog_posts',
-			'type'		=> 'text',
-			'priority' => 20,
 		) ) );
 
 }
