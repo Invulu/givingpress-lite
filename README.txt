@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.3.3
+GivingPress Lite Theme v1.4
 http://www.givingpress.com
 
 Image Credits
