@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.4
+GivingPress Lite Theme v1.4.2
 http://www.givingpress.com
 
 Image Credits
@@ -90,3 +90,12 @@ CHANGELOG v1.4:
 - Removed hoverintent.js file
 - Removed prefixing on some styles and scripts
 - Added missing translations in customizer
+
+CHANGELOG v1.4.1:
+- Added max-width percentages to site title and navigation
+- Added selective refresh to customizer
+- Added break-word to headings
+
+CHANGELOG v1.4.2:
+- Fixed prefixing on new function
+- Added more "word-wrap: break-word;" style properties

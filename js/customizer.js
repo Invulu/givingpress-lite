@@ -1,8 +1,15 @@
-jQuery( document ).ready( function( $ ) {
+( function( $ ) {
+
+	"use strict";
 
 	/**
 	 * Real-time preview of the site title and description text
 	 */
+	wp.customize( 'blogname', function( value ) {
+		value.bind( function( to ) {
+			$( '.site-title a' ).html( to );
+		} );
+	} );
 	wp.customize( 'blogdescription', function( value ) {
 		value.bind( function( to ) {
 			$( '.site-description' ).html( to );
@@ -27,4 +34,4 @@ jQuery( document ).ready( function( $ ) {
 		} );
 	} );
 
-});
+})( jQuery );

@@ -38,36 +38,42 @@
 	<!-- BEGIN #contact-info -->
 	<div id="contact-info">
 
-		<!-- BEGIN .content -->
-		<div class="content">
+		<!-- BEGIN .row -->
+		<div class="row">
 
-			<div class="align-left">
+			<!-- BEGIN .content -->
+			<div class="content">
 
-			<?php if ( get_theme_mod( 'givingpress_lite_contact_address', '231 Front Street, Lahaina, HI 96761' ) ) { ?>
-				<span class="contact-address"><i class="fa fa-map-marker"></i> <?php echo esc_html( get_theme_mod( 'givingpress_lite_contact_address', '231 Front Street, Lahaina, HI 96761' ) ); ?></span>
-			<?php } ?>
+				<div class="align-left">
 
-			<?php if ( get_theme_mod( 'givingpress_lite_contact_email', 'info@givingpress.com' ) ) { ?>
-				<span class="contact-email text-right"><i class="fa fa-envelope"></i> <a class="link-email" href="mailto:<?php echo esc_html( get_theme_mod( 'givingpress_lite_contact_email', 'info@givingpress.com' ) ); ?>" target="_blank"><?php echo esc_html( get_theme_mod( 'givingpress_lite_contact_email', 'info@givingpress.com' ) ); ?></a></span>
-			<?php } ?>
+				<?php if ( get_theme_mod( 'givingpress_lite_contact_address', '231 Front Street, Lahaina, HI 96761' ) ) { ?>
+					<span class="contact-address"><i class="fa fa-map-marker"></i> <?php echo esc_html( get_theme_mod( 'givingpress_lite_contact_address', '231 Front Street, Lahaina, HI 96761' ) ); ?></span>
+				<?php } ?>
 
-			<?php if ( get_theme_mod( 'givingpress_lite_contact_phone', '808.123.4567' ) ) { ?>
-				<span class="contact-phone text-right"><i class="fa fa-phone"></i> <?php echo esc_html( get_theme_mod( 'givingpress_lite_contact_phone', '808.123.4567' ) ); ?></span>
-			<?php } ?>
+				<?php if ( get_theme_mod( 'givingpress_lite_contact_email', 'info@givingpress.com' ) ) { ?>
+					<span class="contact-email text-right"><i class="fa fa-envelope"></i> <a class="link-email" href="mailto:<?php echo esc_html( get_theme_mod( 'givingpress_lite_contact_email', 'info@givingpress.com' ) ); ?>" target="_blank"><?php echo esc_html( get_theme_mod( 'givingpress_lite_contact_email', 'info@givingpress.com' ) ); ?></a></span>
+				<?php } ?>
 
+				<?php if ( get_theme_mod( 'givingpress_lite_contact_phone', '808.123.4567' ) ) { ?>
+					<span class="contact-phone text-right"><i class="fa fa-phone"></i> <?php echo esc_html( get_theme_mod( 'givingpress_lite_contact_phone', '808.123.4567' ) ); ?></span>
+				<?php } ?>
+
+				</div>
+
+				<?php if ( '1' == get_theme_mod( 'givingpress_lite_display_header_search', '1' ) ) { ?>
+
+				<div class="align-right">
+
+					<div class="header-search"><i class="fa fa-search"></i> <?php get_template_part( 'searchform' ); ?></div>
+
+				</div>
+
+				<?php } ?>
+
+			<!-- END .content -->
 			</div>
 
-			<?php if ( '1' == get_theme_mod( 'givingpress_lite_display_header_search', '1' ) ) { ?>
-
-			<div class="align-right">
-
-				<div class="header-search"><i class="fa fa-search"></i> <?php get_template_part( 'searchform' ); ?></div>
-
-			</div>
-
-			<?php } ?>
-
-		<!-- END .content -->
+		<!-- END .row -->
 		</div>
 
 	<!-- END #contact-info -->
@@ -78,44 +84,50 @@
 	<!-- BEGIN #top-nav -->
 	<div id="top-nav">
 
-		<!-- BEGIN .content -->
-		<div class="content">
+		<!-- BEGIN .row -->
+		<div class="row">
 
-		<?php givingpress_lite_custom_logo(); ?>
+			<!-- BEGIN .content -->
+			<div class="content">
 
-		<?php if ( has_nav_menu( 'main-menu' ) ) { ?>
+			<?php givingpress_lite_custom_logo(); ?>
 
-			<button class="menu-toggle"><i class="fa fa-bars"></i></button>
+			<?php if ( has_nav_menu( 'main-menu' ) ) { ?>
 
-			<!-- BEGIN #navigation -->
-			<nav id="navigation" class="navigation-main vertical-center" role="navigation">
+				<button class="menu-toggle"><i class="fa fa-bars"></i></button>
 
-				<?php wp_nav_menu( array(
-					'theme_location' 	=> 'main-menu',
-					'title_li' 			=> '',
-					'depth' 			=> 4,
-					'fallback_cb'     	=> 'wp_page_menu',
-					'container_class' 	=> '',
-					'menu_class'      	=> 'menu',
-					)
-				); ?>
+				<!-- BEGIN #navigation -->
+				<nav id="navigation" class="navigation-main vertical-center" role="navigation">
 
-			<!-- END #navigation -->
-			</nav>
+					<?php wp_nav_menu( array(
+						'theme_location' 		=> 'main-menu',
+						'title_li' 					=> '',
+						'depth' 						=> 4,
+						'fallback_cb'     	=> 'wp_page_menu',
+						'container_class' 	=> '',
+						'menu_class'      	=> 'menu',
+						)
+					); ?>
 
-		<?php } elseif ( current_user_can( 'publish_posts' ) ) { ?>
+				<!-- END #navigation -->
+				</nav>
 
-			<!-- BEGIN #navigation -->
-			<nav id="navigation" class="navigation-main vertical-center" role="navigation">
+			<?php } elseif ( current_user_can( 'publish_posts' ) ) { ?>
 
-				<p class="instruction"><?php printf( wp_kses( __( 'Create a Custom Navigation Menu <a href="%1$s">here</a>.', 'givingpress-lite' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'nav-menus.php' ) ) ); ?></p>
+				<!-- BEGIN #navigation -->
+				<nav id="navigation" class="navigation-main vertical-center" role="navigation">
 
-			<!-- END #navigation -->
-			</nav>
+					<p class="instruction"><?php printf( wp_kses( __( 'Create a Custom Navigation Menu <a href="%1$s">here</a>.', 'givingpress-lite' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'nav-menus.php' ) ) ); ?></p>
 
-		<?php } ?>
+				<!-- END #navigation -->
+				</nav>
 
-		<!-- END .content -->
+			<?php } ?>
+
+			<!-- END .content -->
+			</div>
+
+		<!-- END .row -->
 		</div>
 
 	<!-- END #top-nav -->

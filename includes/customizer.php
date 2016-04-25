@@ -253,12 +253,49 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 		}
 	}
 
+	/**
+	 * Render the site title for the selective refresh partial.
+	 *
+	 * @since GivingPress Lite 1.0
+	 * @see givingpress_lite_customize_register()
+	 *
+	 * @return void
+	 */
+	function givingpress_lite_customize_partial_blogname() {
+		bloginfo( 'name' );
+	}
+
+	/**
+	 * Render the site tagline for the selective refresh partial.
+	 *
+	 * @since GivingPress Lite 1.0
+	 * @see givingpress_lite_customize_register()
+	 *
+	 * @return void
+	 */
+	function givingpress_lite_customize_partial_blogdescription() {
+		bloginfo( 'description' );
+	}
+
 	// Set site name and description text to be previewed in real-time.
 	$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 
 	// Set site title color to be previewed in real-time.
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+
+	if ( isset( $wp_customize->selective_refresh ) ) {
+		$wp_customize->selective_refresh->add_partial( 'blogname', array(
+			'selector' => '.site-title a',
+			'container_inclusive' => false,
+			'render_callback' => 'givingpress_lite_customize_partial_blogname',
+		) );
+		$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
+			'selector' => '.site-description',
+			'container_inclusive' => false,
+			'render_callback' => 'givingpress_lite_customize_partial_blogdescription',
+		) );
+	}
 
 	/*
 	-------------------------------------------------------------------------------------------------------
@@ -507,6 +544,6 @@ add_action( 'customize_register', 'givingpress_lite_theme_customizer' );
  * asynchronously.
  */
 function givingpress_lite_customize_preview_js() {
-	wp_enqueue_script( 'giving-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ) );
+	wp_enqueue_script( 'giving-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '1.0', true );
 }
 add_action( 'customize_preview_init', 'givingpress_lite_customize_preview_js' );
