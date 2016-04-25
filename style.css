@@ -1259,6 +1259,7 @@ html[xmlns] .slides {
 }
 .post-edit-link {
 	display: inline-block;
+	width: 100%;
 	margin: 12px 0px;
 }
 .author-column {
