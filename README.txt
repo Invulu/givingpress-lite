@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.4.2
+GivingPress Lite Theme v1.5
 http://www.givingpress.com
 
 Image Credits
@@ -99,3 +99,6 @@ CHANGELOG v1.4.1:
 CHANGELOG v1.4.2:
 - Fixed prefixing on new function
 - Added more "word-wrap: break-word;" style properties
+
+CHANGELOG v1.5:
+- Release version
