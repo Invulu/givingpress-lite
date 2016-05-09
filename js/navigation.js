@@ -11,7 +11,7 @@
 	if ( ! container )
 		return;
 
-	button = container.getElementsByTagName( 'button' )[0];
+	button = document.getElementsByClassName( 'menu-toggle' )[0];
 	if ( 'undefined' === typeof button )
 		return;
 
@@ -28,6 +28,7 @@
 		return;
 
 	button.onclick = function() {
+		
 		if ( -1 == menu.className.indexOf( 'mobile-menu' ) )
 			menu.className = 'menu';
 
