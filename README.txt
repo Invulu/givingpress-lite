@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.5
+GivingPress Lite Theme v1.5.1
 http://www.givingpress.com
 
 Image Credits
@@ -102,3 +102,6 @@ CHANGELOG v1.4.2:
 
 CHANGELOG v1.5:
 - Release version
+
+CHANGELOG v1.5.1:
+- Mobile navigation bug fixed
