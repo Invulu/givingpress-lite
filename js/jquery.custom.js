@@ -16,7 +16,7 @@
 		});
 
 		// Fix Superfish menu if off screen.
-		var sfMainWindowWidth = $(window).width();
+		var wapoMainWindowWidth = $(window).width();
 
 		$('ul.menu li').mouseover(function() {
 
@@ -24,21 +24,19 @@
 			var subMenuExist = $(this).find('.sub-menu').length;
 			if ( subMenuExist > 0 ) {
 				var subMenuWidth = $(this).find('.sub-menu').width();
-				var subMenuOffset = $(this).find('.sub-menu').parent().offset().left;
+				var subMenuOffset = $(this).find('.sub-menu').parent().offset().left + subMenuWidth;
 
 				// If sub menu is off screen, give new position.
-				if ( (subMenuOffset + subMenuWidth) > sfMainWindowWidth ) {
+				if ( (subMenuOffset + subMenuWidth) > wapoMainWindowWidth ) {
+					var newSubMenuPosition = subMenuWidth + 3;
 					$(this).find('.sub-menu').css({
 						right: 0,
-					});
-					$(this).find('.sub-menu').css({
-						left: 'auto',
 					});
 				}
 			}
 		});
 
-		$('ul.menu li').mouseover(function() {
+		$('ul.menu li li').mouseover(function() {
 
 			// Checks if third level menu exist.
 			var subMenuExist = $(this).find('.sub-menu').length;
@@ -47,9 +45,9 @@
 				var subMenuOffset = $(this).find('.sub-menu').parent().offset().left + subMenuWidth;
 
 				// If sub menu is off screen, give new position.
-				if ( (subMenuOffset + subMenuWidth) > sfMainWindowWidth ) {
-					var newSubMenuPosition = subMenuWidth + 24;
-					$(this).find('.sub-menu .sub-menu').css({
+				if ( (subMenuOffset + subMenuWidth) > wapoMainWindowWidth ) {
+					var newSubMenuPosition = subMenuWidth + 3;
+					$(this).find('.sub-menu').css({
 						left: -newSubMenuPosition,
 					});
 				}
@@ -105,15 +103,15 @@
 		}
 	}
 
-	/* Equal Height Columns ---------------------*/
-	function equalHeight() {
+	/* Equal Height Columns Pages ---------------------*/
+	function equalHeightPages() {
 		var currentTallest 	= 0,
 			currentRowStart = 0,
 			rowDivs 		= new Array(),
 			$el,
 			topPosition 	= 0;
 
-		$('.featured-pages .content').each(function() {
+		$('.featured-pages .holder .content').each(function() {
 			$el = $(this);
 			$($el).height('auto')
 			topPostion = $el.position().top;
@@ -165,7 +163,7 @@
 
 	$( window )
 	.load( flexSliderSetup )
-	.load( equalHeight )
-	.resize( equalHeight );
+	.load( equalHeightPages )
+	.resize( equalHeightPages );
 
 })( jQuery );

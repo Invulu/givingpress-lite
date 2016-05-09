@@ -21,27 +21,33 @@ get_header(); ?>
 		<!-- BEGIN .content -->
 		<div class="content donation">
 
-			<?php if ( get_theme_mod( 'givingpress_lite_donation_link', '#' ) && '' != get_theme_mod( 'givingpress_lite_donation_link', '#' ) ) { ?>
+			<!-- BEGIN .holder -->
+			<div class="holder">
 
-			<div class="twelve columns">
-				<h2><?php echo get_theme_mod( 'givingpress_lite_donation_tagline', 'Donations Are Welcome' ); ?></h2>
-				<p class="description"><?php echo get_theme_mod( 'givingpress_lite_donation_description', 'Enter a brief message about accepting donations for your cause. Edit the content in this section within the WordPress Customizer.' ); ?></p>
-			</div>
+				<?php if ( get_theme_mod( 'givingpress_lite_donation_link', '#' ) && '' != get_theme_mod( 'givingpress_lite_donation_link', '#' ) ) { ?>
 
-			<div class="four columns vertical-center">
-				<div class="align-right">
-					<a class="button large" href="<?php echo get_theme_mod( 'givingpress_lite_donation_link', '#' ); ?>"><span class="btn-holder"><?php echo get_theme_mod( 'givingpress_lite_donation_link_text', 'Donate' ); ?></span></a>
+				<div class="twelve columns">
+					<h2><?php echo get_theme_mod( 'givingpress_lite_donation_tagline', 'Donations Are Welcome' ); ?></h2>
+					<p class="description"><?php echo get_theme_mod( 'givingpress_lite_donation_description', 'Enter a brief message about accepting donations for your cause. Edit the content in this section within the WordPress Customizer.' ); ?></p>
 				</div>
+
+				<div class="four columns vertical-center">
+					<div class="align-right">
+						<a class="button large" href="<?php echo get_theme_mod( 'givingpress_lite_donation_link', '#' ); ?>"><span class="btn-holder"><?php echo get_theme_mod( 'givingpress_lite_donation_link_text', 'Donate' ); ?></span></a>
+					</div>
+				</div>
+
+				<?php } else { ?>
+
+				<div class="text-center">
+					<h2><?php echo get_theme_mod( 'givingpress_lite_donation_tagline', 'Donations Are Welcome' ); ?></h2>
+					<p class="description"><?php echo get_theme_mod( 'givingpress_lite_donation_description', 'Enter a brief message about accepting donations for your cause. Edit the content in this section within the WordPress Customizer.' ); ?></p>
+				</div>
+
+				<?php } ?>
+
+			<!-- BEGIN .holder -->
 			</div>
-
-			<?php } else { ?>
-
-			<div class="text-center">
-				<h2><?php echo get_theme_mod( 'givingpress_lite_donation_tagline', 'Donations Are Welcome' ); ?></h2>
-				<p class="description"><?php echo get_theme_mod( 'givingpress_lite_donation_description', 'Enter a brief message about accepting donations for your cause. Edit the content in this section within the WordPress Customizer.' ); ?></p>
-			</div>
-
-			<?php } ?>
 
 		<!-- END .content -->
 		</div>
