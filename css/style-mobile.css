@@ -143,9 +143,6 @@
 	.featured-pages .information {
 		padding: 18px;
 	}
-	.featured-tabs .organic-tabs div[id^="panel"] {
-		padding: 24px;
-	}
 	.postarea {
 		padding: 24px 4%;
 	}
@@ -410,8 +407,7 @@
 	.featured-pages .information {
 		padding: 12px;
 	}
-	.featured-bottom,
-	.featured-tabs {
+	.featured-bottom {
 		margin: 12px;
 	}
 	.blog-holder {

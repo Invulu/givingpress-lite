@@ -16,42 +16,41 @@
 		});
 
 		// Fix Superfish menu if off screen.
-		var wapoMainWindowWidth = $(window).width();
+		var sfMainWindowWidth = $(window).width();
 
-		$('ul.menu li').mouseover(function() {
+		$('ul.menu li, div.menu li').mouseover(function() {
 
-			// Checks if second level menu exist.
-			var subMenuExist = $(this).find('.sub-menu').length;
+			// Checks if second level menu exists.
+			var subMenuExist = $(this).find('.sub-menu, ul.children').length;
 			if ( subMenuExist > 0 ) {
-				var subMenuWidth = $(this).find('.sub-menu').width();
-				var subMenuOffset = $(this).find('.sub-menu').parent().offset().left + subMenuWidth;
+				var subMenuWidth = $(this).find('.sub-menu, ul.children').width();
+				var subMenuOffset = $(this).find('.sub-menu, ul.children').parent().offset().left;
 
 				// If sub menu is off screen, give new position.
-				if ( (subMenuOffset + subMenuWidth) > wapoMainWindowWidth ) {
-					var newSubMenuPosition = subMenuWidth + 3;
-					$(this).find('.sub-menu').css({
+				if ( ( subMenuOffset + subMenuWidth) > sfMainWindowWidth ) {
+					$(this).find('.sub-menu, ul.children').css({
 						right: 0,
+						left: 'auto',
 					});
 				}
 			}
-		});
 
-		$('ul.menu li li').mouseover(function() {
-
-			// Checks if third level menu exist.
-			var subMenuExist = $(this).find('.sub-menu').length;
-			if ( subMenuExist > 0 ) {
-				var subMenuWidth = $(this).find('.sub-menu').width();
-				var subMenuOffset = $(this).find('.sub-menu').parent().offset().left + subMenuWidth;
+			// Checks if third level menu exists.
+			var subSubMenuExist = $(this).find('.sub-menu .sub-menu, ul.children ul.children').length;
+			if ( subSubMenuExist > 0 ) {
+				var subSubMenuWidth = $(this).find('.sub-menu .sub-menu, ul.children ul.children').width();
+				var subSubMenuOffset = $(this).find('.sub-menu .sub-menu, ul.children ul.children').parent().offset().left + subSubMenuWidth;
 
 				// If sub menu is off screen, give new position.
-				if ( (subMenuOffset + subMenuWidth) > wapoMainWindowWidth ) {
-					var newSubMenuPosition = subMenuWidth + 3;
-					$(this).find('.sub-menu').css({
-						left: -newSubMenuPosition,
+				if ( ( subSubMenuOffset + subSubMenuWidth) > sfMainWindowWidth){
+					var newSubSubMenuPosition = subSubMenuWidth + 24;
+					$(this).find('.sub-menu .sub-menu, ul.children ul.children').css({
+						left: -newSubSubMenuPosition,
+						right: 'auto',
 					});
 				}
 			}
+
 		});
 	}
 
