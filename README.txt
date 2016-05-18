@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.5.3
+GivingPress Lite Theme v1.5.4
 http://www.givingpress.com
 
 Image Credits
@@ -114,3 +114,6 @@ CHANGELOG v1.5.2:
 CHANGELOG v1.5.3:
 - Dropdown menu JS cleanup
 - Removed excess styles
+
+CHANGELOG v1.5.4:
+- Updated screenshot
