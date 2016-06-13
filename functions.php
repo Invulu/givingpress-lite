@@ -96,25 +96,11 @@ add_action( 'after_setup_theme', 'givingpress_lite_setup' );
 
 /** Function givingpress_lite_admin_notice */
 function givingpress_lite_admin_notice() {
-	global $current_user ;
-	$user_id = $current_user->ID;
-	if ( ! get_user_meta( $user_id, 'givingpress_lite_ignore_notice' ) ) {
-		echo '<div class="notice updated is-dismissible"><p>';
-		printf( __( 'Enjoying the theme? <a href="%1$s" target="_blank">Sign Up</a> to start your <a href="%2$s" target="_blank">GivingPress Pro</a> site with a ton of added features and services! <a class="notice-dismiss" type="button" href="%3$s"><span class="screen-reader-text">Hide Notice</span></a>', 'givingpress-lite' ), 'https://givingpress.com', 'http://preview.givingpress.com', '?givingpress_lite_nag_ignore=0' );
-		echo '</p></div>';
-	}
+	echo '<div class="notice updated"><p>';
+	printf( __( 'Enjoying the theme? <a href="%1$s" target="_blank">Sign Up</a> for FREE to start a <a href="%2$s" target="_blank">GivingPress Pro</a> site with tons of additional features and functionality for non-profit organizations!', 'givingpress-lite' ), 'https://givingpress.com', 'http://preview.givingpress.com' );
+	echo '</p></div>';
 }
 add_action( 'admin_notices', 'givingpress_lite_admin_notice' );
-
-/** Function givingpress_lite_nag_ignore */
-function givingpress_lite_nag_ignore() {
-	global $current_user;
-	$user_id = $current_user->ID;
-	if ( isset( $_GET['givingpress_lite_nag_ignore'] ) && '0' == $_GET['givingpress_lite_nag_ignore'] ) {
-		 add_user_meta( $user_id, 'givingpress_lite_ignore_notice', 'true', true );
-	}
-}
-add_action( 'admin_init', 'givingpress_lite_nag_ignore' );
 
 /*
 -------------------------------------------------------------------------------------------------------
@@ -245,12 +231,12 @@ add_action( 'widgets_init', 'givingpress_lite_add_editor_styles' );
  * @uses get_stylesheet_uri() Returns URI of theme stylesheet
  */
 function givingpress_lite_add_editor_styles() {
-	add_editor_style( 'css/style-editor.css' );
+	add_editor_style( 'style.css' );
 }
 
 /*
 ------------------------------------------------------------------------------------------------------
-   Content Width
+	Content Width
 ------------------------------------------------------------------------------------------------------
 */
 

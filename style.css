@@ -7,7 +7,7 @@
 	Author URI: http://givingpress.com/
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.5.4
+	Version: 1.5.5
 	Text Domain: givingpress-lite
 	Tags: light, gray, white, green, one-column, two-columns, three-columns, right-sidebar, fluid-layout, custom-background, custom-header, custom-menu, featured-images, featured-image-header, flexible-header, full-width-template, theme-options, translation-ready, sticky-post, featured-images
 
@@ -58,6 +58,11 @@ body {
 	line-height: 1.9;
 	margin: 0px;
 	padding: 0px;
+}
+body.wp-autoresize {
+	background: #ffffff;
+	box-sizing: border-box;
+	padding: 12px 24px !important;
 }
 
 /************************************************
@@ -340,12 +345,11 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 	border: none;
 }
 .headline {
-	font-family: 'Raleway', 'Helvetica Neue', Arial, sans-serif;
-	font-style: normal;
 	font-size: 3em;
 	font-weight: 400;
 	line-height: 1.1;
 	letter-spacing: -1px;
+	word-wrap: break-word;
 	margin: 0px;
 	padding: 0px 0px 12px 0px;
 }
@@ -360,24 +364,23 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 .headline.img-headline {
 	display: block;
 	color: #ffffff;
-	background: rgba(0, 0, 0, .24);
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	max-width: 80%;
+	width: 92%;
 	font-size: 3.2em;
 	font-weight: 300;
 	text-align: center;
+	text-shadow: 0px 0px 8px rgba(0, 0, 0, .24);
 	line-height: 1.1;
 	margin: 0px auto 0px;
-	padding: 12px 24px;
-	border: 3px solid #ffffff;
+	padding: 12px 4%;
 	-webkit-transform: translateY(-50%) translateX(-50%);
 	-ms-transform: translateY(-50%) translateX(-50%);
 	transform: translateY(-50%) translateX(-50%);
 }
 .post-banner .headline.img-headline {
-	font-size: 2.6em;
+	font-size: 2.2em;
 }
 .page-banner .headline.img-headline a,
 .post-banner .headline.img-headline a {
@@ -389,9 +392,11 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 }
 .title {
 	color: rgba(0, 0, 0, 0.8);
-	font-size: 1.4em;
-	font-weight: 400;
+	font-size: 1em;
+	font-weight: 700;
 	line-height: 1.2;
+	letter-spacing: 1px;
+	text-transform: uppercase;
 	margin: 0px;
 	padding: 0px;
 }
@@ -418,7 +423,7 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 	width: 100%;
 	padding: 0px;
 	z-index: 9;
-	box-shadow: 0px 0px 6px rgba(0, 0, 0, .24);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 #contact-info {
 	display: block;
@@ -459,26 +464,25 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 #contact-info .header-search #searchform #s {
 	background: none;
 	font-size: 1.1em;
+	line-height: 1.8;
 	width: auto;
 	margin: 0px;
 	padding: 0px;
 	box-shadow: none;
+	border: none;
 }
 #contact-info .header-search #searchsubmit {
 	display: none;
 }
 #top-nav {
 	position: relative;
-	padding: 0px;
-	z-index: 99;
+	padding: 12px 0px;
+	z-index: 9;
 }
 #top-nav .site-title {
 	display: block;
-	max-width: 30%;
-	font-size: 1.6em;
-	font-family: 'Raleway', Arial, sans-serif;
+	font-size: 1.8em;
 	font-style: normal;
-	font-weight: 500;
 	letter-spacing: 0px;
 	line-height: 1.2;
 	margin: 0px;
@@ -486,8 +490,8 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 }
 #site-info {
 	position: relative;
-	z-index: 9;
 	padding: 72px 0px;
+	z-index: 9;
 }
 #site-info .content {
 	background: none;
@@ -503,7 +507,7 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 	display: block;
 	width: auto;
 	height: auto;
-	max-height: 100px;
+	max-height: 80px;
 }
 #masthead {
 	display: block;
@@ -1128,15 +1132,9 @@ html[xmlns] .slides {
 .featured-pages .feature-img.page-banner {
 	margin-bottom: -4px;
 }
-.featured-pages .headline,
-.featured-pages .headline.img-headline {
+.featured-pages .headline {
 	font-size: 2.2em;
-}
-.featured-pages .headline.img-headline {
-	background: none;
-	width: 100%;
-	padding: 0px;
-	border: none;
+	padding: 6px 0px 0px 0px;
 }
 .featured-pages .information {
 	text-align: center;
@@ -1184,8 +1182,14 @@ html[xmlns] .slides {
 .content.no-bg {
 	background: none;
 }
-.content.not-set {
+.content.not-set,
+.page .hentry .content,
+.search .hentry .content,
+.archive .hentry .content {
 	margin-top: 24px;
+}
+.archive.category .hentry .content {
+	margin-top: 0px;
 }
 .content::before,
 .content::after {
@@ -1889,31 +1893,35 @@ img.alignleft {
 #searchform {
 	margin: 0px;
 	padding: 0px;
+	overflow: hidden;
 }
 #searchform label {
 	display: none;
 }
-#searchform .search-field,
-#searchform #s {
+#searchform #s,
+#searchform .search-field {
 	float: left;
+	background: rgba(0, 0, 0, 0.06);
 	color: #999999;
-	color: rgba(0, 0, 0, 0.6);
-	width: 68%;
-	font-family: 'Helvetica Neue', Arial, sans-serif;
-	font-size: 1em;
-	line-height: 1.8;
-	margin: 0px 2% 0px 0px;
-	padding: 6px 3%;
-	border: none;
-	box-shadow: inset 0px 0px 3px rgba(0, 0, 0, .2);
+	color: rgba(0, 0, 0, 0.5);
+	width: 70%;
+	font-size: 0.9em;
+	line-height: 1;
+	margin: 0px;
+	padding: 12px 8px;
+	box-sizing: border-box;
+	border: 1px solid rgba(0, 0, 0, 0.12);
+	box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.12);
 }
-#wrapper #searchsubmit {
+#searchform #searchsubmit {
 	float: right;
-	width: 22%;
+	width: 26%;
+	font-size: 0.9em;
+	line-height: 1.1;
 	margin-top: 0px;
 	margin-bottom: 0px;
-	padding-left: 2%;
-	padding-right: 2%;
+	margin-left: 4%;
+	padding: 10px 12px;
 }
 .no-result-search {
 	display: block;
@@ -2233,8 +2241,26 @@ table td {
 form {
 	display: block;
 }
-form ul li {
+form div {
+	display: block;
+	overflow: hidden;
+}
+form span {
+	margin-bottom: 8px;
+	overflow: hidden;
+}
+form span.required {
+	display: inline;
+}
+form li {
 	list-style: none;
+	margin: 6px 0px;
+	padding: 0px;
+}
+form ul,
+form ol {
+	list-style: none;
+	margin: 0px;
 	padding: 0px;
 }
 form legend {
@@ -2244,6 +2270,15 @@ form legend {
 form label {
 	margin-top: 6px;
 }
+form li > label {
+	font-weight: bold;
+}
+form li li > label {
+	font-weight: normal;
+}
+form span label {
+	font-size: 0.8em;
+}
 form input[type='url'],
 form input[type='tel'],
 form input[type='email'],
@@ -2252,16 +2287,15 @@ form input[type='password'],
 form input[type='number'],
 form textarea {
 	display: block;
+	box-sizing: border-box;
 	background: #f9f9f9;
-	background: rgba(0, 0, 0, 0.04);
-	font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font-family: inherit;
 	font-size: 1em;
 	line-height: 1.4;
-	margin: 0px;
 	padding: 8px;
-	border: 1px inset rgba(0, 0, 0, 0.08);
+	border: 1px solid rgba(0, 0, 0, 0.12);
+	box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.12);
 	border-radius: 3px;
-	box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .12);
 }
 form input[type='url'],
 form input[type='tel'],
@@ -2269,10 +2303,10 @@ form input[type='email'],
 form input[type='text'],
 form input[type='password'],
 form input[type='number'] {
-	width: 42%;
+	width: 50%;
 }
 form textarea {
-	width: 96%;
+	width: 100%;
 }
 form input[type='checkbox'],
 form input[type='radio'] {
@@ -2280,21 +2314,29 @@ form input[type='radio'] {
 	margin-right: 6px;
 }
 form input[type='submit'] {
-	margin-top: 0px;
+	margin: 0px;
 }
-form select, select {
+form .form-submit {
+	padding: 8px 0px;
+}
+textarea {
+	overflow: auto;
+}
+address {
+	margin: 12px 0px;
+}
+select {
 	display: block;
+	box-sizing: border-box;
+	max-width: 100%;
 	background: #f9f9f9;
-	background: rgba(0, 0, 0, 0.04);
-	max-width: 98%;
-	font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font-family: inherit;
 	font-size: 1em;
 	line-height: 1.4;
-	margin: 4px 12px 4px 0px;
-	padding: 6px;
-	border: 1px inset rgba(0, 0, 0, 0.08);
+	padding: 8px;
+	border: 1px solid rgba(0, 0, 0, 0.12);
+	box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.12);
 	border-radius: 3px;
-	box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .12);
 }
 
 /************************************************

@@ -11,7 +11,7 @@
 	if ( ! container )
 		return;
 
-	button = document.getElementsByClassName( 'menu-toggle' )[0];
+	button = container.getElementsByTagName( 'button' )[0];
 	if ( 'undefined' === typeof button )
 		return;
 
@@ -28,7 +28,6 @@
 		return;
 
 	button.onclick = function() {
-		
 		if ( -1 == menu.className.indexOf( 'mobile-menu' ) )
 			menu.className = 'menu';
 
@@ -46,5 +45,16 @@
 			container.className = container.className.replace( 'navigation-main', 'main-small-navigation' );
 		}
 	};
+
+	// Untoggle menu on screen resize.
+	window.addEventListener("resize", function() {
+		if ( window.innerWidth > 1179  && -1 != button.className.indexOf( 'toggled-on' ) ) {
+			button.className = button.className.replace( ' toggled-on', '' );
+			menu.className = menu.className.replace( ' toggled-on', '' );
+			menu.className = menu.className.replace( 'mobile-menu', 'menu' );
+			holder.className = holder.className.replace( 'mobile-menu', 'menu' );
+			container.className = container.className.replace( 'main-small-navigation', 'navigation-main' );
+		}
+	});
 
 } )();

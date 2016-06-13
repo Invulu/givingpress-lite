@@ -15,9 +15,7 @@
 	<p><i class="fa fa-clock-o"></i> <?php givingpress_lite_posted_on(); ?></p>
 </div>
 
-<?php if ( ! has_post_thumbnail() ) { ?>
-	<h1 class="headline"><?php the_title(); ?></h1>
-<?php } ?>
+<h1 class="headline"><?php the_title(); ?></h1>
 
 <!-- BEGIN .article -->
 <div class="article">

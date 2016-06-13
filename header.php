@@ -88,16 +88,16 @@
 		<div class="row">
 
 			<!-- BEGIN .content -->
-			<div class="content">
+			<div class="content no-bg">
 
 			<?php givingpress_lite_custom_logo(); ?>
 
 			<?php if ( has_nav_menu( 'main-menu' ) ) { ?>
 
-				<button class="menu-toggle"><i class="fa fa-bars"></i></button>
-
 				<!-- BEGIN #navigation -->
-				<nav id="navigation" class="navigation-main vertical-center" role="navigation">
+				<nav id="navigation" class="navigation-main vertical-center">
+
+					<button class="menu-toggle"><i class="fa fa-bars"></i></button>
 
 					<?php wp_nav_menu( array(
 						'theme_location' 		=> 'main-menu',
@@ -115,7 +115,7 @@
 			<?php } elseif ( current_user_can( 'publish_posts' ) ) { ?>
 
 				<!-- BEGIN #navigation -->
-				<nav id="navigation" class="navigation-main vertical-center" role="navigation">
+				<nav id="navigation" class="navigation-main vertical-center">
 
 					<p class="instruction"><?php printf( wp_kses( __( 'Create a Custom Navigation Menu <a href="%1$s">here</a>.', 'givingpress-lite' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'nav-menus.php' ) ) ); ?></p>
 

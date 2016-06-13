@@ -26,7 +26,7 @@ get_header(); ?>
 	<div class="row">
 
 		<!-- BEGIN .content -->
-		<div class="content radius-bottom">
+		<div class="content">
 
 			<!-- BEGIN .three columns -->
 			<div class="three columns">

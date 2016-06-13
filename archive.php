@@ -16,7 +16,7 @@ get_header(); ?>
 	<div class="row">
 
 		<!-- BEGIN .content -->
-		<div class="content radius-bottom">
+		<div class="content">
 
 			<?php if ( is_active_sidebar( 'sidebar-1' ) && is_active_sidebar( 'sidebar-left' ) ) { ?>
 
