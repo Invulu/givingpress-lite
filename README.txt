@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.5.5
+GivingPress Lite Theme v1.5.6
 http://www.givingpress.com
 
 Image Credits
@@ -122,3 +122,6 @@ CHANGELOG v1.5.5:
 - Mobile menu fixes
 - General cleanup
 - Style updates
+
+CHANGELOG v1.5.6:
+- Depreciated style tags removed
