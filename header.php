@@ -138,7 +138,7 @@
 
 <?php $header_image = get_header_image(); ?>
 
-<?php if ( is_home() || is_page_template( 'template-home.php' ) || is_single() || is_404() || is_attachment() || is_archive() || is_search() || is_page() && ! has_post_thumbnail() ) { ?>
+<?php if ( ! is_page() || is_page() && ! has_post_thumbnail() ) { ?>
 <?php if ( 'blank' != get_theme_mod( 'header_textcolor' ) || ! empty( $header_image ) ) { ?>
 
 <!-- BEGIN #header -->

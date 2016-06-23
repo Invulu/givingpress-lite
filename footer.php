@@ -24,7 +24,7 @@
 		<div class="row">
 
 			<!-- BEGIN .footer-widgets -->
-			<div class="footer-widgets">
+			<div class="footer-widgets <?php echo givingpress_lite_count_widgets( 'footer' ); ?>">
 
 				<?php dynamic_sidebar( 'footer' ); ?>
 

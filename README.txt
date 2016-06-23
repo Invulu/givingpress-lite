@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.5.6
+GivingPress Lite Theme v1.5.7
 http://www.givingpress.com
 
 Image Credits
@@ -125,3 +125,12 @@ CHANGELOG v1.5.5:
 
 CHANGELOG v1.5.6:
 - Depreciated style tags removed
+
+CHANGELOG v1.5.7:
+- Custom menu widget style updates
+- Centered footer information if no social menu
+- Improved footer widget styling
+- Added front-page.php
+- Added blog page template
+- Removed Jetpack file
+- Additional style tweaks

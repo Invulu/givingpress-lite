@@ -11,7 +11,7 @@
 <!-- BEGIN .no-results -->
 <div class="no-results">
 
-<?php if ( is_page_template( 'template-home.php' ) && current_user_can( 'publish_posts' ) ) { ?>
+<?php if ( is_page_template( 'template-home.php' ) && current_user_can( 'publish_posts' ) || is_front_page() && current_user_can( 'publish_posts' ) ) { ?>
 
 	<h2 class="headline text-center"><?php esc_html_e( 'No Options Saved', 'givingpress-lite' ); ?></h2>
 	<p class="text-center"><?php printf( wp_kses( __( 'Please set and save the theme options for the Home Page template within the <a href="%1$s">Customizer</a>.', 'givingpress-lite' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'customize.php' ) ) ); ?></p>

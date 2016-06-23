@@ -8,7 +8,8 @@
 
 ?>
 
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php $wp_query = new WP_Query( array( 'cat' => get_theme_mod( 'givingpress_lite_blog_category', '0' ), 'paged' => $paged, 'suppress_filters' => 0 ) ); ?>
+<?php if ( $wp_query->have_posts() ) : while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
 
 <?php $thumb = ( get_the_post_thumbnail() ) ? wp_get_attachment_image_src( get_post_thumbnail_id(), 'giving-featured-medium' ) : false; ?>
 

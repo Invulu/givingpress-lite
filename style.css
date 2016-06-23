@@ -7,7 +7,7 @@
 	Author URI: http://givingpress.com/
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.5.6
+	Version: 1.5.7
 	Text Domain: givingpress-lite
 	Tags: one-column, two-columns, three-columns, right-sidebar, custom-background, custom-header, custom-menu, featured-images, featured-image-header, flexible-header, full-width-template, theme-options, translation-ready, sticky-post, featured-images, footer-widgets
 
@@ -44,8 +44,7 @@
 	23. Tables
 	24. Forms
 	25. CSS3 Styles
-	26. Jetpack
-	27. WordPress Core
+	26. WordPress Core
 
 *******************************************************************************************************************/
 
@@ -1077,9 +1076,11 @@ html[xmlns] .slides {
 *	6.	Homepage 					     	    *
 ************************************************/
 
+.home.front-page .footer,
 .page-template-template-home .footer {
 	margin-top: 0px;
 }
+.home.front-page .content.not-set,
 .page-template-template-home .content.not-set {
 	margin-bottom: 24px;
 }
@@ -1354,49 +1355,55 @@ html[xmlns] .slides {
 
 .pagination,
 .navigation.pagination {
-	float: left;
 	display: block;
 	width: 100%;
-	font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
 	font-weight: bold;
 	text-align: center;
-	line-height: 32px;
-	margin: 0px;
-	padding: 12px 0px;
+	line-height: 36px;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	margin: 36px auto 0px;
+	padding: 0px;
 	position: relative;
-	z-index: 9;
+	border-radius: 3px;
+	box-shadow: 0px 0px 6px rgba(0, 0, 0, .2);
+	overflow: hidden;
+	z-index: 7;
+}
+.blog .navigation.pagination,
+.category .navigation.pagination {
+	margin-bottom: 12px;
 }
 .pagination .page-numbers {
-	display: inline-block;
-	background: rgba(0, 0, 0, 0.04);
+	float: left;
+	background: #ffffff;
 	color: #666666;
-	min-height: 32px;
-	min-width: 32px;
+	min-height: 36px;
+	min-width: 36px;
 	text-decoration: none;
-	margin: 0px 2px;
+	margin: 0px;
 	padding: 0px;
-	border-radius: 3px;
-	box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.24);
+	border-left: 1px solid #dddddd;
+	border-left: 1px solid rgba(0, 0, 0, .12);
+}
+.pagination .page-numbers:first-child {
+	border-left: none;
 }
 .pagination .page-numbers:hover,
 .pagination .page-numbers:active {
-	background: #ffffff;
-	min-height: 32px;
-	min-width: 32px;
-	line-height: 32px;
+	background: #eeeeee;
+	min-height: 36px;
+	min-width: 36px;
+	line-height: 36px;
 	padding: 0px;
-	border-radius: 3px;
-	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.24);
 }
 .pagination .page-numbers.current {
-	display: inline-block;
-	background: #ffffff;
-	min-height: 32px;
-	min-width: 32px;
-	line-height: 32px;
+	background: #eeeeee;
+	min-height: 36px;
+	min-width: 36px;
+	line-height: 36px;
 	padding: 0px;
-	border-radius: 3px;
-	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.24);
 }
 .post-navigation {
 	display: block;
@@ -1827,6 +1834,7 @@ img.alignleft {
 
 .widget ul.menu {
 	float: none;
+	width: 100%;
 	text-align: left;
 }
 .widget ul.menu .current_page_item a,
@@ -1839,13 +1847,19 @@ img.alignleft {
 	background: none;
 	color: #669900;
 	height: auto;
-	font-size: 1em;
+	font-size: 0.9em;
 	text-align: left;
 	text-transform: none;
 	text-shadow: none;
 	line-height: 1.8;
-	margin: 6px 0px;
+	margin: 0px;
 	padding: 0px;
+}
+.widget ul.menu li.feature-btn a,
+.widget ul.menu li.feature-button a {
+	padding: 0px !important;
+	margin-top: 0px;
+	border: none;
 }
 .widget ul.menu li a:hover {
 	color: #336600;
@@ -1855,10 +1869,7 @@ img.alignleft {
 .widget ul.menu li {
 	float: none;
 	display: block;
-	background: none;
-	margin: 0px;
-	padding: 0px;
-	width: 100%;
+	padding: 6px 12px;
 }
 .widget ul.menu li:last-child {
 	border-bottom: none;
@@ -1868,20 +1879,24 @@ img.alignleft {
 	right: 0px;
 }
 .widget ul.menu li ul.sub-menu {
-	background: none;
-	width: 100%;
-	margin: 0px;
-	padding: 0px;
+	background: none !important;
 	position: static;
-	z-index: 9;
+	width: 100%;
+	margin: 6px 0px 0px 0px;
+	padding: 0px;
 	box-shadow: none;
+	border-radius: 3px;
+	z-index: 9;
 }
-.widget ul.menu li ul.sub-menu span {
-	display: none;
+.widget ul.menu li ul.sub-menu li {
+	width: auto;
 }
-.widget ul.menu li ul.sub-menu li a {
-	padding-left: 12px;
+.widget .sf-arrows .sf-with-ul:after {
+	right: 0;
+	border-top-color: #999999;
+	border-top-color: rgba(0, 0, 0, .4);
 }
+.widget ul.menu li::after,
 .widget ul.menu li ul.sub-menu li ul.sub-menu li {
 	display: none;
 }
@@ -1939,6 +1954,7 @@ img.alignleft {
 	background: #ffffff;
 	margin: 24px auto 0px;
 	padding: 0px;
+	border-top: 1px solid rgba(0, 0, 0, .12);
 }
 .footer-widgets {
 	padding: 0px;
@@ -1947,23 +1963,82 @@ img.alignleft {
 }
 .footer-widgets .widget {
 	float: left;
-	background: #000000;
 	width: 20%;
 	background: none;
-	color: #999999;
 	margin-top: 0px;
 	margin-bottom: 0px;
 	padding: 0px;
 	border-bottom: none;
 }
+.footer-widgets.widget-count-1 {
+	text-align: center;
+}
+.footer-widgets.widget-count-1 .widget,
+.footer-widgets.widget-count-1 .widget:last-child {
+	float: none;
+	display: inline-block;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+.footer-widgets.widget-count-2 .widget,
+.footer-widgets.widget-count-2 .widget:last-child {
+	width: 50%;
+}
+.footer-widgets.widget-count-3 .widget,
+.footer-widgets.widget-count-3 .widget:last-child {
+	width: 33.3%;
+}
 .footer-widgets .widget:nth-child(4n+1) {
 	clear: both;
 }
-.footer-widgets .widget:nth-child(4n+4) {
+.footer-widgets .widget:nth-child(4n+4),
+.footer-widgets .widget:last-child {
 	width: 40%;
+}
+.footer-widgets .widget li {
+	background: none;
+	margin: 2px 0px;
+	padding: 2px 0px;
 }
 .footer-widget {
 	padding: 36px 24px;
+}
+.footer-menu-wrapper {
+	padding: 0px 24px;
+	overflow: hidden;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.footer-menu-wrapper .menu {
+	float: none;
+	text-align: center;
+	line-height: 50px;
+	margin: 0px auto 0px;
+	padding: 0px;
+}
+.footer-menu-wrapper .menu a {
+	font-size: 0.9em;
+	font-weight: normal;
+	text-transform: none;
+	letter-spacing: 0px;
+	padding: 0px 8px;
+}
+.footer-menu-wrapper .menu li {
+	float: none;
+	margin: 0px;
+}
+.footer-menu-wrapper .menu li:after {
+	display: none;
+}
+.footer-menu-wrapper .menu li:first-child a {
+	padding-left: 0px;
+}
+.footer-menu-wrapper .menu-divider {
+	color: rgba(0, 0, 0, 0.2);
+	margin: 12px 0px;
+}
+.footer-menu-wrapper .menu-divider:last-child {
+	display: none;
 }
 .footer-information {
 	padding-top: 48px;
@@ -1971,15 +2046,26 @@ img.alignleft {
 	overflow: hidden;
 }
 .footer-information p {
-	line-height: 2;
+	font-size: 0.8em;
 	padding: 0px;
 }
-.footer-information a {
-	color: #999999;
+.footer-information .align-left a {
+	color: #333333;
+	color: rgba(0, 0, 0, .8);
+	font-weight: 600;
+	text-decoration: underline;
+	transition: color 0s;
+	-moz-transition: color 0s;
+	-webkit-transition: color 0s;
+	-o-transition: color 0s;
 }
-.footer .align-left {
-	font-size: 0.9em;
-	line-height: 1.8;
+.footer-information .align-left a:hover {
+	text-decoration: none;
+}
+.no-social-menu .footer .align-left {
+	float: none;
+	text-align: center;
+	padding: 0px 24px;
 }
 
 /************************************************
@@ -2438,29 +2524,7 @@ a, a:link, button, #submit, #searchsubmit {
 }
 
 /************************************************
-*	26.	Jetpack	 					     	    *
-************************************************/
-
-.jetpack-video-wrapper {
-	display: block;
-	text-align: center;
-	line-height: 0;
-	margin: 24px auto 24px;
-	overflow: hidden;
-}
-#wrapper .grofile-thumbnail,
-#wrapper .widgets-grid-layout {
-	float: left;
-	width: 28%;
-	margin: 12px 24px 6px 0px;
-	border-radius: 50%;
-}
-#wrapper .widget-grofile h4 {
-	margin: 24px 0px 0px 0px;
-}
-
-/************************************************
-*	27.	WordPress Core	 			     	    *
+*	26.	WordPress Core	 			     	    *
 ************************************************/
 
 /* Text meant only for screen readers. */
