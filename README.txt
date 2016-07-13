@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.5.7
+GivingPress Lite Theme v1.5.8
 http://www.givingpress.com
 
 Image Credits
@@ -134,3 +134,7 @@ CHANGELOG v1.5.7:
 - Added blog page template
 - Removed Jetpack file
 - Additional style tweaks
+
+CHANGELOG v1.5.8:
+- Added conditionals to front-page.php and index.php
+- Allow pages set as Static Front Page to use templates other than the home page template

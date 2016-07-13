@@ -8,6 +8,10 @@
  * @since GivingPress Lite 1.0
  */
 
+if ( 'page' == get_option('show_on_front') ) {
+	load_template( dirname( __FILE__ ) . '/front-page.php', 'require_once' );
+} else {
+
 get_header(); ?>
 
 <!-- BEGIN .post class -->
@@ -59,3 +63,5 @@ get_header(); ?>
 </div>
 
 <?php get_footer(); ?>
+
+<?php } //End else ?>
