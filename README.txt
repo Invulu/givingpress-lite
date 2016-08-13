@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.5.8
+GivingPress Lite Theme v1.5.9
 http://www.givingpress.com
 
 Image Credits
@@ -138,3 +138,7 @@ CHANGELOG v1.5.7:
 CHANGELOG v1.5.8:
 - Added conditionals to front-page.php and index.php
 - Allow pages set as Static Front Page to use templates other than the home page template
+
+CHANGELOG v1.5.9:
+- Conditional style tweak for home custom header
+- Footer credit tweak
