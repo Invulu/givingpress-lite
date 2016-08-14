@@ -536,31 +536,6 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 			'priority' => 100,
 		) ) );
 
-		/*
-		-------------------------------------------------------------------------------------------------------
-			Blog Section
-		-------------------------------------------------------------------------------------------------------
-		*/
-
-		$wp_customize->add_section( 'givingpress_lite_blog_section' , array(
-			'title'       => esc_html__( 'Blog Options', 'givingpress-lite' ),
-			'priority'    => 103,
-			'panel' => 'givingpress_lite_theme_options',
-		) );
-
-		// Blog Category.
-		$wp_customize->add_setting( 'givingpress_lite_blog_category', array(
-			'default' => '0',
-			'sanitize_callback' => 'givingpress_lite_sanitize_categories',
-		) );
-		$wp_customize->add_control( new GivingPress_Lite_Category_Dropdown_Control( $wp_customize, 'givingpress_lite_blog_category', array(
-			'type'	=> 'dropdown-categories',
-			'label' => esc_html__( 'Blog Template Category', 'givingpress-pro' ),
-			'section' => 'givingpress_lite_blog_section',
-			'settings'	=> 'givingpress_lite_blog_category',
-			'priority' => 20,
-		) ) );
-
 }
 add_action( 'customize_register', 'givingpress_lite_theme_customizer' );
 

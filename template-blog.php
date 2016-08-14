@@ -10,8 +10,17 @@ Template Name: Blog
 
 get_header(); ?>
 
+<?php $thumb = ( get_the_post_thumbnail() ) ? wp_get_attachment_image_src( get_post_thumbnail_id(), 'giving-featured-large' ) : false; ?>
+
+<?php if ( has_post_thumbnail() ) { ?>
+	<div class="feature-img page-banner" <?php if ( ! empty( $thumb ) ) { ?> style="background-image: url(<?php echo esc_url( $thumb[0] ); ?>);" <?php } ?>>
+		<h1 class="headline img-headline"><?php the_title(); ?></h1>
+		<?php the_post_thumbnail( 'giving-featured-large' ); ?>
+	</div>
+<?php } ?>
+
 <!-- BEGIN .row -->
-<div class="row">
+<div class="row content-row">
 
 	<!-- BEGIN .content -->
 	<div class="content no-bg clearfix">

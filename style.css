@@ -7,7 +7,7 @@
 	Author URI: http://givingpress.com/
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.5.9
+	Version: 1.6
 	Text Domain: givingpress-lite
 	Tags: one-column, two-columns, three-columns, right-sidebar, custom-background, custom-header, custom-menu, featured-images, featured-image-header, flexible-header, full-width-template, theme-options, translation-ready, sticky-post, featured-images, footer-widgets
 
@@ -591,19 +591,15 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 .givingpress-lite-description-right #masthead .site-description::after {
 	right: 0;
 }
-.givingpress-lite-header-active.blog .container,
-.givingpress-lite-header-active.category .container,
-.givingpress-lite-header-active.single .container {
-	margin-top: -48px;
+.givingpress-lite-header-active.blog .content-row,
+.givingpress-lite-header-active.category .content-row,
+.givingpress-lite-header-inactive.has-featured-img.blog.page .content-row,
+.givingpress-lite-header-inactive.givingpress-lite-title-active.blog .content-row,
+.givingpress-lite-header-inactive.givingpress-lite-title-active.category .content-row {
+	margin-top: -36px;
 }
-.givingpress-lite-header-inactive.givingpress-lite-title-active.blog .container,
-.givingpress-lite-header-inactive.givingpress-lite-title-active.category .container,
-.givingpress-lite-header-inactive.givingpress-lite-title-active.single .container {
-	margin-top: -24px;
-}
-.givingpress-lite-header-inactive.givingpress-lite-title-inactive.blog .container,
-.givingpress-lite-header-inactive.givingpress-lite-title-inactive.category .container,
-.givingpress-lite-header-inactive.givingpress-lite-title-inactive.single .container {
+.givingpress-lite-header-inactive.givingpress-lite-title-inactive.blog .content-row,
+.givingpress-lite-header-inactive.givingpress-lite-title-inactive.category .content-row {
 	margin-top: 24px;
 }
 
@@ -1073,7 +1069,7 @@ html[xmlns] .slides {
 }
 
 /************************************************
-*	6.	Homepage 					     	    *
+*	6.	Homepage																	*
 ************************************************/
 
 .home.front-page .footer,
@@ -1185,6 +1181,7 @@ html[xmlns] .slides {
 }
 .content.not-set,
 .page .hentry .content,
+.single .hentry .content,
 .search .hentry .content,
 .archive .hentry .content {
 	margin-top: 24px;
@@ -1683,7 +1680,6 @@ img.alignleft {
 	margin: 0px;
 	padding: 24px;
 	border-radius: 0px 3px 3px 0px;
-	/*background-color: #f9f9f9;*/
 	background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.00)),to(rgba(0, 0, 0, 0.04)));
 	background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.04));
 	background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.04));
@@ -1697,17 +1693,16 @@ img.alignleft {
 .blog .sidebar,
 .category .sidebar {
 	background: none;
-	padding: 24px 0px 0px 36px;
+	padding: 36px 0px 0px 36px;
 }
 
 /* Conditionals */
 
 .givingpress-lite-header-active.blog .sidebar,
-.givingpress-lite-header-active.category .sidebar {
-	margin-top: 60px;
-}
+.givingpress-lite-header-active.category .sidebar,
 .givingpress-lite-header-inactive.givingpress-lite-title-active.blog .sidebar,
-.givingpress-lite-header-inactive.givingpress-lite-title-active.category .sidebar {
+.givingpress-lite-header-inactive.givingpress-lite-title-active.category .sidebar,
+.givingpress-lite-header-inactive.givingpress-lite-title-inactive.has-featured-img.blog.page .sidebar {
 	margin-top: 36px;
 }
 

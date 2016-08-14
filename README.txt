@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.5.9
+GivingPress Lite Theme v1.6
 http://www.givingpress.com
 
 Image Credits
@@ -143,3 +143,11 @@ CHANGELOG v1.5.9:
 - Conditional style tweak for home custom header
 - Updated theme URI in stylesheet
 - Footer credit tweak
+
+CHANGELOG v1.6:
+- Replaced front-page.php with home.php
+- Added featured images to home and blog page templates
+- Removed post title featured image overlay on categories
+- Removed option to display category on blog
+- Updated conditional styles
+- Fixed a wrong text domain
