@@ -523,7 +523,7 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 	color: #ffffff;
 	font-size: 3.4em;
 	font-family: 'Raleway', Arial, sans-serif;
-	font-weight: 500;
+	font-weight: 400;
 	letter-spacing: -2px;
 	line-height: 1.1;
 	max-width: 720px;
@@ -590,9 +590,6 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 }
 .givingpress-lite-description-right #masthead .site-description::after {
 	right: 0;
-}
-.givingpress-lite-header-active.home.front-page .container {
-	margin-top: 0px;
 }
 .givingpress-lite-header-active.blog .container,
 .givingpress-lite-header-active.category .container,

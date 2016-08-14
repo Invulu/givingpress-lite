@@ -7,13 +7,13 @@
  * @since GivingPress Lite 1.0
  */
 
-if ( 'posts' == get_option('show_on_front') ) {
+if ( 'posts' == get_option( 'show_on_front' ) ) {
 	load_template( dirname( __FILE__ ) . '/index.php', 'require_once' );
-} elseif ( 'page' == get_option('show_on_front') && get_option('page_on_front') ) {
+} elseif ( 'page' == get_option( 'show_on_front' ) && get_option( 'page_on_front' ) ) {
 	load_template( get_page_template(), 'require_once' );
 } else {
 
-get_header(); ?>
+	get_header(); ?>
 
 <?php if ( get_theme_mod( 'givingpress_lite_donation_tagline', 'Donations Are Welcome' ) && '' != get_theme_mod( 'givingpress_lite_donation_tagline', 'Donations Are Welcome' ) ) { ?>
 
