@@ -141,4 +141,5 @@ CHANGELOG v1.5.8:
 
 CHANGELOG v1.5.9:
 - Conditional style tweak for home custom header
+- Updated theme URI in stylesheet
 - Footer credit tweak
