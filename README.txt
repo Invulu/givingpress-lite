@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.6
+GivingPress Lite Theme v1.6.1
 http://www.givingpress.com
 
 Image Credits
@@ -151,3 +151,6 @@ CHANGELOG v1.6:
 - Removed option to display category on blog
 - Updated conditional styles
 - Fixed a wrong text domain
+
+CHANGELOG v1.6.1:
+- Admin notice update

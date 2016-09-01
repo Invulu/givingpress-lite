@@ -97,7 +97,7 @@ add_action( 'after_setup_theme', 'givingpress_lite_setup' );
 /** Function givingpress_lite_admin_notice */
 function givingpress_lite_admin_notice() {
 	echo '<div class="notice updated"><p>';
-	printf( __( 'Enjoying the theme? <a href="%1$s" target="_blank">Sign Up</a> for FREE to start a <a href="%2$s" target="_blank">GivingPress Pro</a> site with tons of additional features and functionality for non-profit organizations!', 'givingpress-lite' ), 'https://givingpress.com', 'http://preview.givingpress.com' );
+	printf( __( 'Enjoying the theme? Sign up for a <a href="%1$s" target="_blank">FREE trial</a> of the full GivingPress website solution for nonprofits, or upgrade to the <a href="%2$s" target="_blank">GivingPress Pro</a> theme for tons more options and features!', 'givingpress-lite' ), 'https://givingpress.com', 'https://givingpress.com/theme/givingpress-pro/' );
 	echo '</p></div>';
 }
 add_action( 'admin_notices', 'givingpress_lite_admin_notice' );
