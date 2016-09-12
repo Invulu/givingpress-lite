@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.6.1
+GivingPress Lite Theme v1.6.2
 http://www.givingpress.com
 
 Image Credits
@@ -154,3 +154,6 @@ CHANGELOG v1.6:
 
 CHANGELOG v1.6.1:
 - Admin notice update
+
+CHANGELOG v1.6.2:
+- Removed home.php file
