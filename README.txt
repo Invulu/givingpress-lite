@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.6.3
+GivingPress Lite Theme v1.6.4
 http://www.givingpress.com
 
 Image Credits
@@ -160,3 +160,6 @@ CHANGELOG v1.6.2:
 
 CHANGELOG v1.6.3:
 - Footer change plugin notice
+
+CHANGELOG v1.6.4:
+- Style fix for mobile menu icon

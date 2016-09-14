@@ -114,7 +114,9 @@
 	.sf-arrows .sf-with-ul::after {
 		display: none;
 	}
-	.menu-toggle {
+	.menu-toggle,
+	.menu-toggle:active,
+	.menu-toggle:focus {
 		display: block;
 		color: #999999;
 		background: none !important;
