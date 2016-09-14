@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.6.2
+GivingPress Lite Theme v1.6.3
 http://www.givingpress.com
 
 Image Credits
@@ -157,3 +157,6 @@ CHANGELOG v1.6.1:
 
 CHANGELOG v1.6.2:
 - Removed home.php file
+
+CHANGELOG v1.6.3:
+- Footer change plugin notice
