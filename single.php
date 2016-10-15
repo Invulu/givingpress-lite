@@ -58,7 +58,6 @@ get_header(); ?>
 
 					<?php if ( has_post_thumbnail() ) { ?>
 						<div class="feature-img post-banner" <?php if ( ! empty( $thumb ) ) { ?> style="background-image: url(<?php echo esc_url( $thumb[0] ); ?>);" <?php } ?>>
-							<h1 class="headline img-headline"><?php the_title(); ?></h1>
 							<?php the_post_thumbnail( 'giving-featured-medium' ); ?>
 						</div>
 					<?php } ?>

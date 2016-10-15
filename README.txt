@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.6.5
+GivingPress Lite Theme v1.6.6
 http://www.givingpress.com
 
 Image Credits
@@ -168,3 +168,6 @@ CHANGELOG v1.6.5:
 - Better menu and logo alignment using flexbox
 - Mobile style tweaks
 - General cleanup
+
+CHANGELOG v1.6.6:
+- Removed duplicate post title
