@@ -7,7 +7,7 @@
 	Author URI: http://givingpress.com/
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.6.4
+	Version: 1.6.5
 	Text Domain: givingpress-lite
 	Tags: one-column, two-columns, three-columns, right-sidebar, custom-background, custom-header, custom-menu, featured-images, featured-image-header, flexible-header, full-width-template, theme-options, translation-ready, sticky-post, featured-images, footer-widgets
 
@@ -478,7 +478,16 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 	padding: 12px 0px;
 	z-index: 9;
 }
-#top-nav .site-title {
+#nav-bar {
+	display: flex;
+	align-content: center;
+	justify-content: space-between;
+	position: relative;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+.site-title {
 	display: block;
 	font-size: 1.8em;
 	font-style: normal;
@@ -486,6 +495,16 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 	line-height: 1.2;
 	margin: 0px;
 	padding: 24px 0px;
+}
+.custom-logo-link {
+	display: inline-block;
+	max-width: 100%;
+}
+.custom-logo-link img {
+	display: block;
+	width: auto;
+	height: auto;
+	max-height: 120px;
 }
 #site-info {
 	position: relative;
@@ -497,16 +516,6 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 }
 #header-content {
 	width: 100%;
-}
-.custom-logo-link {
-	display: inline-block;
-	max-width: 100%;
-}
-.custom-logo-link img {
-	display: block;
-	width: auto;
-	height: auto;
-	max-height: 80px;
 }
 #masthead {
 	display: block;
@@ -553,23 +562,24 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 .givingpress-lite-title-active.givingpress-lite-header-active #masthead .site-description {
 	text-shadow: 0px 0px 4px rgba(0, 0, 0, .24);
 }
-.givingpress-lite-logo-left .custom-logo-link,
-.givingpress-lite-logo-left .site-title,
 .givingpress-lite-description-left #masthead {
 	float: left;
 	text-align: left;
 }
-.givingpress-lite-logo-right .custom-logo-link,
-.givingpress-lite-logo-right .site-title,
+.givingpress-lite-logo-right #nav-bar {
+	flex-direction: row-reverse;
+}
+.givingpress-lite-logo-center #nav-bar {
+	display: block;
+	text-align: center;
+}
 .givingpress-lite-description-right #masthead {
 	float: right;
 	text-align: right;
 }
-.givingpress-lite-logo-center #top-nav {
-	padding-bottom: 12px;
+.givingpress-lite-logo-center .site-title {
+	padding: 12px 0px;
 }
-.givingpress-lite-logo-center .custom-logo-link,
-.givingpress-lite-logo-center .site-title,
 .givingpress-lite-logo-center #navigation,
 .givingpress-lite-description-center #masthead {
 	text-align: center;
@@ -608,13 +618,12 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 ************************************************/
 
 #navigation {
-	display: inline;
+	align-self: center;
 	color: #999999;
-	position: relative;
-	max-width: 70%;
 	font-size: 0.8em;
 	font-family: 'Raleway', Arial, sans-serif;
 	font-weight: 600;
+	text-align: center;
 	text-transform: uppercase;
 	margin: 0px;
 	padding: 0px;
@@ -632,15 +641,6 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 }
 
 /* Conditionals */
-.givingpress-lite-logo-left #navigation {
-	right: 0;
-}
-.givingpress-lite-logo-right #navigation {
-	left: 0;
-}
-.givingpress-lite-logo-center #navigation {
-	position: relative !important;
-}
 .givingpress-lite-logo-center .menu {
 	float: none;
 	margin: 0px auto 0px;
@@ -2087,8 +2087,8 @@ img.alignleft {
 	color: #666666;
 	font-size: 1em;
 	font-family: Georgia, "Times New Roman", Times, serif;
-	margin: 5px 0px;
-	padding: 5px;
+	margin: 6px 0px;
+	padding: 12px;
 	border: 1px solid rgba(0,0,0, 0.08);
 	border-radius: 3px;
 	box-shadow: inset 1px 1px 1px #DDDDDD;
@@ -2154,10 +2154,6 @@ img.alignleft {
 #commentform #submit {
 	font-size: 1em;
 	padding: 6px 12px;
-}
-#commentform textarea {
-	width: 92%;
-	padding: 3%;
 }
 .commentlist li #respond {
 	border-top: 1px solid rgba(0,0,0, 0.08);

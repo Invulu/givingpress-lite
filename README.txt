@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.6.4
+GivingPress Lite Theme v1.6.5
 http://www.givingpress.com
 
 Image Credits
@@ -163,3 +163,8 @@ CHANGELOG v1.6.3:
 
 CHANGELOG v1.6.4:
 - Style fix for mobile menu icon
+
+CHANGELOG v1.6.5:
+- Better menu and logo alignment using flexbox
+- Mobile style tweaks
+- General cleanup

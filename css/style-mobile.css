@@ -86,25 +86,25 @@
 	#top-nav {
 		padding: 12px;
 	}
-	#top-nav #navigation {
-		float: none;
+	#nav-bar {
 		display: block;
-		max-width: 100%;
 	}
 	#navigation {
-		position: relative !important;
-		right: auto;
-		top: auto;
 		text-align: left;
 		margin: 0px;
 		padding: 0px;
-		-webkit-transform: none;
-		-ms-transform: none;
-		transform: none;
 	}
 	.mobile-menu {
 		margin: 0px;
 		padding: 0px;
+	}
+	.toggle-holder {
+		display: flex;
+		align-content: center;
+		justify-content: space-between;
+	}
+	.givingpress-lite-logo-right .toggle-holder {
+		flex-direction: row-reverse;
 	}
 	.menu-toggle,
 	.main-small-navigation ul.mobile-menu.toggled-on {
@@ -118,32 +118,23 @@
 	.menu-toggle:active,
 	.menu-toggle:focus {
 		display: block;
-		color: #999999;
 		background: none !important;
+		box-shadow: none !important;
+		color: #999999;
 		position: relative;
-		margin: 18px auto 18px;
+		margin: 0px;
 		padding: 0px;
 		border: none;
 		z-index: 9;
 	}
-	.givingpress-lite-logo-center .menu-toggle {
-		margin-top: 0px;
-	}
-	.givingpress-lite-logo-left .menu-toggle {
-		float: right;
-	}
-	.givingpress-lite-logo-right .menu-toggle {
-		float: left;
-	}
 	.menu-toggle:hover {
 		color: #000000;
-		background: none !important;
-		box-shadow: none !important;
 	}
 	.mobile-menu-full-menu-container,
 	.mobile-menu-main-menu-container {
 		float: left;
 		width: 100%;
+		margin-top: 12px;
 	}
 	.menu-toggle .fa {
 		background: #ffffff;
@@ -156,7 +147,7 @@
 		margin: 0px;
 		padding: 12px;
 		border-radius: 3px;
-		box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+		box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.24);
 	}
 	.mobile-menu ul.sub-menu,
 	.mobile-menu ul.children {
@@ -254,6 +245,11 @@
 	.featured-pages .information {
 		padding: 18px;
 	}
+	.content.not-set,
+	.page .hentry .content,
+	.single .hentry .content {
+		margin-top: 0px;
+	}
 	.postarea {
 		padding: 24px 4%;
 	}
@@ -272,6 +268,9 @@
 		display: block;
 		width: 100%;
 		font-size: 0.9em;
+	}
+	.footer {
+		margin-top: 0px;
 	}
 	.footer-content {
 		text-align: center;

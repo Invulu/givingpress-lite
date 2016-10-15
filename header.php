@@ -90,39 +90,53 @@
 			<!-- BEGIN .content -->
 			<div class="content no-bg">
 
-			<?php givingpress_lite_custom_logo(); ?>
+				<!-- BEGIN #nav-bar -->
+				<div id="nav-bar">
 
-			<?php if ( has_nav_menu( 'main-menu' ) ) { ?>
+					<?php if ( has_nav_menu( 'main-menu' ) ) { ?>
 
-				<!-- BEGIN #navigation -->
-				<nav id="navigation" class="navigation-main vertical-center">
+						<div class="toggle-holder">
 
-					<button class="menu-toggle"><i class="fa fa-bars"></i></button>
+					<?php } ?>
 
-					<?php wp_nav_menu( array(
-						'theme_location' 		=> 'main-menu',
-						'title_li' 					=> '',
-						'depth' 						=> 4,
-						'fallback_cb'     	=> 'wp_page_menu',
-						'container_class' 	=> '',
-						'menu_class'      	=> 'menu',
-						)
-					); ?>
+					<?php givingpress_lite_custom_logo(); ?>
 
-				<!-- END #navigation -->
-				</nav>
+					<?php if ( has_nav_menu( 'main-menu' ) ) { ?>
 
-			<?php } elseif ( current_user_can( 'publish_posts' ) ) { ?>
+						<button class="menu-toggle"><i class="fa fa-bars"></i></button>
 
-				<!-- BEGIN #navigation -->
-				<nav id="navigation" class="navigation-main vertical-center">
+						</div>
 
-					<p class="instruction"><?php printf( wp_kses( __( 'Create a Custom Navigation Menu <a href="%1$s">here</a>.', 'givingpress-lite' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'nav-menus.php' ) ) ); ?></p>
+						<!-- BEGIN #navigation -->
+						<nav id="navigation" class="navigation-main">
 
-				<!-- END #navigation -->
-				</nav>
+							<?php wp_nav_menu( array(
+								'theme_location' 		=> 'main-menu',
+								'title_li' 					=> '',
+								'depth' 						=> 4,
+								'fallback_cb'     	=> 'wp_page_menu',
+								'container_class' 	=> '',
+								'menu_class'      	=> 'menu',
+								)
+							); ?>
 
-			<?php } ?>
+						<!-- END #navigation -->
+						</nav>
+
+					<?php } elseif ( current_user_can( 'publish_posts' ) ) { ?>
+
+						<!-- BEGIN #navigation -->
+						<nav id="navigation" class="navigation-main">
+
+							<p class="instruction"><?php printf( wp_kses( __( 'Create a Custom Navigation Menu <a href="%1$s">here</a>.', 'givingpress-lite' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'nav-menus.php' ) ) ); ?></p>
+
+						<!-- END #navigation -->
+						</nav>
+
+					<?php } ?>
+
+				<!-- END #nav-bar -->
+				</div>
 
 			<!-- END .content -->
 			</div>
