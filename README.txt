@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.6.6
+GivingPress Lite Theme v1.6.6.1
 http://www.givingpress.com
 
 Image Credits
@@ -171,3 +171,6 @@ CHANGELOG v1.6.5:
 
 CHANGELOG v1.6.6:
 - Removed duplicate post title
+
+CHANGELOG v1.6.6.1:
+- Minor style tweak
