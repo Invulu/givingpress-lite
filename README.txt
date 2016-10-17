@@ -177,4 +177,5 @@ CHANGELOG v1.6.6.1:
 
 CHANGELOG v1.6.7:
 - Added max width to blog posts
+- Max height for logo increased slightly
 - Style tweaks
