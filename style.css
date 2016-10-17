@@ -504,7 +504,7 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 	display: block;
 	width: auto;
 	height: auto;
-	max-height: 120px;
+	max-height: 140px;
 }
 #site-info {
 	position: relative;

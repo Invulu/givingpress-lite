@@ -69,7 +69,7 @@ if ( ! function_exists( 'givingpress_lite_setup' ) ) :
 		* Enable support for custom logo.
 		*/
 		add_theme_support( 'custom-logo', array(
-			'height'      => 240,
+			'height'      => 280,
 			'width'       => 640,
 			'flex-height' => true,
 			'flex-width'  => true,
