@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.6.6.1
+GivingPress Lite Theme v1.6.7
 http://www.givingpress.com
 
 Image Credits
@@ -174,3 +174,7 @@ CHANGELOG v1.6.6:
 
 CHANGELOG v1.6.6.1:
 - Minor style tweak
+
+CHANGELOG v1.6.7:
+- Added max width to blog posts
+- Style tweaks
