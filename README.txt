@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.6.7
+GivingPress Lite Theme v1.6.8
 http://www.givingpress.com
 
 Image Credits
@@ -179,3 +179,6 @@ CHANGELOG v1.6.7:
 - Added max width to blog posts
 - Max height for logo increased slightly
 - Style tweaks
+
+CHANGELOG v1.6.8:
+- Updated admin notification
