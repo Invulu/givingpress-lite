@@ -7,7 +7,7 @@
 	Author URI: http://givingpress.com/
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.6.8
+	Version: 1.6.9
 	Text Domain: givingpress-lite
 	Tags: one-column, two-columns, three-columns, right-sidebar, custom-background, custom-header, custom-menu, featured-images, featured-image-header, flexible-header, full-width-template, theme-options, translation-ready, sticky-post, featured-images, footer-widgets
 
@@ -505,6 +505,7 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 	width: auto;
 	height: auto;
 	max-height: 140px;
+	max-width: 360px;
 }
 #site-info {
 	position: relative;
@@ -1075,12 +1076,10 @@ html[xmlns] .slides {
 *	6.	Homepage																	*
 ************************************************/
 
-.home.front-page .footer,
-.page-template-template-home .footer {
+.home-template .footer {
 	margin-top: 0px;
 }
-.home.front-page .content.not-set,
-.page-template-template-home .content.not-set {
+.home-template .content.not-set {
 	margin-bottom: 24px;
 }
 

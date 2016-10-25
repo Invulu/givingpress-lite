@@ -497,6 +497,9 @@ function givingpress_lite_body_class( $classes ) {
 	if ( is_page_template( 'template-blog.php' ) ) {
 		$classes[] = 'blog'; }
 
+	if ( is_page_template( 'template-home.php' ) ) {
+		$classes[] = 'home-template'; }
+
 	if ( has_post_thumbnail() ) {
 		$classes[] = 'has-featured-img'; }
 
