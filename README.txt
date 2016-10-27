@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.6.9
+GivingPress Lite Theme v1.6.10
 http://www.givingpress.com
 
 Image Credits
@@ -186,3 +186,6 @@ CHANGELOG v1.6.8:
 CHANGELOG v1.6.9:
 - Minor body class update
 - Style tweak for new body class
+
+CHANGELOG v1.6.10:
+- Fixed comment link on blog
