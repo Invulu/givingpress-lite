@@ -371,6 +371,9 @@
 		font-weight: 400;
 		letter-spacing: -1px;
 	}
+	.custom-logo-link img {
+		max-width: 300px;
+	}
 	.slideshow .loading,
 	.slideshow.gallery-slideshow .loading {
 		min-height: 280px;
