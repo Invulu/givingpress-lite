@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.6.11
+GivingPress Lite Theme v1.6.12
 http://www.givingpress.com
 
 Image Credits
@@ -192,3 +192,6 @@ CHANGELOG v1.6.10:
 
 CHANGELOG v1.6.11:
 - Mobile style fix for logo width
+
+CHANGELOG v1.6.12:
+- Updated theme description
