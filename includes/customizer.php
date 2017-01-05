@@ -67,112 +67,10 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 		$categories = get_terms( 'category', array( 'fields' => 'ids', 'get' => 'all' ) );
 
 		if ( in_array( $input, $categories, true ) ) {
-		    return $input;
+			return $input;
 		} else {
 			return '';
 		}
-	}
-
-	/**
-	 * Sanitize Pages.
-	 *
-	 * @param array $input Sanitizes user input.
-	 * @return array
-	 */
-	function givingpress_lite_sanitize_pages( $input ) {
-		$pages = get_all_page_ids();
-
-	    if ( in_array( $input, $pages, true ) ) {
-	        return $input;
-	    } else {
-	    	return '';
-	    }
-	}
-
-	/**
-	 * Sanitize Slideshow Transition Interval.
-	 *
-	 * @param array $input Sanitizes user input.
-	 * @return array
-	 */
-	function givingpress_lite_sanitize_transition_interval( $input ) {
-	    $valid = array(
-	        '2000' 		=> esc_html__( '2 Seconds', 'givingpress-lite' ),
-	        '4000' 		=> esc_html__( '4 Seconds', 'givingpress-lite' ),
-	        '6000' 		=> esc_html__( '6 Seconds', 'givingpress-lite' ),
-	        '8000' 		=> esc_html__( '8 Seconds', 'givingpress-lite' ),
-	        '10000' 	=> esc_html__( '10 Seconds', 'givingpress-lite' ),
-	        '12000' 	=> esc_html__( '12 Seconds', 'givingpress-lite' ),
-	        '20000' 	=> esc_html__( '20 Seconds', 'givingpress-lite' ),
-	        '30000' 	=> esc_html__( '30 Seconds', 'givingpress-lite' ),
-	        '60000' 	=> esc_html__( '1 Minute', 'givingpress-lite' ),
-	        '999999999'	=> esc_html__( 'Hold Frame', 'givingpress-lite' ),
-	    );
-
-	    if ( array_key_exists( $input, $valid ) ) {
-	        return $input;
-	    } else {
-	        return '';
-	    }
-	}
-
-	/**
-	 * Sanitize Slideshow Transition Style.
-	 *
-	 * @param array $input Sanitizes user input.
-	 * @return array
-	 */
-	function givingpress_lite_sanitize_transition_style( $input ) {
-	    $valid = array(
-	        'fade' 		=> esc_html__( 'Fade', 'givingpress-lite' ),
-	        'slide' 	=> esc_html__( 'Slide', 'givingpress-lite' ),
-	    );
-
-	    if ( array_key_exists( $input, $valid ) ) {
-	        return $input;
-	    } else {
-	        return '';
-	    }
-	}
-
-	/**
-	 * Sanitize Columns.
-	 *
-	 * @param array $input Sanitizes user input.
-	 * @return array
-	 */
-	function givingpress_lite_sanitize_columns( $input ) {
-	    $valid = array(
-	        'one' 		=> esc_html__( 'One Column', 'givingpress-lite' ),
-	        'two' 		=> esc_html__( 'Two Columns', 'givingpress-lite' ),
-	        'three' 	=> esc_html__( 'Three Columns', 'givingpress-lite' ),
-	        'four' 		=> esc_html__( 'Four Columns', 'givingpress-lite' ),
-	    );
-
-	    if ( array_key_exists( $input, $valid ) ) {
-	        return $input;
-	    } else {
-	        return '';
-	    }
-	}
-
-	/**
-	 * Sanitize Slide Info Alignment.
-	 *
-	 * @param array $input Sanitizes user input.
-	 * @return array
-	 */
-	function givingpress_lite_sanitize_slide_info( $input ) {
-	    $valid = array(
-	        'right' 		=> esc_html__( 'Right', 'givingpress-lite' ),
-	        'bottom' 		=> esc_html__( 'Bottom', 'givingpress-lite' ),
-	    );
-
-	    if ( array_key_exists( $input, $valid ) ) {
-	        return $input;
-	    } else {
-	        return '';
-	    }
 	}
 
 	/**
@@ -182,17 +80,17 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 	 * @return array
 	 */
 	function givingpress_lite_sanitize_align( $input ) {
-	    $valid = array(
-	        'left' 		=> esc_html__( 'Left Align', 'givingpress-lite' ),
-	        'center' 		=> esc_html__( 'Center Align', 'givingpress-lite' ),
-	        'right' 	=> esc_html__( 'Right Align', 'givingpress-lite' ),
-	    );
+		$valid = array(
+			'left' 		=> esc_html__( 'Left Align', 'givingpress-lite' ),
+			'center' 		=> esc_html__( 'Center Align', 'givingpress-lite' ),
+			'right' 	=> esc_html__( 'Right Align', 'givingpress-lite' ),
+		);
 
-	    if ( array_key_exists( $input, $valid ) ) {
-	        return $input;
-	    } else {
-	        return '';
-	    }
+		if ( array_key_exists( $input, $valid ) ) {
+			return $input;
+		} else {
+			return '';
+		}
 	}
 
 	/**
@@ -230,7 +128,7 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 	}
 
 	/**
-	 * Sanitize IURL Input.
+	 * Sanitize URL Input.
 	 *
 	 * @param array $input Sanitizes user input.
 	 * @return array
@@ -487,7 +385,7 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 		// Featured Page Left.
 		$wp_customize->add_setting( 'givingpress_lite_page_one', array(
 			'default' => '2',
-			'sanitize_callback' => 'givingpress_lite_sanitize_pages',
+			'sanitize_callback' => 'absint',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'givingpress_lite_page_one', array(
 			'label'		=> esc_html__( 'Featured Page Left', 'givingpress-lite' ),
@@ -500,7 +398,7 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 		// Featured Page Middle.
 		$wp_customize->add_setting( 'givingpress_lite_page_two', array(
 			'default' => '2',
-			'sanitize_callback' => 'givingpress_lite_sanitize_pages',
+			'sanitize_callback' => 'absint',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'givingpress_lite_page_two', array(
 			'label'		=> esc_html__( 'Featured Page Middle', 'givingpress-lite' ),
@@ -513,7 +411,7 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 		// Featured Page Right.
 		$wp_customize->add_setting( 'givingpress_lite_page_three', array(
 			'default' => '2',
-			'sanitize_callback' => 'givingpress_lite_sanitize_pages',
+			'sanitize_callback' => 'absint',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'givingpress_lite_page_three', array(
 			'label'		=> esc_html__( 'Featured Page Right', 'givingpress-lite' ),
@@ -526,7 +424,7 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 		// Featured Page Bottom.
 		$wp_customize->add_setting( 'givingpress_lite_page_four', array(
 			'default' => '2',
-			'sanitize_callback' => 'givingpress_lite_sanitize_pages',
+			'sanitize_callback' => 'absint',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'givingpress_lite_page_four', array(
 			'label'		=> esc_html__( 'Featured Page Bottom', 'givingpress-lite' ),

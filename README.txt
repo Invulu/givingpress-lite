@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.6.12
+GivingPress Lite Theme v1.7
 http://www.givingpress.com
 
 Image Credits
@@ -8,6 +8,10 @@ Image Credits
 - header.jpg: Downloaded from Unsplash, https://unsplash.com/photos/n9SLYuyyZhQ. Licensed under Creative Commons Zero license, https://unsplash.com/license.
 - header-thumb.jpg: Downloaded from Unsplash, https://unsplash.com/photos/n9SLYuyyZhQ. Licensed under Creative Commons Zero license, https://unsplash.com/license.
 - default-image.jpg: Downloaded from Unsplash, https://unsplash.com/photos/N9yFjkDc0vA. Licensed under Creative Commons Zero license, https://unsplash.com/license.
+- image-about.jpg: Downloaded from Unsplash, https://unsplash.com/photos/N9yFjkDc0vA. Licensed under Creative Commons Zero license, https://unsplash.com/license.
+- image-contact.jpg: Downloaded from Unsplash, https://unsplash.com/photos/N9yFjkDc0vA. Licensed under Creative Commons Zero license, https://unsplash.com/license.
+- image-services.jpg: Downloaded from Unsplash, https://unsplash.com/photos/N9yFjkDc0vA. Licensed under Creative Commons Zero license, https://unsplash.com/license.
+- image-mission.jpg: Downloaded from Unsplash, https://unsplash.com/photos/N9yFjkDc0vA. Licensed under Creative Commons Zero license, https://unsplash.com/license.
 
 Font Awesome
 - Font License: SIL OFL 1.1 http://scripts.sil.org/OFL
@@ -195,3 +199,11 @@ CHANGELOG v1.6.11:
 
 CHANGELOG v1.6.12:
 - Updated theme description
+
+CHANGELOG v1.7:
+- Made notifications dismissible
+- Added starter content
+- Changed body font to match pro theme
+- Removed unnecessary functions
+- Updated FontAwesome
+- Style tweaks

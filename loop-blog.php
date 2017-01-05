@@ -14,7 +14,7 @@
 <?php $thumb = ( get_the_post_thumbnail() ) ? wp_get_attachment_image_src( get_post_thumbnail_id(), 'giving-featured-medium' ) : false; ?>
 
 <!-- BEGIN .blog-holder -->
-<div class="blog-holder shadow radius-full">
+<div class="blog-holder radius-full">
 
 	<?php if ( has_post_thumbnail() ) { ?>
 		<a class="feature-img post-banner" <?php if ( ! empty( $thumb ) ) { ?> style="background-image: url(<?php echo esc_url( $thumb[0] ); ?>);" <?php } ?> href="<?php the_permalink(); ?>" rel="bookmark" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'givingpress-lite' ), the_title_attribute( 'echo=0' ) ) ); ?>">

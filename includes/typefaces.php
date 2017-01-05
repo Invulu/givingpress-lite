@@ -20,8 +20,9 @@ function givingpress_lite_fonts_url() {
 	$playfair = _x( 'on', 'Playfair font: on or off', 'givingpress-lite' );
 	$montserrat = _x( 'on', 'Montserrat font: on or off', 'givingpress-lite' );
 	$raleway = _x( 'on', 'Raleway font: on or off', 'givingpress-lite' );
+	$noto = _x( 'on', 'Noto Serif font: on or off', 'givingpress-pro' );
 
-	if ( 'off' != $oswald || 'off' != $open_sans || 'off' != $merriweather || 'off' != $playfair || 'off' != $montserrat || 'off' != $raleway ) {
+	if ( 'off' != $oswald || 'off' != $open_sans || 'off' != $merriweather || 'off' != $playfair || 'off' != $montserrat || 'off' != $raleway || 'off' !== $noto ) {
 		$font_families = array();
 
 		if ( 'off' != $oswald ) {
@@ -46,6 +47,10 @@ function givingpress_lite_fonts_url() {
 
 		if ( 'off' != $raleway ) {
 			$font_families[] = 'Raleway:400,100,200,300,500,600,700,800,900';
+		}
+
+		if ( 'off' !== $noto ) {
+			$font_families[] = 'Noto Serif:400,400i,700,700i';
 		}
 
 		$query_args = array(

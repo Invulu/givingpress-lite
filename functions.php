@@ -48,14 +48,14 @@ if ( ! function_exists( 'givingpress_lite_setup' ) ) :
 			),
 		));
 		$defaults = array(
-		'width'                 => 1800,
-		'height'                => 640,
-		'default-image'					=> get_template_directory_uri() . '/images/header.jpg',
-		'flex-height'           => true,
-		'flex-width'            => true,
-		'default-text-color'    => 'ffffff',
-		'header-text'           => true,
-		'uploads'               => true,
+			'width'                 => 1800,
+			'height'                => 640,
+			'default-image'					=> get_template_directory_uri() . '/images/header.jpg',
+			'flex-height'           => true,
+			'flex-width'            => true,
+			'default-text-color'    => 'ffffff',
+			'header-text'           => true,
+			'uploads'               => true,
 		);
 		add_theme_support( 'custom-header', $defaults );
 
@@ -84,6 +84,107 @@ if ( ! function_exists( 'givingpress_lite_setup' ) ) :
 			'gallery',
 			'caption',
 		) );
+
+		// Add theme starter content.
+		add_theme_support( 'starter-content', array(
+
+			// Starter theme options.
+			'theme_mods' => array(
+				'givingpress_lite_page_one' => '{{about}}',
+				'givingpress_lite_page_two' => '{{services}}',
+				'givingpress_lite_page_three' => '{{contact}}',
+				'givingpress_lite_page_four' => '{{mission}}',
+			),
+
+			// Static front page set to Home, posts page set to Blog.
+			'options' => array(
+				'show_on_front' => 'page',
+				'page_on_front' => '{{home}}',
+				'page_for_posts' => '{{blog}}',
+				'blogdescription' => 'My Awesome <b>GivingPress</b><br /> Nonprofit Website',
+			),
+
+			// Starter pages to include.
+			'posts' => array(
+				'home' => array(
+					'template' => 'template-home.php',
+				),
+				'about' => array(
+					'thumbnail' => '{{image-about}}',
+				),
+				'services' => array(
+					'post_type' => 'page',
+					'post_title' => 'Services',
+					'post_content' => '<p>This is an example services page. You may want to write about the various services your organization provides.</p>',
+					'thumbnail' => '{{image-services}}',
+				),
+				'mission' => array(
+					'post_type' => 'page',
+					'post_title' => 'Our Mission',
+					'post_content' => '<p><b>GivingPress</b> aims to make the world a better place by providing nonprofit organizations with the tools they need to create and manage a professional website at an affordable price. Our goal is to promote and aid businesses that are focused on the good of the world and mankind, so they can spend less time on their website, and more time making a difference.</p>
+					<p>GivingPress provides small to medium sized nonprofit organizations with a WordPress powered website solution catered specifically to their needs. Start accepting donations, creating fundraisers and supercharging your nonprofit website today!</p>',
+					'thumbnail' => '{{image-mission}}',
+				),
+				'blog',
+				'contact' => array(
+					'thumbnail' => '{{image-contact}}',
+				),
+			),
+
+			// Starter attachments for default images.
+			'attachments' => array(
+				'image-about' => array(
+					'post_title' => 'About Image',
+					'file' => 'images/image-about.jpg',
+				),
+				'image-services' => array(
+					'post_title' => 'Services Image',
+					'file' => 'images/image-services.jpg',
+				),
+				'image-mission' => array(
+					'post_title' => 'Mission Image',
+					'file' => 'images/image-mission.jpg',
+				),
+				'image-contact' => array(
+					'post_title' => 'Contact Image',
+					'file' => 'images/image-contact.jpg',
+				),
+			),
+
+			// Add pages to primary navigation menu.
+			'nav_menus' => array(
+				'main-menu' => array(
+					'name' => __( 'Primary Navigation', 'givingpress-lite' ),
+					'items' => array(
+						'page_home',
+						'page_about',
+						'page_mission' => array(
+							'type' => 'post_type',
+							'object' => 'page',
+							'object_id' => '{{mission}}',
+						),
+						'page_services' => array(
+							'type' => 'post_type',
+							'object' => 'page',
+							'object_id' => '{{services}}',
+						),
+						'page_blog',
+						'page_contact',
+					),
+				)
+			),
+
+			// Add test widgets to footer.
+			'widgets' => array(
+				'footer' => array(
+					'text_business_info',
+					'meta',
+					'recent-posts',
+					'text_about',
+				)
+			)
+
+		));
 	}
 endif; // Function givingpress_lite_setup.
 add_action( 'after_setup_theme', 'givingpress_lite_setup' );
@@ -96,20 +197,38 @@ add_action( 'after_setup_theme', 'givingpress_lite_setup' );
 
 /** Function givingpress_lite_admin_notice */
 function givingpress_lite_admin_notice() {
-	echo '<div class="notice updated"><p>';
-	printf( __( 'Enjoying the theme? Sign up for a <a href="%1$s" target="_blank">FREE trial</a> of the full GivingPress website solution for nonprofits, or upgrade to the <a href="%2$s" target="_blank">GivingPress Pro</a> theme for tons more options and features!', 'givingpress-lite' ), 'https://givingpress.com', 'https://givingpress.com/theme/givingpress-pro/' );
-	echo '</p></div>';
+	global $current_user;
+	$user_id = $current_user->ID;
+	if ( ! get_user_meta( $user_id, 'givingpress_lite_ignore_notice' ) ) {
+		echo '<div class="notice updated is-dismissible"><p>';
+		printf( __( 'Enjoying the theme? Sign up for a <a href="%1$s" target="_blank">FREE trial</a> of the full GivingPress website solution for nonprofits, or upgrade to the <a href="%2$s" target="_blank">GivingPress Pro</a> theme for tons more options and features! <a class="notice-dismiss" type="button" href="%3$s"><span class="screen-reader-text">Hide Notice</span></a>', 'givingpress-lite' ), 'https://givingpress.com', 'https://givingpress.com/theme/givingpress-pro/', '?givingpress_lite_nag_ignore=0' );
+		echo '</p></div>';
+	}
 }
 add_action( 'admin_notices', 'givingpress_lite_admin_notice' );
 
 if ( ! class_exists( 'Organic_Footer_Modifier' ) ) {
 	function givingpress_lite_admin_footer_notice() {
-		echo '<div class="updated"><p>';
-		printf( __( 'Want to remove or change those pesky footer credits? Get the <a href="%1$s" target="_blank">Footer Change Plugin</a> from Organic Themes! Use discount code <b>FOOTERSAVE10</b> to save $10!', 'givingpress-lite' ), 'http://organicthemes.com/footer-change-plugin/' );
-		echo '</p></div>';
+		global $current_user;
+		$user_id = $current_user->ID;
+		if ( ! get_user_meta( $user_id, 'givingpress_lite_ignore_notice' ) ) {
+			echo '<div class="notice updated is-dismissible"><p>';
+			printf( __( 'Want to remove or change those pesky footer credits? Get the <a href="%1$s" target="_blank">Footer Change Plugin</a> from Organic Themes! Use discount code <b>FOOTERSAVE10</b> to save $10! <a class="notice-dismiss" type="button" href="%2$s"><span class="screen-reader-text">Hide Notice</span></a>', 'givingpress-lite' ), 'http://organicthemes.com/footer-change-plugin/', '?givingpress_lite_nag_ignore=0' );
+			echo '</p></div>';
+		}
 	}
 	add_action( 'admin_notices', 'givingpress_lite_admin_footer_notice' );
 }
+
+/** Function givingpress_lite_nag_ignore */
+function givingpress_lite_nag_ignore() {
+	global $current_user;
+	$user_id = $current_user->ID;
+	if ( isset( $_GET['givingpress_lite_nag_ignore'] ) && '0' == $_GET['givingpress_lite_nag_ignore'] ) {
+		 add_user_meta( $user_id, 'givingpress_lite_ignore_notice', 'true', true );
+	}
+}
+add_action( 'admin_init', 'givingpress_lite_nag_ignore' );
 
 /*
 -------------------------------------------------------------------------------------------------------

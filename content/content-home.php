@@ -11,7 +11,7 @@
 <?php if ( get_theme_mod( 'givingpress_lite_donation_tagline', 'Donations Are Welcome' ) && '' != get_theme_mod( 'givingpress_lite_donation_tagline', 'Donations Are Welcome' ) ) { ?>
 
 <!-- BEGIN .featured-donation -->
-<section class="featured-donation shadow">
+<section class="featured-donation">
 
 	<!-- BEGIN .row -->
 	<div class="row">
@@ -58,8 +58,14 @@
 
 <?php } ?>
 
+<?php
+	$page_one = get_theme_mod( 'givingpress_lite_page_one' );
+	$page_two = get_theme_mod( 'givingpress_lite_page_two' );
+	$page_three = get_theme_mod( 'givingpress_lite_page_three' );
+?>
+
 <!-- Featured Pages Small Section -->
-<?php if ( get_theme_mod( 'givingpress_lite_page_one' ) && get_theme_mod( 'givingpress_lite_page_two' ) && get_theme_mod( 'givingpress_lite_page_three' ) ) { ?>
+<?php if ( $page_one && $page_two && $page_three ) { ?>
 
 <!-- BEGIN .featured-pages -->
 <section class="featured-pages">
@@ -71,26 +77,32 @@
 		<div class="content no-bg">
 
 			<div class="holder third">
-				<?php $recent = new WP_Query( 'page_id='.get_theme_mod( 'givingpress_lite_page_one' ) );
+				<?php $recent = new WP_Query( array(
+					'page_id' => $page_one,
+				) );
 				while ( $recent->have_posts() ) : $recent->the_post(); ?>
-									<?php get_template_part( 'content/home-page', 'small' ); ?>
-								<?php endwhile; ?>
+					<?php get_template_part( 'content/home-page', 'small' ); ?>
+				<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
 			</div>
 
 			<div class="holder third">
-				<?php $recent = new WP_Query( 'page_id='.get_theme_mod( 'givingpress_lite_page_two' ) );
+				<?php $recent = new WP_Query( array(
+					'page_id' => $page_two,
+				) );
 				while ( $recent->have_posts() ) : $recent->the_post(); ?>
-									<?php get_template_part( 'content/home-page', 'small' ); ?>
-								<?php endwhile; ?>
+					<?php get_template_part( 'content/home-page', 'small' ); ?>
+				<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
 			</div>
 
 			<div class="holder third">
-				<?php $recent = new WP_Query( 'page_id='.get_theme_mod( 'givingpress_lite_page_three' ) );
+				<?php $recent = new WP_Query( array(
+					'page_id' => $page_three,
+				) );
 				while ( $recent->have_posts() ) : $recent->the_post(); ?>
-									<?php get_template_part( 'content/home-page', 'small' ); ?>
-								<?php endwhile; ?>
+					<?php get_template_part( 'content/home-page', 'small' ); ?>
+				<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
 			</div>
 
@@ -108,7 +120,9 @@
 <!-- Featured Page Wide Section -->
 <?php if ( get_theme_mod( 'givingpress_lite_page_four' ) ) { ?>
 
-	<?php $recent = new WP_Query( 'page_id='.get_theme_mod( 'givingpress_lite_page_four' ) );
+	<?php $recent = new WP_Query( array(
+		'page_id' => get_theme_mod( 'givingpress_lite_page_four' ),
+	) );
 	while ( $recent->have_posts() ) : $recent->the_post(); ?>
 		<?php $thumb = ( get_the_post_thumbnail() ) ? wp_get_attachment_image_src( get_post_thumbnail_id(), 'giving-featured-large' ) : false; ?>
 		<?php $has_content = get_the_content(); ?>
