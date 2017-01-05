@@ -101,7 +101,7 @@ if ( ! function_exists( 'givingpress_lite_setup' ) ) :
 				'show_on_front' => 'page',
 				'page_on_front' => '{{home}}',
 				'page_for_posts' => '{{blog}}',
-				'blogdescription' => 'My Awesome <b>GivingPress</b><br /> Nonprofit Website',
+				'blogdescription' => __( 'My Awesome <b>GivingPress</b><br /> Nonprofit Website', 'givingpress-lite' ),
 			),
 
 			// Starter pages to include.
@@ -114,15 +114,15 @@ if ( ! function_exists( 'givingpress_lite_setup' ) ) :
 				),
 				'services' => array(
 					'post_type' => 'page',
-					'post_title' => 'Services',
-					'post_content' => '<p>This is an example services page. You may want to write about the various services your organization provides.</p>',
+					'post_title' => __( 'Services', 'givingpress-lite' ),
+					'post_content' => __( '<p>This is an example services page. You may want to write about the various services your organization provides.</p>', 'givingpress-lite' ),
 					'thumbnail' => '{{image-services}}',
 				),
 				'mission' => array(
 					'post_type' => 'page',
-					'post_title' => 'Our Mission',
-					'post_content' => '<p><b>GivingPress</b> aims to make the world a better place by providing nonprofit organizations with the tools they need to create and manage a professional website at an affordable price. Our goal is to promote and aid businesses that are focused on the good of the world and mankind, so they can spend less time on their website, and more time making a difference.</p>
-					<p>GivingPress provides small to medium sized nonprofit organizations with a WordPress powered website solution catered specifically to their needs. Start accepting donations, creating fundraisers and supercharging your nonprofit website today!</p>',
+					'post_title' => __( 'Our Mission', 'givingpress-lite' ),
+					'post_content' => __( '<p><b>GivingPress</b> aims to make the world a better place by providing nonprofit organizations with the tools they need to create and manage a professional website at an affordable price. Our goal is to promote and aid businesses that are focused on the good of the world and mankind, so they can spend less time on their website, and more time making a difference.</p>
+					<p>GivingPress provides small to medium sized nonprofit organizations with a WordPress powered website solution catered specifically to their needs. Start accepting donations, creating fundraisers and supercharging your nonprofit website today!</p>', 'givingpress-lite' ),
 					'thumbnail' => '{{image-mission}}',
 				),
 				'blog',
@@ -134,19 +134,19 @@ if ( ! function_exists( 'givingpress_lite_setup' ) ) :
 			// Starter attachments for default images.
 			'attachments' => array(
 				'image-about' => array(
-					'post_title' => 'About Image',
+					'post_title' => __( 'About Image', 'givingpress-lite' ),
 					'file' => 'images/image-about.jpg',
 				),
 				'image-services' => array(
-					'post_title' => 'Services Image',
+					'post_title' => __( 'Services Image', 'givingpress-lite' ),
 					'file' => 'images/image-services.jpg',
 				),
 				'image-mission' => array(
-					'post_title' => 'Mission Image',
+					'post_title' => __( 'Mission Image', 'givingpress-lite' ),
 					'file' => 'images/image-mission.jpg',
 				),
 				'image-contact' => array(
-					'post_title' => 'Contact Image',
+					'post_title' => __( 'Contact Image', 'givingpress-lite' ),
 					'file' => 'images/image-contact.jpg',
 				),
 			),

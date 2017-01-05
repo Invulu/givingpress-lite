@@ -20,7 +20,7 @@ function givingpress_lite_fonts_url() {
 	$playfair = _x( 'on', 'Playfair font: on or off', 'givingpress-lite' );
 	$montserrat = _x( 'on', 'Montserrat font: on or off', 'givingpress-lite' );
 	$raleway = _x( 'on', 'Raleway font: on or off', 'givingpress-lite' );
-	$noto = _x( 'on', 'Noto Serif font: on or off', 'givingpress-pro' );
+	$noto = _x( 'on', 'Noto Serif font: on or off', 'givingpress-lite' );
 
 	if ( 'off' != $oswald || 'off' != $open_sans || 'off' != $merriweather || 'off' != $playfair || 'off' != $montserrat || 'off' != $raleway || 'off' !== $noto ) {
 		$font_families = array();

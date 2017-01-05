@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.7
+GivingPress Lite Theme v1.7.1
 http://www.givingpress.com
 
 Image Credits
@@ -207,3 +207,6 @@ CHANGELOG v1.7:
 - Removed unnecessary functions
 - Updated FontAwesome
 - Style tweaks
+
+CHANGELOG v1.7.1:
+- Added localization to starter content
