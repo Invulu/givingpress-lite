@@ -158,11 +158,6 @@ if ( ! function_exists( 'givingpress_lite_setup' ) ) :
 					'items' => array(
 						'page_home',
 						'page_about',
-						'page_mission' => array(
-							'type' => 'post_type',
-							'object' => 'page',
-							'object_id' => '{{mission}}',
-						),
 						'page_services' => array(
 							'type' => 'post_type',
 							'object' => 'page',
