@@ -9,11 +9,11 @@
 function givingpress_lite_fonts_url() {
 	$fonts_url = '';
 
-	/*
-	Translators: If there are characters in your language that are not
-    * supported by Lora, translate this to 'off'. Do not translate
-    * into your own language.
-    */
+	/**
+	 * Translators: If there are characters in your language that are not
+	 * supported by Lora, translate this to 'off'. Do not translate
+	 * into your own language.
+	 */
 	$oswald = _x( 'on', 'Oswald font: on or off', 'givingpress-lite' );
 	$open_sans = _x( 'on', 'Open Sans font: on or off', 'givingpress-lite' );
 	$merriweather = _x( 'on', 'Merriweather font: on or off', 'givingpress-lite' );

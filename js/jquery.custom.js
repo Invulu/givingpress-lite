@@ -77,33 +77,6 @@
 		});
 	}
 
-	/* Flexslider ---------------------*/
-	function flexSliderSetup() {
-		if( ($).flexslider) {
-			var slider = $('.flexslider');
-			slider.flexslider({
-				slideshowSpeed		: '12000',
-				animationDuration	: 800,
-				animation			: 'fade',
-				video				: false,
-				useCSS				: false,
-				prevText			: '<i class="fa fa-angle-left"></i>',
-				nextText			: '<i class="fa fa-angle-right"></i>',
-				touch				: false,
-				controlNav			: false,
-				animationLoop		: true,
-				smoothHeight		: true,
-				pauseOnAction		: true,
-				pauseOnHover		: false,
-
-				start: function(slider) {
-					slider.removeClass('loading');
-					$( ".preloader" ).hide();
-				}
-			});
-		}
-	}
-
 	/* Equal Height Columns Pages ---------------------*/
 	function equalHeightPages() {
 		var currentTallest 	= 0,
@@ -163,7 +136,6 @@
 	.on( 'post-load', modifyPosts );
 
 	$( window )
-	.load( flexSliderSetup )
 	.load( equalHeightPages )
 	.resize( equalHeightPages );
 

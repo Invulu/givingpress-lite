@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.7.1
+GivingPress Lite Theme v1.7.2
 http://www.givingpress.com
 
 Image Credits
@@ -19,10 +19,6 @@ Font Awesome
 
 Navigation.js
 - Copyright 2014 Organic Themes
-- Licensed under the GPLv2 license, http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
-
-FlexSlider.js
-- Copyright 2012 WooThemes
 - Licensed under the GPLv2 license, http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
 FitVids.js
@@ -210,3 +206,10 @@ CHANGELOG v1.7:
 
 CHANGELOG v1.7.1:
 - Added localization to starter content
+
+CHANGELOG v1.7.2:
+- Starter content tweaks
+- Removed unnecessary page templates
+- Removed flexslider script
+- General cleanup
+- Style tweaks

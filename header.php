@@ -161,7 +161,7 @@
 	<?php if ( ! empty( $header_image ) ) { ?>
 
 	<!-- BEGIN .custom-header -->
-	<div class="custom-header" <?php if ( ! empty( $header_image ) ) { ?> style="background-image: url(<?php header_image(); ?>);"<?php } ?>>
+	<div class="custom-header bg-image" style="background-image: url(<?php header_image(); ?>);">
 
 	<?php } ?>
 

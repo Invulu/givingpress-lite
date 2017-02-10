@@ -56,6 +56,7 @@ if ( ! function_exists( 'givingpress_lite_setup' ) ) :
 			'default-text-color'    => 'ffffff',
 			'header-text'           => true,
 			'uploads'               => true,
+			'video' 								=> true,
 		);
 		add_theme_support( 'custom-header', $defaults );
 
@@ -156,7 +157,7 @@ if ( ! function_exists( 'givingpress_lite_setup' ) ) :
 				'main-menu' => array(
 					'name' => __( 'Primary Navigation', 'givingpress-lite' ),
 					'items' => array(
-						'page_home',
+						'link_home',
 						'page_about',
 						'page_services' => array(
 							'type' => 'post_type',
@@ -291,11 +292,6 @@ if ( ! function_exists( 'givingpress_lite_enqueue_scripts' ) ) {
 		wp_enqueue_script( 'hoverIntent' );
 		wp_enqueue_script( 'givingpress-lite-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20130729', true );
 		wp_enqueue_script( 'givingpress-lite-custom', get_template_directory_uri() . '/js/jquery.custom.js', array( 'jquery', 'superfish', 'fitvids', 'masonry' ), '20130729', true );
-
-		// Load Flexslider on front page and slideshow page template.
-		if ( is_page_template( 'template-slideshow.php' ) ) {
-			wp_enqueue_script( 'flexslider', get_template_directory_uri() . '/js/jquery.flexslider.js', array( 'jquery' ), '20130729' );
-		}
 
 		// Load single scripts only on single pages.
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -758,26 +754,6 @@ function givingpress_lite_first_embed_media() {
 		return false;
 	}
 }
-
-/*
--------------------------------------------------------------------------------------------------------
-	Remove First Gallery
--------------------------------------------------------------------------------------------------------
-*/
-
-/**
- * Retrieve first gallery from post content.
- *
- * @param array $content Returns gallery in content.
- * @return array
- */
-function givingpress_lite_remove_gallery( $content ) {
-	if ( is_page_template( 'template-slideshow.php' ) ) {
-		$content = preg_replace( '/\[gallery(.*?)ids=[^\]]+\]/', '', $content, 1 );
-	}
-	return $content;
-}
-add_filter( 'the_content', 'givingpress_lite_remove_gallery' );
 
 /*
 -------------------------------------------------------------------------------------------------------

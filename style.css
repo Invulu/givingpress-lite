@@ -2,12 +2,12 @@
 
 	Theme Name: GivingPress Lite
 	Theme URI: https://givingpress.com/theme/givingpress-lite/
-	Description: A WordPress theme for nonprofit organizations, charities, foundations and conscious businesses. GivingPress provides professional website solutions for nonprofit organizations. The theme is perfect for churches, scholarships, education, healthcare, scientific reasearch, political, charity and humanitarian sites. The design features a modern aesthetic with an emphasis on collecting donations and fundraising. Visit the GivingPress site for more information.
+	Description: A WordPress theme for nonprofit organizations, charities, foundations and conscious businesses. GivingPress provides professional website solutions for nonprofit organizations. The theme is perfect for churches, scholarships, education, healthcare, scientific reasearch, political, charity, humanitarian, club and association websites. The design features a modern aesthetic with an emphasis on collecting donations and fundraising. Visit the GivingPress site for more information.
 	Author: GivingPress
 	Author URI: http://givingpress.com/
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.7.1
+	Version: 1.7.2
 	Text Domain: givingpress-lite
 	Tags: one-column, two-columns, three-columns, right-sidebar, custom-background, custom-header, custom-menu, featured-images, featured-image-header, flexible-header, full-width-template, theme-options, translation-ready, sticky-post, featured-images, footer-widgets
 
@@ -23,28 +23,26 @@
 	 2.	Headings
 	 3.	Header
 	 4.	Navigation
-	 5.	Slideshow
-	 6.	Homepage
-	 7. Menu Page
-	 8.	Content
-	 9. Social Media
-	10. Pagination
-	11.	Images
-	12. Page Templates
-	13.	WordPress Gallery
-	14.	Sidebar
-	15.	Widgets
-	16.	RSS Widget
-	17.	Calendar Widget
-	18.	Custom Menu Widget
-	19.	Search Form
-	20.	Footer
-	21.	Comments
-	22.	Buttons
-	23. Tables
-	24. Forms
-	25. CSS3 Styles
-	26. WordPress Core
+	 5.	Homepage
+	 6.	Content
+	 7. Social Media
+	 8. Pagination
+	 9.	Images
+	10. Page Templates
+	11.	WordPress Gallery
+	12.	Sidebar
+	13.	Widgets
+	14.	RSS Widget
+	15.	Calendar Widget
+	16.	Custom Menu Widget
+	17.	Search Form
+	18.	Footer
+	19.	Comments
+	20.	Buttons
+	21. Tables
+	22. Forms
+	23. CSS3 Styles
+	24. WordPress Core
 
 *******************************************************************************************************************/
 
@@ -65,7 +63,7 @@ body.wp-autoresize {
 }
 
 /************************************************
-*	0.	Global									*
+*	0.	Global
 ************************************************/
 
 p {
@@ -277,7 +275,7 @@ table {
 }
 
 /************************************************
-*	1.	Hyperlinks								*
+*	1.	Hyperlinks
 ************************************************/
 
 a img {
@@ -294,7 +292,7 @@ a:focus, a:hover, a:active {
 }
 
 /************************************************
-*	2.	Headings  								*
+*	2.	Headings
 ************************************************/
 
 h1, h2, h3,
@@ -401,7 +399,7 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 }
 
 /************************************************
-*	3.	Header  								*
+*	3.	Header
 ************************************************/
 
 #header {
@@ -490,11 +488,12 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 .site-title {
 	display: block;
 	font-size: 1.8em;
-	font-style: normal;
-	letter-spacing: 0px;
+	font-family: 'Noto Serif';
+	font-weight: 700;
+	letter-spacing: -1px;
 	line-height: 1.2;
 	margin: 0px;
-	padding: 24px 0px;
+	padding: 18px 0px;
 }
 .custom-logo-link {
 	display: inline-block;
@@ -615,7 +614,7 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 }
 
 /************************************************
-*	4.	Navigation 								*
+*	4.	Navigation
 ************************************************/
 
 #navigation {
@@ -920,160 +919,7 @@ div.menu ul li li li:hover ul {
 }
 
 /************************************************
-*	5. Slideshow							    *
-************************************************/
-
-.slideshow {
-	display: block;
-	height: 100%;
-	margin: 0px;
-	padding: 0px;
-	position: relative;
-	overflow: hidden;
-}
-.flexslider {
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-}
-.flexslider.loading {
-	min-height: 480px;
-}
-.flexslider .preloader {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-left: -16px;
-	margin-top: -16px;
-	border-bottom: 3px solid rgba(0, 0, 0, 0.08);
-	border-left: 3px solid rgba(0, 0, 0, 0.08);
-	border-right: 3px solid rgba(0, 0, 0, 0.24);
-	border-top: 3px solid rgba(0, 0, 0, 0.24);
-	border-radius: 100%;
-	height: 32px;
-	width: 32px;
-	-webkit-animation: spin .6s infinite linear;
-	-moz-animation: spin .6s infinite linear;
-	-ms-animation: spin .6s infinite linear;
-	-o-animation: spin .6s infinite linear;
-	animation: spin .6s infinite linear;
-	z-index: 99;
-}
-.flexslider ul, .flexslider li {
-	list-style-type: none;
-	margin: 0px;
-	padding: 0px;
-}
-.flexslider .slides {
-	position: relative;
-	overflow: hidden;
-	zoom: 1;
-}
-.flexslider .slides > li {
-	display: none;
-	-webkit-backface-visibility: hidden;
-}
-.flexslider .slides img {
-	width: 100%;
-	display: block;
-}
-.flex-pauseplay span {
-	text-transform: capitalize;
-}
-
-/* Clearfix for the .slides element */
-.slides:after {
-	content: "\0020";
-	display: block;
-	clear: both;
-	visibility: hidden;
-	line-height: 0;
-	height: 0;
-}
-html[xmlns] .slides {
-	display: block;
-}
-* html .slides {
-	height: 1%;
-}
-
-/* No JavaScript Fallback */
-.no-js .slides > li:first-child {
-	display: none;
-}
-
-/* Caption style */
-.flex-caption {
-	background: none;
-	-ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
-	zoom: 1;
-}
-.flex-caption {
-	background: rgba(0,0,0,.3);
-	color: #FFFFFF;
-	width: 96%;
-	padding: 2%;
-	margin: 0;
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	text-shadow: 0 -1px 0 rgba(0,0,0,.3);
-}
-
-/* Direction Nav */
-.flex-direction-nav {
-	height: 0;
-}
-.flex-direction-nav li a {
-	display: block;
-	background: #ffffff;
-	font-size: 14px;
-	line-height: 32px;
-	height: 32px;
-	width: 32px;
-	text-decoration: none;
-	margin: 0px;
-	opacity: 1;
-	position: absolute;
-	top: 50%;
-	cursor: pointer;
-	overflow: visible;
-	z-index: 9;
-}
-.gallery-slideshow .flex-direction-nav li a {
-	margin-top: -12px;
-}
-.flex-direction-nav .flex-next {
-	right: 24px;
-	text-align: center;
-	border-radius: 2px;
-}
-.flex-direction-nav .flex-prev {
-	left: 24px;
-	text-align: center;
-	border-radius: 2px;
-}
-.flex-direction-nav .flex-next i,
-.flex-direction-nav .flex-prev i {
-	color: #999999;
-	color: rgba(0, 0, 0, .4);
-}
-.flex-direction-nav .flex-prev:hover,
-.flex-direction-nav .flex-next:hover {
-	text-decoration: none;
-}
-.flex-direction-nav .flex-prev:hover i,
-.flex-direction-nav .flex-next:hover i {
-	color: #333333;
-	color: rgba(0, 0, 0, 1);
-}
-.flex-direction-nav a.flex-disabled {
-	opacity: 0;
-}
-
-/************************************************
-*	6.	Homepage																	*
+*	5.	Homepage
 ************************************************/
 
 .home-template .footer {
@@ -1155,7 +1001,7 @@ html[xmlns] .slides {
 }
 
 /************************************************
-*	8.	Content 					     	    *
+*	6.	Content
 ************************************************/
 
 #wrapper {
@@ -1291,7 +1137,7 @@ html[xmlns] .slides {
 }
 
 /************************************************
-*	9.	Social Media   							*
+*	7.	Social Media
 ************************************************/
 
 .social-icons {
@@ -1350,7 +1196,7 @@ html[xmlns] .slides {
 .social-icons li a[href$="/feed/"]::before				{ content: '\f09e'; }
 
 /************************************************
-*	10.	Pagination 	  		      		     	*
+*	8.	Pagination
 ************************************************/
 
 .pagination,
@@ -1434,7 +1280,7 @@ html[xmlns] .slides {
 }
 
 /************************************************
-*	11.	Images  				     		    *
+*	9.	Images
 ************************************************/
 
 .background-fixed {
@@ -1574,7 +1420,7 @@ img.alignleft {
 }
 
 /************************************************
-*	12.	Page Templates						    *
+*	10.	Page Templates
 ************************************************/
 
 .archive-column {
@@ -1595,7 +1441,7 @@ img.alignleft {
 }
 
 /************************************************
-*	13.	WordPress Gallery					    *
+*	11.	WordPress Gallery
 ************************************************/
 
 .gallery {
@@ -1675,7 +1521,7 @@ img.alignleft {
 }
 
 /************************************************
-*	14.	Sidebar 	        		    	    *
+*	12.	Sidebar
 ************************************************/
 
 .sidebar {
@@ -1710,7 +1556,7 @@ img.alignleft {
 }
 
 /************************************************
-*	15.	Widgets									*
+*	13.	Widgets
 ************************************************/
 
 .widget {
@@ -1773,7 +1619,7 @@ img.alignleft {
 }
 
 /************************************************
-*	16.	RSS Widget								*
+*	14.	RSS Widget
 ************************************************/
 
 .widget h6 a.rsswidget {
@@ -1789,7 +1635,7 @@ img.alignleft {
 }
 
 /************************************************
-*	17.	Calendar Widget							*
+*	15.	Calendar Widget
 ************************************************/
 
 #calendar_wrap {
@@ -1827,7 +1673,7 @@ img.alignleft {
 }
 
 /************************************************
-*	18.	Custom Menu Widget						*
+*	16.	Custom Menu Widget
 ************************************************/
 
 .widget ul.menu {
@@ -1900,7 +1746,7 @@ img.alignleft {
 }
 
 /************************************************
-*	19.	Search Form								*
+*	17.	Search Form
 ************************************************/
 
 #searchform {
@@ -1948,7 +1794,7 @@ img.alignleft {
 }
 
 /************************************************
-*	20.	Footer  								*
+*	18.	Footer
 ************************************************/
 
 .footer {
@@ -2009,42 +1855,6 @@ img.alignleft {
 .footer-widget {
 	padding: 36px 24px;
 }
-.footer-menu-wrapper {
-	padding: 0px 24px;
-	overflow: hidden;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-}
-.footer-menu-wrapper .menu {
-	float: none;
-	text-align: center;
-	line-height: 50px;
-	margin: 0px auto 0px;
-	padding: 0px;
-}
-.footer-menu-wrapper .menu a {
-	font-size: 0.9em;
-	font-weight: normal;
-	text-transform: none;
-	letter-spacing: 0px;
-	padding: 0px 8px;
-}
-.footer-menu-wrapper .menu li {
-	float: none;
-	margin: 0px;
-}
-.footer-menu-wrapper .menu li:after {
-	display: none;
-}
-.footer-menu-wrapper .menu li:first-child a {
-	padding-left: 0px;
-}
-.footer-menu-wrapper .menu-divider {
-	color: rgba(0, 0, 0, 0.2);
-	margin: 12px 0px;
-}
-.footer-menu-wrapper .menu-divider:last-child {
-	display: none;
-}
 .footer-information {
 	padding-top: 48px;
 	padding-bottom: 48px;
@@ -2074,7 +1884,7 @@ img.alignleft {
 }
 
 /************************************************
-*	21.	Comments								*
+*	19.	Comments
 ************************************************/
 
 #author, #email, #url {
@@ -2231,7 +2041,7 @@ p.logged-in-as {
 }
 
 /************************************************
-*	22.	Buttons  								*
+*	20.	Buttons
 ************************************************/
 
 button, .button, a.button, a:link.button, a:visited.button,
@@ -2280,7 +2090,7 @@ a.button.large {
 }
 
 /************************************************
-*	23. Tables		 							*
+*	21. Tables
 ************************************************/
 
 table {
@@ -2322,7 +2132,7 @@ table td {
 }
 
 /************************************************
-*	24. Forms									*
+*	22. Forms
 ************************************************/
 
 form {
@@ -2427,7 +2237,7 @@ select {
 }
 
 /************************************************
-*	25.	CSS3 Styles								*
+*	23.	CSS3 Styles
 ************************************************/
 
 a, a:link, button, #submit, #searchsubmit {
@@ -2525,7 +2335,7 @@ a, a:link, button, #submit, #searchsubmit {
 }
 
 /************************************************
-*	26.	WordPress Core	 			     	    *
+*	24.	WordPress Core
 ************************************************/
 
 /* Text meant only for screen readers. */
