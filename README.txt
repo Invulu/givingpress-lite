@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.7.2
+GivingPress Lite Theme v1.7.3
 http://www.givingpress.com
 
 Image Credits
@@ -213,3 +213,7 @@ CHANGELOG v1.7.2:
 - Removed flexslider script
 - General cleanup
 - Style tweaks
+
+CHANGELOG v1.7.3:
+- Updated translation files
+- Theme description tweaks

@@ -1,22 +1,24 @@
+#, fuzzy
 msgid ""
 msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: GivingPress Lite\n"
-"POT-Creation-Date: 2016-04-21 17:11-0500\n"
-"PO-Revision-Date: 2016-04-21 17:12-0500\n"
+"POT-Creation-Date: 2017-02-19 22:08-1000\n"
+"PO-Revision-Date: 2017-02-19 22:07-1000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.1\n"
+"X-Generator: Poedit 1.8.11\n"
 "X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
 
 #: 404.php:23 404.php:45
 msgid "Not Found, Error 404"
@@ -72,13 +74,13 @@ msgstr ""
 msgid "Posts by %1$s:"
 msgstr ""
 
-#: content/content-author.php:43 loop-archive.php:54 loop-blog.php:61
-#: loop-category.php:61
+#: content/content-author.php:43 loop-archive.php:54 loop-blog.php:59
+#: loop-category.php:58
 msgid "&laquo;"
 msgstr ""
 
-#: content/content-author.php:44 loop-archive.php:55 loop-blog.php:62
-#: loop-category.php:62
+#: content/content-author.php:44 loop-archive.php:55 loop-blog.php:60
+#: loop-category.php:59
 msgid "&raquo;"
 msgstr ""
 
@@ -107,11 +109,11 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: content/home-page-small.php:30
+#: content/home-page-small.php:27
 msgid "Learn More"
 msgstr ""
 
-#: content/home-page-wide.php:25 functions.php:362 loop-blog.php:42
+#: content/home-page-wide.php:25 functions.php:504 loop-blog.php:40
 #: loop-page.php:17
 msgid "Read More"
 msgstr ""
@@ -132,8 +134,9 @@ msgstr ""
 msgid "GivingPress Lite by"
 msgstr ""
 
+#. Author of the plugin/theme
 #: footer.php:49
-msgid "Giving Press"
+msgid "GivingPress"
 msgstr ""
 
 #: footer.php:49
@@ -152,85 +155,148 @@ msgstr ""
 msgid "Default Custom Header"
 msgstr ""
 
-#: functions.php:103
-#, php-format
-msgid ""
-"Enjoying the theme? <a href=\"%1$s\" target=\"_blank\">Sign Up</a> to start "
-"your <a href=\"%2$s\" target=\"_blank\">GivingPress Pro</a> site with a ton "
-"of added features and services! <a class=\"notice-dismiss\" type=\"button\" "
-"href=\"%3$s\"><span class=\"screen-reader-text\">Hide Notice</span></a>"
+#: functions.php:105
+msgid "My Awesome <b>GivingPress</b><br /> Nonprofit Website"
 msgstr ""
 
-#: functions.php:208
+#: functions.php:118
+msgid "Services"
+msgstr ""
+
+#: functions.php:119
+msgid ""
+"<p>This is an example services page. You may want to write about the various "
+"services your organization provides.</p>"
+msgstr ""
+
+#: functions.php:124
+msgid "Our Mission"
+msgstr ""
+
+#: functions.php:125
+msgid ""
+"<p><b>GivingPress</b> aims to make the world a better place by providing "
+"nonprofit organizations with the tools they need to create and manage a "
+"professional website at an affordable price. Our goal is to promote and aid "
+"businesses that are focused on the good of the world and mankind, so they "
+"can spend less time on their website, and more time making a difference.</"
+"p>\n"
+"\t\t\t\t\t<p>GivingPress provides small to medium sized nonprofit "
+"organizations with a WordPress powered website solution catered specifically "
+"to their needs. Start accepting donations, creating fundraisers and "
+"supercharging your nonprofit website today!</p>"
+msgstr ""
+
+#: functions.php:138
+msgid "About Image"
+msgstr ""
+
+#: functions.php:142
+msgid "Services Image"
+msgstr ""
+
+#: functions.php:146
+msgid "Mission Image"
+msgstr ""
+
+#: functions.php:150
+msgid "Contact Image"
+msgstr ""
+
+#: functions.php:158
+msgid "Primary Navigation"
+msgstr ""
+
+#: functions.php:200
+#, php-format
+msgid ""
+"Enjoying the theme? Sign up for a <a href=\"%1$s\" target=\"_blank\">FREE "
+"trial</a> of the full GivingPress website solution for nonprofits, or "
+"upgrade to the <a href=\"%2$s\" target=\"_blank\">GivingPress Pro</a> theme "
+"for tons more options and features! <a class=\"notice-dismiss\" type=\"button"
+"\" href=\"%3$s\"><span class=\"screen-reader-text\">Hide Notice</span></a>"
+msgstr ""
+
+#: functions.php:212
+#, php-format
+msgid ""
+"Want to remove or change those pesky footer credits? Get the <a href=\"%1$s"
+"\" target=\"_blank\">Footer Change Plugin</a> from Organic Themes! Use "
+"discount code <b>FOOTERSAVE10</b> to save $10! <a class=\"notice-dismiss\" "
+"type=\"button\" href=\"%2$s\"><span class=\"screen-reader-text\">Hide "
+"Notice</span></a>"
+msgstr ""
+
+#: functions.php:313
 msgid "Default Sidebar"
 msgstr ""
 
-#: functions.php:216
+#: functions.php:321
 msgid "Left Sidebar"
 msgstr ""
 
-#: functions.php:224
+#: functions.php:329
 msgid "Footer Widgets"
 msgstr ""
 
-#: functions.php:285
+#: functions.php:427
 msgid "Pingback:"
 msgstr ""
 
-#: functions.php:285 functions.php:325
+#: functions.php:427 functions.php:467
 msgid "Edit"
 msgstr ""
 
-#: functions.php:304
+#: functions.php:446
 #, php-format
 msgid "%1$s <br/> %2$s <br/>"
 msgstr ""
 
-#: functions.php:309
+#: functions.php:451
 #, php-format
 msgid "%1$s"
 msgstr ""
 
-#: functions.php:318
+#: functions.php:460
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:323
+#: functions.php:465
 msgid "Reply"
 msgstr ""
 
-#: functions.php:375
+#: functions.php:517
 #, php-format
 msgid ""
 "<span class=\"%1$s\">Last Updated:</span> %2$s <span class=\"meta-sep\">by</"
 "span> %3$s"
 msgstr ""
 
-#: functions.php:384 functions.php:398
+#: functions.php:526 functions.php:540
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
 
-#: functions.php:389
+#: functions.php:531
 #, php-format
 msgid ""
 "<span class=\"%1$s\">Posted:</span> %2$s <span class=\"meta-sep\">by</span> "
 "%3$s"
 msgstr ""
 
-#: functions.php:567
+#: functions.php:721
 #, php-format
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
-#: functions.php:571
+#: functions.php:725
 #, php-format
 msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
-#: header.php:111
+#: header.php:131
 #, php-format
 msgid "Create a Custom Navigation Menu <a href=\"%1$s\">here</a>."
 msgstr ""
@@ -239,178 +305,106 @@ msgstr ""
 msgid "&mdash; Select &mdash;"
 msgstr ""
 
-#: includes/customizer.php:100
-msgid "2 Seconds"
-msgstr ""
-
-#: includes/customizer.php:101
-msgid "4 Seconds"
-msgstr ""
-
-#: includes/customizer.php:102
-msgid "6 Seconds"
-msgstr ""
-
-#: includes/customizer.php:103
-msgid "8 Seconds"
-msgstr ""
-
-#: includes/customizer.php:104
-msgid "10 Seconds"
-msgstr ""
-
-#: includes/customizer.php:105
-msgid "12 Seconds"
-msgstr ""
-
-#: includes/customizer.php:106
-msgid "20 Seconds"
-msgstr ""
-
-#: includes/customizer.php:107
-msgid "30 Seconds"
-msgstr ""
-
-#: includes/customizer.php:108
-msgid "1 Minute"
-msgstr ""
-
-#: includes/customizer.php:109
-msgid "Hold Frame"
-msgstr ""
-
-#: includes/customizer.php:127
-msgid "Fade"
-msgstr ""
-
-#: includes/customizer.php:128
-msgid "Slide"
-msgstr ""
-
-#: includes/customizer.php:146
-msgid "One Column"
-msgstr ""
-
-#: includes/customizer.php:147
-msgid "Two Columns"
-msgstr ""
-
-#: includes/customizer.php:148
-msgid "Three Columns"
-msgstr ""
-
-#: includes/customizer.php:149
-msgid "Four Columns"
-msgstr ""
-
-#: includes/customizer.php:167
-msgid "Right"
-msgstr ""
-
-#: includes/customizer.php:168
-msgid "Bottom"
-msgstr ""
-
-#: includes/customizer.php:186 includes/customizer.php:284
-#: includes/customizer.php:301
+#: includes/customizer.php:84 includes/customizer.php:219
+#: includes/customizer.php:236
 msgid "Left Align"
 msgstr ""
 
-#: includes/customizer.php:187 includes/customizer.php:285
-#: includes/customizer.php:302
+#: includes/customizer.php:85 includes/customizer.php:220
+#: includes/customizer.php:237
 msgid "Center Align"
 msgstr ""
 
-#: includes/customizer.php:188 includes/customizer.php:286
-#: includes/customizer.php:303
+#: includes/customizer.php:86 includes/customizer.php:221
+#: includes/customizer.php:238
 msgid "Right Align"
 msgstr ""
 
-#: includes/customizer.php:270
+#: includes/customizer.php:205
 msgid "Site Identity"
 msgstr ""
 
-#: includes/customizer.php:281
+#: includes/customizer.php:216
 msgid "Logo Alignment"
 msgstr ""
 
-#: includes/customizer.php:298
+#: includes/customizer.php:233
 msgid "Site Description Alignment"
 msgstr ""
 
-#: includes/customizer.php:318
+#: includes/customizer.php:253
 msgid "Theme Options"
 msgstr ""
 
-#: includes/customizer.php:319
+#: includes/customizer.php:254
 msgid ""
 "This panel allows you to customize specific areas of the GivingPress Lite "
 "Theme."
 msgstr ""
 
-#: includes/customizer.php:329
+#: includes/customizer.php:264
 msgid "Contact Info Bar"
 msgstr ""
 
-#: includes/customizer.php:340
+#: includes/customizer.php:275
 msgid "Company Address"
 msgstr ""
 
-#: includes/customizer.php:353
+#: includes/customizer.php:288
 msgid "Company Email Address"
 msgstr ""
 
-#: includes/customizer.php:366
+#: includes/customizer.php:301
 msgid "Company Phone Number"
 msgstr ""
 
-#: includes/customizer.php:379
+#: includes/customizer.php:314
 msgid "Display Search Field?"
 msgstr ""
 
-#: includes/customizer.php:393
-msgid "Home Page Template"
+#: includes/customizer.php:328
+msgid "Home Page Options"
 msgstr ""
 
-#: includes/customizer.php:404
+#: includes/customizer.php:339
 msgid "Donation Tagline"
 msgstr ""
 
-#: includes/customizer.php:413
+#: includes/customizer.php:348
 msgid ""
 "Enter a brief message about accepting donations for your cause. Edit the "
 "content in this section within the WordPress Customizer."
 msgstr ""
 
-#: includes/customizer.php:417
+#: includes/customizer.php:352
 msgid "Donation Description"
 msgstr ""
 
-#: includes/customizer.php:426
+#: includes/customizer.php:361
 msgid "#"
 msgstr ""
 
-#: includes/customizer.php:430
+#: includes/customizer.php:365
 msgid "Donation Link"
 msgstr ""
 
-#: includes/customizer.php:443
+#: includes/customizer.php:378
 msgid "Donation Link Text"
 msgstr ""
 
-#: includes/customizer.php:456
+#: includes/customizer.php:391
 msgid "Featured Page Left"
 msgstr ""
 
-#: includes/customizer.php:469
+#: includes/customizer.php:404
 msgid "Featured Page Middle"
 msgstr ""
 
-#: includes/customizer.php:482
+#: includes/customizer.php:417
 msgid "Featured Page Right"
 msgstr ""
 
-#: includes/customizer.php:495
+#: includes/customizer.php:430
 msgid "Featured Page Bottom"
 msgstr ""
 
@@ -444,6 +438,11 @@ msgctxt "Raleway font: on or off"
 msgid "on"
 msgstr ""
 
+#: includes/typefaces.php:23
+msgctxt "Noto Serif font: on or off"
+msgid "on"
+msgstr ""
+
 #: loop-archive.php:21
 msgid "Updated on"
 msgstr ""
@@ -460,15 +459,15 @@ msgstr ""
 msgid "by"
 msgstr ""
 
-#: loop-archive.php:27 loop-blog.php:32 loop-category.php:31 loop-post.php:14
+#: loop-archive.php:27 loop-blog.php:32 loop-category.php:30 loop-post.php:14
 msgid "Leave a Comment"
 msgstr ""
 
-#: loop-archive.php:27 loop-blog.php:32 loop-category.php:31 loop-post.php:14
+#: loop-archive.php:27 loop-blog.php:32 loop-category.php:30 loop-post.php:14
 msgid "1 Comment"
 msgstr ""
 
-#: loop-archive.php:31
+#: loop-archive.php:31 loop-blog.php:20
 #, php-format
 msgid "Permalink to %s"
 msgstr ""
@@ -477,35 +476,35 @@ msgstr ""
 msgid ","
 msgstr ""
 
-#: loop-archive.php:41 loop-post.php:50
+#: loop-archive.php:41 loop-post.php:48
 msgid "Category:"
 msgstr ""
 
-#: loop-archive.php:41 loop-post.php:50
+#: loop-archive.php:41 loop-post.php:48
 msgid "Tags:"
 msgstr ""
 
-#: loop-blog.php:32 loop-category.php:31 loop-post.php:14
+#: loop-blog.php:32 loop-category.php:30 loop-post.php:14
 msgid "% Comments"
 msgstr ""
 
-#: loop-page.php:20 loop-post.php:31
+#: loop-page.php:20 loop-post.php:29
 msgid "Pages:"
 msgstr ""
 
-#: loop-page.php:25 loop-post.php:36
+#: loop-page.php:25 loop-post.php:34
 msgid "Next"
 msgstr ""
 
-#: loop-page.php:26 loop-post.php:37
+#: loop-page.php:26 loop-post.php:35
 msgid "Previous"
 msgstr ""
 
-#: loop-page.php:32 loop-post.php:43
+#: loop-page.php:32 loop-post.php:41
 msgid "(Edit)"
 msgstr ""
 
-#: loop-post.php:45 loop-post.php:50
+#: loop-post.php:43 loop-post.php:48
 msgid ", "
 msgstr ""
 
@@ -526,18 +525,25 @@ msgstr ""
 msgid "Go"
 msgstr ""
 
-#: template-archive.php:40
-msgid "By Page:"
+#. Theme Name of the plugin/theme
+msgid "GivingPress Lite"
 msgstr ""
 
-#: template-archive.php:45
-msgid "By Post:"
+#. Theme URI of the plugin/theme
+msgid "https://givingpress.com/theme/givingpress-lite/"
 msgstr ""
 
-#: template-archive.php:50
-msgid "By Month:"
+#. Description of the plugin/theme
+msgid ""
+"A WordPress theme for nonprofit organizations, charities, foundations and "
+"cause-driven businesses. GivingPress provides professional website solutions "
+"for nonprofit organizations. The theme is perfect for churches, "
+"scholarships, education, healthcare, scientific reasearch, political, "
+"charity, humanitarian, club and association websites. The responsive design "
+"features a modern aesthetic with an emphasis on collecting donations and "
+"fundraising. Visit the GivingPress site for more information."
 msgstr ""
 
-#: template-archive.php:53
-msgid "By Category:"
+#. Author URI of the plugin/theme
+msgid "http://givingpress.com/"
 msgstr ""
