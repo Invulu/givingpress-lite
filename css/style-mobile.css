@@ -203,20 +203,6 @@
 		padding-left: 18px;
 		padding-right: 18px;
 	}
-	.slideshow .information {
-		padding: 36px;
-	}
-	.slideshow .information .excerpt {
-		font-size: 0.9rem;
-	}
-	.slideshow .loading,
-	.slideshow.gallery-slideshow .loading {
-		min-height: 360px;
-	}
-	.slideshow .preloader,
-	.flex-direction-nav li a {
-		margin-top: -16px;
-	}
 	.featured-donation .donations {
 		padding-top: 48px;
 		padding-bottom: 48px;
@@ -373,27 +359,6 @@
 	}
 	.custom-logo-link img {
 		max-width: 300px;
-	}
-	.slideshow .loading,
-	.slideshow.gallery-slideshow .loading {
-		min-height: 280px;
-	}
-	.slideshow .information {
-		padding: 12px 18px;
-	}
-	.slideshow .information .headline {
-		font-size: 1.6rem;
-	}
-	.slideshow .information .excerpt {
-		display: none;
-	}
-	.flex-direction-nav .flex-next {
-		right: 0px;
-		border-radius: 2px 0px 0px 2px;
-	}
-	.flex-direction-nav .flex-prev {
-		left: 0px;
-		border-radius: 0px 2px 2px 0px;
 	}
 	.homepage .content {
 		margin-top: 12px;
