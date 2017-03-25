@@ -47,15 +47,15 @@
 				<div class="align-left">
 
 				<?php if ( get_theme_mod( 'givingpress_lite_contact_address', '231 Front Street, Lahaina, HI 96761' ) ) { ?>
-					<span class="contact-address"><i class="fa fa-map-marker"></i> <?php esc_html_e( get_theme_mod( 'givingpress_lite_contact_address', '231 Front Street, Lahaina, HI 96761' ), 'givingpress-lite' ); ?></span>
+					<span class="contact-address"><i class="fa fa-map-marker"></i> <?php echo esc_html( get_theme_mod( 'givingpress_lite_contact_address', '231 Front Street, Lahaina, HI 96761' ) ); ?></span>
 				<?php } ?>
 
 				<?php if ( get_theme_mod( 'givingpress_lite_contact_email', 'info@givingpress.com' ) ) { ?>
-					<span class="contact-email text-right"><i class="fa fa-envelope"></i> <a class="link-email" href="mailto:<?php echo esc_html( get_theme_mod( 'givingpress_lite_contact_email', 'info@givingpress.com' ) ); ?>" target="_blank"><?php esc_html_e( get_theme_mod( 'givingpress_lite_contact_email', 'info@givingpress.com' ), 'givingpress-lite' ); ?></a></span>
+					<span class="contact-email text-right"><i class="fa fa-envelope"></i> <a class="link-email" href="mailto:<?php echo esc_html( get_theme_mod( 'givingpress_lite_contact_email', 'info@givingpress.com' ) ); ?>" target="_blank"><?php echo esc_html( get_theme_mod( 'givingpress_lite_contact_email', 'info@givingpress.com' ) ); ?></a></span>
 				<?php } ?>
 
 				<?php if ( get_theme_mod( 'givingpress_lite_contact_phone', '808.123.4567' ) ) { ?>
-					<span class="contact-phone text-right"><i class="fa fa-phone"></i> <?php esc_html_e( get_theme_mod( 'givingpress_lite_contact_phone', '808.123.4567' ), 'givingpress-lite' ); ?></span>
+					<span class="contact-phone text-right"><i class="fa fa-phone"></i> <?php echo esc_html( get_theme_mod( 'givingpress_lite_contact_phone', '808.123.4567' ) ); ?></span>
 				<?php } ?>
 
 				</div>

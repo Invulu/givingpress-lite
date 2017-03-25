@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.7.5
+GivingPress Lite Theme v1.7.6
 http://www.givingpress.com
 
 Image Credits
@@ -224,3 +224,6 @@ CHANGELOG v1.7.4:
 CHANGELOG v1.7.5:
 - Added i18n internationalization to contact info values
 - Updated translation file
+
+CHANGELOG v1.7.6:
+- More translation updates
