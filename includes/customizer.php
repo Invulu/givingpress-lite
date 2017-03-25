@@ -268,7 +268,7 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 
 		// Contact Address.
 		$wp_customize->add_setting( 'givingpress_lite_contact_address', array(
-			'default' => '231 Front Street, Lahaina, HI 96761',
+			'default' => esc_html__( '231 Front Street, Lahaina, HI 96761', 'givingpress-lite' ),
 			'sanitize_callback' => 'givingpress_lite_sanitize_text',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'givingpress_lite_contact_address', array(
@@ -281,7 +281,7 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 
 		// Contact Email.
 		$wp_customize->add_setting( 'givingpress_lite_contact_email', array(
-			'default' => 'info@givingpress.com',
+			'default' => esc_html__( 'info@givingpress.com', 'givingpress-lite' ),
 			'sanitize_callback' => 'sanitize_email',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'givingpress_lite_contact_email', array(
@@ -294,7 +294,7 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 
 		// Contact Phone.
 		$wp_customize->add_setting( 'givingpress_lite_contact_phone', array(
-			'default' => '808.123.4567',
+			'default' => esc_html__( '808.123.4567', 'givingpress-lite' ),
 			'sanitize_callback' => 'givingpress_lite_sanitize_text',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'givingpress_lite_contact_phone', array(
@@ -332,7 +332,7 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 
 		// Donation Tagline.
 		$wp_customize->add_setting( 'givingpress_lite_donation_tagline', array(
-			'default' => 'Donations Are Welcome',
+			'default' => esc_html__( 'Donations Are Welcome', 'givingpress-lite' ),
 			'sanitize_callback' => 'givingpress_lite_sanitize_text',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'givingpress_lite_donation_tagline', array(
@@ -371,7 +371,7 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 
 		// Featured Link Text.
 		$wp_customize->add_setting( 'givingpress_lite_donation_link_text', array(
-			'default' => 'Donate',
+			'default' => esc_html__( 'Donate', 'givingpress-lite' ),
 			'sanitize_callback' => 'givingpress_lite_sanitize_text',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'givingpress_lite_donation_link_text', array(

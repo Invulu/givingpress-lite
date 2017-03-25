@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.7.4
+GivingPress Lite Theme v1.7.5
 http://www.givingpress.com
 
 Image Credits
@@ -220,3 +220,7 @@ CHANGELOG v1.7.3:
 
 CHANGELOG v1.7.4:
 - Removed unnecessary slideshow styles from mobile
+
+CHANGELOG v1.7.5:
+- Added i18n internationalization to contact info values
+- Updated translation file
