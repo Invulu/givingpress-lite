@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.7.6
+GivingPress Lite Theme v1.7.7
 http://www.givingpress.com
 
 Image Credits
@@ -227,3 +227,8 @@ CHANGELOG v1.7.5:
 
 CHANGELOG v1.7.6:
 - More translation updates
+
+CHANGELOG v1.7.7:
+- Added meta tag to force IE compatibility off for intranets
+- Header fixes for IE
+- Style tweaks

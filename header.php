@@ -15,6 +15,9 @@
 
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 
+	<!-- IE Compatibility Off -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
 	<!-- Mobile View -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -64,7 +67,7 @@
 
 				<div class="align-right">
 
-					<div class="header-search"><i class="fa fa-search"></i> <?php get_template_part( 'searchform' ); ?></div>
+					<div class="header-search clearfix"><?php get_template_part( 'searchform' ); ?></div>
 
 				</div>
 

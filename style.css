@@ -7,7 +7,7 @@
 	Author URI: http://givingpress.com/
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.7.6
+	Version: 1.7.7
 	Text Domain: givingpress-lite
 	Tags: one-column, two-columns, three-columns, right-sidebar, custom-background, custom-header, custom-menu, featured-images, featured-image-header, flexible-header, full-width-template, theme-options, translation-ready, sticky-post, featured-images, footer-widgets
 
@@ -451,14 +451,10 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 	background: rgba(0, 0, 0, .04);
 	padding: 6px 12px;
 }
-#contact-info .header-search .fa {
-	margin-right: 6px;
-}
-#contact-info .header-search #searchform {
-	float: right;
-}
 #contact-info .header-search #searchform .search-field,
 #contact-info .header-search #searchform #s {
+	float: none;
+	display: inline-block;
 	background: none;
 	font-size: 1.1em;
 	line-height: 1.8;
@@ -467,6 +463,14 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 	padding: 0px;
 	box-shadow: none;
 	border: none;
+}
+#contact-info .header-search #searchform::before {
+	display: inline-block;
+	color: rgba(0, 0, 0, 0.2);
+	font-family: 'FontAwesome';
+	line-height: 2;
+	content: '\f002';
+	margin-right: 6px;
 }
 #contact-info .header-search #searchsubmit {
 	display: none;
@@ -1031,7 +1035,8 @@ div.menu ul li li li:hover ul {
 .page .hentry .content,
 .single .hentry .content,
 .search .hentry .content,
-.archive .hentry .content {
+.archive .hentry .content,
+.error404 .container .content {
 	margin-top: 24px;
 }
 .archive.category .hentry .content {
