@@ -46,7 +46,7 @@
 
 					<p><?php esc_html_e( 'Copyright', 'givingpress-lite' ); ?> &copy; <?php echo date( esc_html__( 'Y', 'givingpress-lite' ) ); ?> &middot; <?php esc_html_e( 'All Rights Reserved', 'givingpress-lite' ); ?> &middot; <?php bloginfo( 'name' ); ?></p>
 
-					<p><?php esc_html_e( 'GivingPress Lite by', 'givingpress-lite' ); ?> <a href="http://givingpress.com" target="_blank"><?php esc_html_e( 'GivingPress', 'givingpress-lite' ); ?></a> &middot; <a href="<?php bloginfo( 'rss2_url' ); ?>"><?php esc_html_e( 'RSS Feed', 'givingpress-lite' ); ?></a> &middot; <?php wp_loginout(); ?></p>
+					<p><a href="https://givingpress.com/theme/givingpress-lite/" target="_blank"><?php esc_html_e( 'Nonprofit Website', 'givingpress-lite' ); ?></a> <?php esc_html_e( 'by GivingPress', 'givingpress-lite' ); ?> &middot; <a href="<?php bloginfo( 'rss2_url' ); ?>"><?php esc_html_e( 'RSS Feed', 'givingpress-lite' ); ?></a> &middot; <?php wp_loginout(); ?></p>
 
 				</div>
 

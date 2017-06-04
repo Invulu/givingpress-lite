@@ -20,7 +20,7 @@
 
 	<h2 class="headline"><?php esc_html_e( 'No Results Found', 'givingpress-lite' ); ?></h2>
 	<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'givingpress-lite' ); ?></p>
-	<div class="no-result-search"><?php get_template_part( 'searchform' ); ?></div>
+	<div class="no-result-search"><?php get_search_form(); ?></div>
 
 <?php } ?>
 
