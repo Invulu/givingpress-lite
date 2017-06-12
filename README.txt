@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.7.7.1
+GivingPress Lite Theme v1.7.8
 http://www.givingpress.com
 
 Image Credits
@@ -237,3 +237,9 @@ CHANGELOG v1.7.7.1:
 - Minor footer credit update
 - Minor searchform tweaks
 - Tag updates in stylesheet
+
+CHANGELOG v1.7.8:
+- Fixed home page featured pages conditional default setting
+- Removed equal heights script for home featured pages
+- Added flexbox styles to home featured pages sections
+- Added capability to display less than 3 featured pages

@@ -384,7 +384,7 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 
 		// Featured Page Left.
 		$wp_customize->add_setting( 'givingpress_lite_page_one', array(
-			'default' => '2',
+			'default' => '0',
 			'sanitize_callback' => 'absint',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'givingpress_lite_page_one', array(
@@ -397,7 +397,7 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 
 		// Featured Page Middle.
 		$wp_customize->add_setting( 'givingpress_lite_page_two', array(
-			'default' => '2',
+			'default' => '0',
 			'sanitize_callback' => 'absint',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'givingpress_lite_page_two', array(
@@ -410,7 +410,7 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 
 		// Featured Page Right.
 		$wp_customize->add_setting( 'givingpress_lite_page_three', array(
-			'default' => '2',
+			'default' => '0',
 			'sanitize_callback' => 'absint',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'givingpress_lite_page_three', array(
@@ -423,7 +423,7 @@ function givingpress_lite_theme_customizer( $wp_customize ) {
 
 		// Featured Page Bottom.
 		$wp_customize->add_setting( 'givingpress_lite_page_four', array(
-			'default' => '2',
+			'default' => '0',
 			'sanitize_callback' => 'absint',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'givingpress_lite_page_four', array(

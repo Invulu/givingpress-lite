@@ -228,6 +228,9 @@
 	.featured-donation .align-right {
 		float: none;
 	}
+	.featured-pages .holder .content {
+		margin: 12px !important;
+	}
 	.featured-pages .information {
 		padding: 18px;
 	}
@@ -372,8 +375,12 @@
 	.featured-pages {
 		padding: 12px 0px;
 	}
-	.featured-pages .holder .content {
-		margin: 12px !important;
+	.featured-pages .content.no-bg {
+		display: block;
+	}
+	.featured-pages .holder {
+		display: block;
+		width: 100%;
 	}
 	.featured-pages .information {
 		padding: 12px;

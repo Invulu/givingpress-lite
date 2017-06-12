@@ -59,13 +59,14 @@
 <?php } ?>
 
 <?php
-	$page_one = get_theme_mod( 'givingpress_lite_page_one' );
-	$page_two = get_theme_mod( 'givingpress_lite_page_two' );
-	$page_three = get_theme_mod( 'givingpress_lite_page_three' );
+	$page_one = get_theme_mod( 'givingpress_lite_page_one', '0' );
+	$page_two = get_theme_mod( 'givingpress_lite_page_two', '0' );
+	$page_three = get_theme_mod( 'givingpress_lite_page_three', '0' );
+	$page_four = get_theme_mod( 'givingpress_lite_page_four', '0' );
 ?>
 
 <!-- Featured Pages Small Section -->
-<?php if ( $page_one && $page_two && $page_three ) { ?>
+<?php if ( $page_one && $page_two || $page_two && $page_thre || $page_one && $page_three ) { ?>
 
 <!-- BEGIN .featured-pages -->
 <section class="featured-pages">
@@ -76,7 +77,9 @@
 		<!-- BEGIN .content -->
 		<div class="content no-bg">
 
-			<div class="holder third">
+			<?php if ( $page_one ) { ?>
+
+			<div class="holder clearfix">
 				<?php $recent = new WP_Query( array(
 					'page_id' => $page_one,
 				) );
@@ -86,7 +89,11 @@
 				<?php wp_reset_postdata(); ?>
 			</div>
 
-			<div class="holder third">
+			<?php } ?>
+
+			<?php if ( $page_two ) { ?>
+
+			<div class="holder clearfix">
 				<?php $recent = new WP_Query( array(
 					'page_id' => $page_two,
 				) );
@@ -96,7 +103,11 @@
 				<?php wp_reset_postdata(); ?>
 			</div>
 
-			<div class="holder third">
+			<?php } ?>
+
+			<?php if ( $page_three ) { ?>
+
+			<div class="holder clearfix">
 				<?php $recent = new WP_Query( array(
 					'page_id' => $page_three,
 				) );
@@ -105,6 +116,8 @@
 				<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
 			</div>
+
+			<?php } ?>
 
 		<!-- END .content -->
 		</div>
@@ -118,10 +131,10 @@
 <?php } ?>
 
 <!-- Featured Page Wide Section -->
-<?php if ( get_theme_mod( 'givingpress_lite_page_four' ) ) { ?>
+<?php if ( $page_four ) { ?>
 
 	<?php $recent = new WP_Query( array(
-		'page_id' => get_theme_mod( 'givingpress_lite_page_four' ),
+		'page_id' => $page_four,
 	) );
 	while ( $recent->have_posts() ) : $recent->the_post(); ?>
 		<?php $thumb = ( get_the_post_thumbnail() ) ? wp_get_attachment_image_src( get_post_thumbnail_id(), 'giving-featured-large' ) : false; ?>
@@ -147,7 +160,7 @@
 
 <?php } ?>
 
-<?php if ( '' == get_theme_mod( 'givingpress_lite_page_one' ) && '' == get_theme_mod( 'givingpress_lite_page_four' ) || '' == get_theme_mod( 'givingpress_lite_page_two' ) && '' == get_theme_mod( 'givingpress_lite_page_four' ) || '' == get_theme_mod( 'givingpress_lite_page_three' ) && '' == get_theme_mod( 'givingpress_lite_page_four' ) ) { ?>
+<?php if ( '0' == $page_one && '0' == $page_two && '0' == $page_three && '0' == $page_four ) { ?>
 
 <!-- BEGIN .set-options -->
 <section class="set-options">

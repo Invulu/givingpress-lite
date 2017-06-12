@@ -6,14 +6,14 @@
  * @since GivingPress Lite 1.0
  */
 
-$thumb = ( get_the_post_thumbnail() ) ? wp_get_attachment_image_src( get_post_thumbnail_id(), 'giving-featured-small' ) : false; ?>
+$thumb = ( get_the_post_thumbnail() ) ? wp_get_attachment_image_src( get_post_thumbnail_id(), 'giving-featured-medium' ) : false; ?>
 
 <!-- BEGIN .content -->
 <div class="content radius-full shadow">
 
 	<?php if ( has_post_thumbnail() ) { ?>
 		<div class="feature-img page-banner" <?php if ( ! empty( $thumb ) ) { ?> style="background-image: url(<?php echo esc_url( $thumb[0] ); ?>);" <?php } ?>>
-			<?php the_post_thumbnail( 'giving-featured-small' ); ?>
+			<?php the_post_thumbnail( 'giving-featured-medium' ); ?>
 		</div>
 	<?php } ?>
 
