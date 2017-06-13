@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.7.8
+GivingPress Lite Theme v1.7.8.1
 http://www.givingpress.com
 
 Image Credits
@@ -243,3 +243,8 @@ CHANGELOG v1.7.8:
 - Removed equal heights script for home featured pages
 - Added flexbox styles to home featured pages sections
 - Added capability to display less than 3 featured pages
+
+CHANGELOG v1.7.8.1:
+- Removed footer change admin notification
+- Added newsletter signup form to upgrade notification
+- Added admin notice dismissible plugin
