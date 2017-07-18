@@ -29,6 +29,9 @@ if ( ! function_exists( 'givingpress_lite_setup' ) ) :
 		// Enable support for Post Thumbnails.
 		add_theme_support( 'post-thumbnails' );
 
+		// Enable selective refresh for Widgets.
+		add_theme_support( 'customize-selective-refresh-widgets' );
+
 		add_image_size( 'givingpress-lite-featured-large', 2400, 1800 ); // Large Featured Image.
 		add_image_size( 'givingpress-lite-featured-medium', 1800, 1200 ); // Medium Featured Image.
 		add_image_size( 'givingpress-lite-featured-small', 640, 640 ); // Small Featured Image.
@@ -193,11 +196,11 @@ add_action( 'after_setup_theme', 'givingpress_lite_setup' );
 
 /** Function givingpress_lite_admin_notice */
 function givingpress_lite_admin_notice() {
-	if ( ! PAnD::is_admin_notice_active( 'notice-one-30' ) ) {
+	if ( ! PAnD::is_admin_notice_active( 'notice-two-forever' ) ) {
 		return;
 	}
 	?>
-	<div data-dismissible="notice-one-30" class="notice updated is-dismissible">
+	<div data-dismissible="notice-two-forever" class="updated notice notice-success is-dismissible">
 		<p><?php printf( __( 'Enjoying the GivingPress Lite theme? Enter your email to receive updates and information from <a href="%1$s" target="_blank">GivingPress</a>.', 'givingpress-lite' ), 'https://givingpress.com' ); ?></p>
 		<div id="mc_embed_signup" class="clear" style="overflow: hidden; margin-bottom: 12px;">
 			<form action="//givingpress.us1.list-manage.com/subscribe/post?u=7cf6b005868eab70f031dc806&amp;id=06c209928e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -766,3 +769,5 @@ function givingpress_lite_first_embed_media() {
 
 require_once( get_template_directory() . '/includes/customizer.php' );
 require_once( get_template_directory() . '/includes/typefaces.php' );
+require_once( get_template_directory() . '/includes/plugin-activation.php' );
+require_once( get_template_directory() . '/includes/plugin-activation-class.php' );

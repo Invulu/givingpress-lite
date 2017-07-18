@@ -248,3 +248,10 @@ CHANGELOG v1.7.8.1:
 - Removed footer change admin notification
 - Added newsletter signup form to upgrade notification
 - Added admin notice dismissible plugin
+
+CHANGELOG v1.7.9:
+- Enable selective refresh for widgets
+- Added 'use strict' to jquery.custom.js
+- Added plugin activation recommendations
+- Fixed admin notice dismissal
+- Style tweaks
