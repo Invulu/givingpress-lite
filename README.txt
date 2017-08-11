@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.7.8.1
+GivingPress Lite Theme v1.8
 http://www.givingpress.com
 
 Image Credits
@@ -255,3 +255,8 @@ CHANGELOG v1.7.9:
 - Added plugin activation recommendations
 - Fixed admin notice dismissal
 - Style tweaks
+
+CHANGELOG v1.8:
+- Updated plugin activation scripts
+- Require Organic Customizer Widgets plugin
+- Recommend Customize Posts plugin
