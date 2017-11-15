@@ -51,8 +51,8 @@ if ( ! function_exists( 'givingpress_lite_setup' ) ) :
 			),
 		));
 		$defaults = array(
-			'width'                 => 1800,
-			'height'                => 640,
+			'width'                 => 2400,
+			'height'                => 1200,
 			'default-image'					=> get_template_directory_uri() . '/images/header.jpg',
 			'flex-height'           => true,
 			'flex-width'            => true,
