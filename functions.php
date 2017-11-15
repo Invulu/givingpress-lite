@@ -201,7 +201,7 @@ function givingpress_lite_admin_notice() {
 	}
 	?>
 	<div data-dismissible="notice-two-forever" class="updated notice notice-success is-dismissible">
-		<p><?php printf( __( 'Enjoying the GivingPress Lite theme? Enter your email to receive updates and information from <a href="%1$s" target="_blank">GivingPress</a>.', 'givingpress-lite' ), 'https://givingpress.com' ); ?></p>
+		<p><?php printf( __( 'Enter your email to receive important updates and information from <a href="%1$s" target="_blank">GivingPress</a>. Also, consider upgrading to the <a href="%2$s" target="_blank">GivingPress Pro Theme</a> for more flexible layouts, customization options, on-site donations, custom post types for displaying your staff and projects and much more!', 'givingpress-lite' ), 'https://givingpress.com', 'https://givingpress.com/theme/givingpress-pro/' ); ?></p>
 		<div id="mc_embed_signup" class="clear" style="overflow: hidden; margin-bottom: 12px;">
 			<form action="//givingpress.us1.list-manage.com/subscribe/post?u=7cf6b005868eab70f031dc806&amp;id=06c209928e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 				<div id="mc_embed_signup_scroll">
