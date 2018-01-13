@@ -11,7 +11,9 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 <div class="post-date">
-	<p><i class="fa fa-comment"></i> <a class="scroll" href="<?php the_permalink(); ?>#comments"><?php comments_number( esc_html__( 'Leave a Comment', 'givingpress-lite' ), esc_html__( '1 Comment', 'givingpress-lite' ), esc_html__( '% Comments', 'givingpress-lite' ) ); ?></a></p>
+	<?php if ( comments_open() || '0' != get_comments_number() ) { ?>
+		<p><i class="fa fa-comment"></i> <a class="scroll" href="<?php the_permalink(); ?>#comments"><?php comments_number( esc_html__( 'Leave a Comment', 'givingpress-lite' ), esc_html__( '1 Comment', 'givingpress-lite' ), esc_html__( '% Comments', 'givingpress-lite' ) ); ?></a></p>
+	<?php } ?>
 	<p><i class="fa fa-clock-o"></i> <?php givingpress_lite_posted_on(); ?></p>
 </div>
 

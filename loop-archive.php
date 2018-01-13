@@ -24,7 +24,9 @@
 			<?php } ?>
 			<?php esc_html_e( 'by', 'givingpress-lite' ); ?> <?php esc_url( the_author_posts_link() ); ?>
 		</p>
-		<p class="align-right"><i class="fa fa-comment"></i> <a href="<?php the_permalink(); ?>#comments"><?php comments_number( esc_html__( 'Leave a Comment', 'givingpress-lite' ), esc_html__( '1 Comment', 'givingpress-lite' ), '% Comments' ); ?></a></p>
+		<?php if ( comments_open() || '0' != get_comments_number() ) { ?>
+			<p class="align-right"><i class="fa fa-comment"></i> <a href="<?php the_permalink(); ?>#comments"><?php comments_number( esc_html__( 'Leave a Comment', 'givingpress-lite' ), esc_html__( '1 Comment', 'givingpress-lite' ), '% Comments' ); ?></a></p>
+		<?php } ?>
 	</div>
 
 	<?php if ( has_post_thumbnail() ) { ?>

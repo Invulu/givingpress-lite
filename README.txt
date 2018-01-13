@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.8.1
+GivingPress Lite Theme v1.8.2
 http://www.givingpress.com
 
 Image Credits
@@ -263,3 +263,6 @@ CHANGELOG v1.8:
 
 CHANGELOG v1.8.1:
 - Increased maximum default size for header image
+
+CHANGELOG v1.8.2:
+- Hide archive and post comment links if comments are closed

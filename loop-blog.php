@@ -29,7 +29,12 @@
 		<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 			<div class="post-date">
-				<p><i class="fa fa-clock-o"></i> <?php givingpress_lite_posted_on(); ?> <span class="align-right"><i class="fa fa-comment"></i> <a href="<?php the_permalink(); ?>#comments"><?php comments_number( esc_html__( 'Leave a Comment', 'givingpress-lite' ), esc_html__( '1 Comment', 'givingpress-lite' ), esc_html__( '% Comments', 'givingpress-lite' ) ); ?></a></span></p>
+				<p>
+					<i class="fa fa-clock-o"></i> <?php givingpress_lite_posted_on(); ?>
+					<?php if ( comments_open() || '0' != get_comments_number() ) { ?>
+						<span class="align-right"><i class="fa fa-comment"></i> <a href="<?php the_permalink(); ?>#comments"><?php comments_number( esc_html__( 'Leave a Comment', 'givingpress-lite' ), esc_html__( '1 Comment', 'givingpress-lite' ), esc_html__( '% Comments', 'givingpress-lite' ) ); ?></a></span>
+					<?php } ?>
+				</p>
 			</div>
 
 			<h2 class="headline"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
