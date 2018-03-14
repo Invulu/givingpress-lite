@@ -767,7 +767,7 @@ function givingpress_lite_first_embed_media() {
 -------------------------------------------------------------------------------------------------------
 */
 
-require_once( get_template_directory() . '/includes/customizer.php' );
+require_once( get_template_directory() . '/customizer/customizer.php' );
 require_once( get_template_directory() . '/includes/typefaces.php' );
 require_once( get_template_directory() . '/includes/plugin-activation.php' );
 require_once( get_template_directory() . '/includes/plugin-activation-class.php' );

@@ -442,6 +442,11 @@ add_action( 'customize_register', 'givingpress_lite_theme_customizer' );
  * asynchronously.
  */
 function givingpress_lite_customize_preview_js() {
-	wp_enqueue_script( 'giving-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '1.0', true );
+	wp_enqueue_script( 'giving-customizer', get_template_directory_uri() . '/customizer/js/customizer.js', array( 'customize-preview' ), '1.0', true );
 }
 add_action( 'customize_preview_init', 'givingpress_lite_customize_preview_js' );
+
+/**
+ * Logo Resizer
+ */
+require get_template_directory() . '/customizer/logo-resizer.php';

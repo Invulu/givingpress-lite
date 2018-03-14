@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.8.2
+GivingPress Lite Theme v1.8.3
 http://www.givingpress.com
 
 Image Credits
@@ -266,3 +266,7 @@ CHANGELOG v1.8.1:
 
 CHANGELOG v1.8.2:
 - Hide archive and post comment links if comments are closed
+
+CHANGELOG v1.8.3:
+- Removed force activation
+- Added logo resizer
