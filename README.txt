@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.8.3
+GivingPress Lite Theme v1.8.4
 http://www.givingpress.com
 
 Image Credits
@@ -270,3 +270,6 @@ CHANGELOG v1.8.2:
 CHANGELOG v1.8.3:
 - Removed force activation
 - Added logo resizer
+
+CHANGELOG v1.8.4:
+- Removed header video option

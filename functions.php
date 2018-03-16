@@ -59,7 +59,7 @@ if ( ! function_exists( 'givingpress_lite_setup' ) ) :
 			'default-text-color'    => 'ffffff',
 			'header-text'           => true,
 			'uploads'               => true,
-			'video' 								=> true,
+			// 'video' 								=> true,
 		);
 		add_theme_support( 'custom-header', $defaults );
 
