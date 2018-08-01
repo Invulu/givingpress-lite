@@ -1,4 +1,4 @@
-GivingPress Lite Theme v1.8.4
+GivingPress Lite Theme v1.8.5
 http://www.givingpress.com
 
 Image Credits
@@ -273,3 +273,7 @@ CHANGELOG v1.8.3:
 
 CHANGELOG v1.8.4:
 - Removed header video option
+
+CHANGELOG v1.8.5:
+- Updated OCW plugin name to Organic Builder Widgets
+- General cleanup
