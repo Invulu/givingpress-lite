@@ -241,7 +241,8 @@ require( get_template_directory() . '/includes/persist-admin-notices-dismissal/p
 /**
  * Custom logo function.
  */
-function givingpress_lite_custom_logo() {
+if ( ! function_exists ( 'givingpress_lite_custom_logo' ) ) {
+    function givingpress_lite_custom_logo() {
 
 	if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
 		the_custom_logo();
@@ -253,6 +254,7 @@ function givingpress_lite_custom_logo() {
 		<?php
 	}
 
+    }
 }
 
 /*
